@@ -5,16 +5,17 @@ import Button from '../ui/Button';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-slate-50 via-cyan-50 to-slate-100">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,97,209,0.15),transparent_50%)]"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-teal-100/30 via-transparent to-transparent"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-teal-200/30"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-cyan-200/30"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-teal-300/30"></div>
       
       {/* Glowing orbs */}
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-teal-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-cyan-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-3/4 right-1/3 w-48 h-48 bg-yellow-200/15 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
@@ -24,23 +25,23 @@ const Hero: React.FC = () => {
           className="max-w-4xl mx-auto"
         >
           {/* Pill header */}
-          <div className="inline-block px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
-            <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent">
+          <div className="inline-block px-6 py-2 rounded-full border border-teal-200 bg-teal-50/80 backdrop-blur-sm mb-8">
+            <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent font-medium">
               Global AI Research Council
             </span>
           </div>
 
-          {/* Main heading */}
+          {/* Main heading - Mix of styles as requested */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-            <span className="text-white">India's AI Future</span>
+            <span className="text-navy-800">India's</span>{' '}
+            <span className="bg-gradient-to-r from-teal-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">AI Future</span>
             <br />
-            <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
-              Begins Here
-            </span>
+            <span className="text-navy-800">Begins</span>{' '}
+            <span className="bg-gradient-to-r from-teal-500 to-yellow-400 bg-clip-text text-transparent">Here</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
             Join GARC in building a comprehensive ecosystem of AI education, innovation, and technological excellence
           </p>
 
@@ -51,7 +52,7 @@ const Hero: React.FC = () => {
             to="/partnerships"
             icon={<ArrowRight size={20} />}
             iconPosition="right"
-            className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+            className="min-w-[200px]"
           >
             Explore Partnership Opportunities
           </Button>
