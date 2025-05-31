@@ -5,7 +5,7 @@ import Button from '../ui/Button';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+    <footer className="bg-slate-900/80 backdrop-blur-sm border-t border-white/10 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
@@ -18,36 +18,37 @@ const Footer: React.FC = () => {
                 className="object-contain"
               />
             </Link>
-            <p className="text-slate-600 mb-6">
+            <p className="text-gray-300 mb-6">
               Pioneering India's AI Future
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="Twitter">
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors" aria-label="GitHub">
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors" aria-label="GitHub">
                 <Github size={20} />
               </a>
             </div>
           </div>
 
           <div>
+            <h3 className="text-white font-semibold mb-4">Explore</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/academies" className="text-slate-600 hover:text-primary transition-colors">
+                <Link to="/academies" className="text-gray-300 hover:text-primary transition-colors">
                   Academies
                 </Link>
               </li>
               <li>
-                <Link to="/research" className="text-slate-600 hover:text-primary transition-colors">
+                <Link to="/research-innovation" className="text-gray-300 hover:text-primary transition-colors">
                   Research & Innovation
                 </Link>
               </li>
               <li>
-                <Link to="/partnerships" className="text-slate-600 hover:text-primary transition-colors">
+                <Link to="/partnerships" className="text-gray-300 hover:text-primary transition-colors">
                   Partnerships
                 </Link>
               </li>
@@ -55,14 +56,15 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
+            <h3 className="text-white font-semibold mb-4">Programs</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/venture-ecosystem" className="text-slate-600 hover:text-primary transition-colors">
+                <Link to="/venture-ecosystem" className="text-gray-300 hover:text-primary transition-colors">
                   Venture Ecosystem
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-slate-600 hover:text-primary transition-colors">
+                <Link to="/about" className="text-gray-300 hover:text-primary transition-colors">
                   About
                 </Link>
               </li>
@@ -71,7 +73,7 @@ const Footer: React.FC = () => {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-600 hover:text-primary transition-colors"
+                  className="text-gray-300 hover:text-primary transition-colors"
                 >
                   Join Us
                 </a>
@@ -80,23 +82,23 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-slate-800 font-semibold mb-4">Ready to Partner?</h3>
+            <h3 className="text-white font-semibold mb-4">Ready to Partner?</h3>
             <ul className="space-y-3 mb-6">
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary shrink-0" />
-                <a href="mailto:info@garc.ai" className="text-slate-600 hover:text-primary transition-colors">
+                <a href="mailto:info@garc.ai" className="text-gray-300 hover:text-primary transition-colors">
                   info@garc.ai
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary shrink-0" />
-                <a href="tel:+919876543210" className="text-slate-600 hover:text-primary transition-colors">
+                <a href="tel:+919876543210" className="text-gray-300 hover:text-primary transition-colors">
                   +91 9876543210
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary mt-1 shrink-0" />
-                <span className="text-slate-600">Hyderabad, Telangana, India</span>
+                <span className="text-gray-300">Hyderabad, Telangana, India</span>
               </li>
             </ul>
             <Button 
@@ -112,15 +114,15 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} GARC. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-slate-500 hover:text-primary text-sm transition-colors">
+            <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-slate-500 hover:text-primary text-sm transition-colors">
+            <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
               Terms of Service
             </a>
           </div>
