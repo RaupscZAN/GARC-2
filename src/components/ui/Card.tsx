@@ -15,18 +15,18 @@ const Card: React.FC<CardProps> = ({
   hover = true,
 }) => {
   const glowClasses = {
-    primary: 'before:bg-glow-primary',
-    secondary: 'before:bg-glow-secondary',
-    accent: 'before:bg-glow-accent',
+    primary: 'before:bg-primary/10',
+    secondary: 'before:bg-secondary/10',
+    accent: 'before:bg-accent/10',
     none: '',
   };
 
-  const baseClasses = 'relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm';
+  const baseClasses = 'relative overflow-hidden rounded-xl border border-white/10 bg-slate-800/80 backdrop-blur-sm shadow-sm';
   const hoverClasses = hover ? 'hover:border-primary/30 hover:shadow-lg transition-all duration-300' : '';
   
   return (
     <motion.div
-      className={`${baseClasses} ${hoverClasses} ${className} ${glowColor !== 'none' ? 'before:absolute before:inset-0 before:z-0 before:opacity-10 before:blur-xl' : ''} ${glowColor !== 'none' ? glowClasses[glowColor] : ''}`}
+      className={`${baseClasses} ${hoverClasses} ${className} ${glowColor !== 'none' ? 'before:absolute before:inset-0 before:z-0 before:opacity-20 before:blur-xl' : ''} ${glowColor !== 'none' ? glowClasses[glowColor] : ''}`}
       whileHover={hover ? { y: -5, boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.2)' } : {}}
       transition={{ duration: 0.3 }}
     >
