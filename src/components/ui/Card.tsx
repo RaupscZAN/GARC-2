@@ -15,19 +15,25 @@ const Card: React.FC<CardProps> = ({
   hover = true,
 }) => {
   const glowClasses = {
-    primary: 'before:bg-primary/10',
-    secondary: 'before:bg-secondary/10',
-    accent: 'before:bg-accent/10',
-    none: '',
+    primary: 'hover:shadow-teal-200/50 border-teal-200',
+    secondary: 'hover:shadow-cyan-200/50 border-cyan-200', 
+    accent: 'hover:shadow-yellow-200/50 border-yellow-200',
+    none: 'hover:shadow-gray-200/50 border-slate-200',
   };
 
-  const baseClasses = 'relative overflow-hidden rounded-xl border border-white/10 bg-slate-800/80 backdrop-blur-sm shadow-sm';
-  const hoverClasses = hover ? 'hover:border-primary/30 hover:shadow-lg transition-all duration-300' : '';
+  const baseClasses = 'relative overflow-hidden rounded-xl bg-white shadow-sm';
+  const hoverClasses = hover ? 'hover:shadow-lg hover:-translate-y-1 transition-all duration-300' : '';
   
   return (
     <motion.div
-      className={`${baseClasses} ${hoverClasses} ${className} ${glowColor !== 'none' ? 'before:absolute before:inset-0 before:z-0 before:opacity-20 before:blur-xl' : ''} ${glowColor !== 'none' ? glowClasses[glowColor] : ''}`}
-      whileHover={hover ? { y: -5, boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.2)' } : {}}
+      className={`${baseClasses} ${hoverClasses} ${className} border ${glowColor !== 'none' ? glowClasses[glowColor] : glowClasses.none}`}
+      whileHover={hover ? { 
+        y: -5, 
+        boxShadow: glowColor === 'primary' ? '0 20px 40px -10px rgba(20, 184, 166, 0.2)' :
+                   glowColor === 'secondary' ? '0 20px 40px -10px rgba(6, 182, 212, 0.2)' :
+                   glowColor === 'accent' ? '0 20px 40px -10px rgba(251, 176, 64, 0.2)' :
+                   '0 20px 40px -10px rgba(0, 0, 0, 0.1)'
+      } : {}}
       transition={{ duration: 0.3 }}
     >
       <div className="relative z-10">{children}</div>
