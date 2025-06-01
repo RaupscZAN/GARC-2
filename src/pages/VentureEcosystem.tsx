@@ -26,7 +26,7 @@ const VentureEcosystem: React.FC = () => {
       </Section>
 
       {/* Intro Section */}
-      <Section className="bg-surface/30">
+      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg text-gray-300">
             GARC's Venture Ecosystem provides students with direct pathways to entrepreneurship and monetization. 
@@ -120,7 +120,7 @@ const VentureEcosystem: React.FC = () => {
       </Section>
 
       {/* Agentic Marketplace Section */}
-      <Section className="bg-surface/30">
+      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
@@ -226,7 +226,7 @@ const VentureEcosystem: React.FC = () => {
       </Section>
 
       {/* Ecosystem Support Section */}
-      <Section className="bg-surface/30">
+      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
@@ -269,7 +269,7 @@ const VentureEcosystem: React.FC = () => {
       </Section>
 
       {/* Call to Action */}
-      <Section className="bg-surface/30">
+      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-lg mb-4">
             <span className="text-white">Ready to Build Your </span>
