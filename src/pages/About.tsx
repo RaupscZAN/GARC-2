@@ -61,7 +61,7 @@ const About: React.FC = () => {
             </div>
             
             <h1 className="heading-xl mb-6">
-              <span className="text-white">About </span>
+              <span className="text-navy-800">About </span>
               <GlowingText color="primary" element="span" gradient>
                 GARC
               </GlowingText>
@@ -115,7 +115,7 @@ const About: React.FC = () => {
           <div>
             <h2 className="heading-md mb-6">Vision & Mission</h2>
             <Card className="p-6 mb-8" glowColor="primary">
-              <h3 className="text-xl font-semibold text-white mb-3">Our Vision</h3>
+              <h3 className="text-xl font-semibold text-navy-800 mb-3">Our Vision</h3>
               <p className="text-gray-300">
                 To establish India as a global AI superpower through excellence in research, 
                 education, and industry application, driving innovation that benefits humanity.
@@ -123,7 +123,7 @@ const About: React.FC = () => {
             </Card>
             
             <Card className="p-6" glowColor="secondary">
-              <h3 className="text-xl font-semibold text-white mb-3">Our Mission</h3>
+              <h3 className="text-xl font-semibold text-navy-800 mb-3">Our Mission</h3>
               <p className="text-gray-300">
                 To create a world-class AI ecosystem that fosters collaborative research, 
                 develops exceptional talent, and accelerates the responsible application of 
@@ -137,7 +137,7 @@ const About: React.FC = () => {
       <Section className="bg-surface/30" pattern="grid">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4">
-            <span className="text-white">Our Core </span>
+            <span className="text-navy-800">Our Core </span>
             <span className="text-primary">Values</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -159,7 +159,7 @@ const About: React.FC = () => {
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-${value.color}`}>
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-navy-800 mb-3">{value.title}</h3>
                 <p className="text-gray-400">{value.description}</p>
               </Card>
             </motion.div>
@@ -192,25 +192,25 @@ const About: React.FC = () => {
             
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-white font-semibold mb-2">Education</h4>
+                <h4 className="text-navy-800 font-semibold mb-2">Education</h4>
                 <div className="text-3xl font-bold text-accent mb-1">10K+</div>
                 <p className="text-gray-400 text-sm">AI Professionals Trained</p>
               </div>
               
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-white font-semibold mb-2">Research</h4>
+                <h4 className="text-navy-800 font-semibold mb-2">Research</h4>
                 <div className="text-3xl font-bold text-accent mb-1">200+</div>
                 <p className="text-gray-400 text-sm">Publications & Patents</p>
               </div>
               
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-white font-semibold mb-2">Startups</h4>
+                <h4 className="text-navy-800 font-semibold mb-2">Startups</h4>
                 <div className="text-3xl font-bold text-accent mb-1">50+</div>
                 <p className="text-gray-400 text-sm">AI Ventures Launched</p>
               </div>
               
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-white font-semibold mb-2">Partners</h4>
+                <h4 className="text-navy-800 font-semibold mb-2">Partners</h4>
                 <div className="text-3xl font-bold text-accent mb-1">150+</div>
                 <p className="text-gray-400 text-sm">Global Collaborations</p>
               </div>
