@@ -21,8 +21,8 @@ const Card: React.FC<CardProps> = ({
     none: 'hover:shadow-gray-200/50 border-slate-200',
   };
 
-  const baseClasses = 'relative overflow-hidden rounded-xl bg-white shadow-sm';
-  const hoverClasses = hover ? 'hover:shadow-lg hover:-translate-y-1 transition-all duration-300' : '';
+  const baseClasses = 'relative overflow-hidden rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-slate-800/80 backdrop-blur-sm shadow-sm';
+  const hoverClasses = hover ? 'hover:border-primary/50 dark:hover:border-primary/30 hover:shadow-lg transition-all duration-300' : '';
   
   return (
     <motion.div
