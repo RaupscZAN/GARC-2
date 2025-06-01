@@ -16,7 +16,7 @@ const VentureEcosystem: React.FC = () => {
       <Section className="pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="heading-xl mb-6">
-            <span className="text-white">From Learning to </span>
+            <span className="text-navy-800">From Learning to </span>
             <span className="text-primary">Earning</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -41,7 +41,7 @@ const VentureEcosystem: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">GARC </span>
+              <span className="text-navy-800">GARC </span>
               <span className="text-primary">Venture Studio</span>
             </h2>
             <p className="text-xl text-primary mb-4">Your Project Could Be the Next Big Thing</p>
@@ -103,7 +103,7 @@ const VentureEcosystem: React.FC = () => {
               }
             ].map((service, index) => (
               <Card key={index} className="p-6" glowColor="primary">
-                <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <h3 className="text-lg font-semibold text-navy-800 mb-2">{service.title}</h3>
                 <p className="text-gray-400">{service.description}</p>
               </Card>
             ))}
@@ -111,7 +111,7 @@ const VentureEcosystem: React.FC = () => {
 
           {/* Selection Criteria */}
           <Card className="p-8 text-center" glowColor="primary">
-            <h3 className="text-xl font-semibold text-white mb-4">Selection Criteria</h3>
+            <h3 className="text-xl font-semibold text-navy-800 mb-4">Selection Criteria</h3>
             <p className="text-gray-300">
               Projects evaluated on innovation, market potential, technical feasibility, and team capability
             </p>
@@ -124,7 +124,7 @@ const VentureEcosystem: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">GARC Agentic </span>
+              <span className="text-navy-800">GARC Agentic </span>
               <span className="text-secondary">Marketplace</span>
             </h2>
             <p className="text-xl text-secondary mb-4">The Future of AI Agent Monetization</p>
@@ -160,7 +160,7 @@ const VentureEcosystem: React.FC = () => {
             ].map((feature, index) => (
               <Card key={index} className="p-8" glowColor="secondary">
                 <div className="text-secondary mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-navy-800 mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </Card>
             ))}
@@ -168,7 +168,7 @@ const VentureEcosystem: React.FC = () => {
 
           {/* Monetization Promise */}
           <Card className="p-8 text-center" glowColor="secondary">
-            <h3 className="text-xl font-semibold text-white mb-4">Build once, earn continuously</h3>
+            <h3 className="text-xl font-semibold text-navy-800 mb-4">Build once, earn continuously</h3>
             <p className="text-gray-300">
               Our platform enables developers to create passive income streams while solving real business challenges
             </p>
@@ -181,7 +181,7 @@ const VentureEcosystem: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">Multiple Paths to </span>
+              <span className="text-navy-800">Multiple Paths to </span>
               <span className="text-accent">Success</span>
             </h2>
           </div>
@@ -210,7 +210,7 @@ const VentureEcosystem: React.FC = () => {
               }
             ].map((path, index) => (
               <Card key={index} className="p-8" glowColor={path.color as 'primary' | 'secondary'}>
-                <h3 className="text-xl font-semibold text-white mb-6">{path.title}</h3>
+                <h3 className="text-xl font-semibold text-navy-800 mb-6">{path.title}</h3>
                 <ol className="space-y-4">
                   {path.steps.map((step, idx) => (
                     <li key={idx} className="flex items-start gap-3">
@@ -230,7 +230,7 @@ const VentureEcosystem: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">Comprehensive Support at </span>
+              <span className="text-navy-800">Comprehensive Support at </span>
               <span className="text-primary">Every Stage</span>
             </h2>
           </div>
@@ -260,7 +260,7 @@ const VentureEcosystem: React.FC = () => {
             ].map((pillar, index) => (
               <Card key={index} className="p-6" glowColor="primary">
                 <div className="text-primary mb-4">{pillar.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{pillar.title}</h3>
+                <h3 className="text-lg font-semibold text-navy-800 mb-2">{pillar.title}</h3>
                 <p className="text-gray-400">{pillar.description}</p>
               </Card>
             ))}
@@ -272,7 +272,7 @@ const VentureEcosystem: React.FC = () => {
       <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-lg mb-4">
-            <span className="text-white">Ready to Build Your </span>
+            <span className="text-navy-800">Ready to Build Your </span>
             <span className="text-accent">AI Venture?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
