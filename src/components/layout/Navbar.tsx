@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             <NavLink
               key={item.name}
               to={item.path}
-              className="nav-link text-slate-700 hover:text-teal-600"
+              className="nav-link text-navy-700 hover:text-primary-600"
             >
               {item.name}
             </NavLink>
