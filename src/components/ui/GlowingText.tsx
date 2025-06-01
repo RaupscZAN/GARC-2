@@ -24,10 +24,10 @@ const GlowingText: React.FC<GlowingTextProps> = ({
   };
 
   const gradientClasses = {
-    primary: 'bg-gradient-to-r from-primary to-primary-300 bg-clip-text text-transparent',
-    secondary: 'bg-gradient-to-r from-secondary to-secondary-300 bg-clip-text text-transparent',
-    accent: 'bg-gradient-to-r from-accent to-accent-300 bg-clip-text text-transparent',
-    white: 'bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent',
+    primary: 'bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent',
+    secondary: 'bg-gradient-to-r from-secondary to-secondary-600 bg-clip-text text-transparent',
+    accent: 'bg-gradient-to-r from-accent to-accent-600 bg-clip-text text-transparent',
+    white: 'bg-gradient-to-r from-gray-100 to-white bg-clip-text text-transparent',
   };
 
   const baseClasses = 'relative';
