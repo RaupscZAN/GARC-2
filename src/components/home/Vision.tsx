@@ -55,7 +55,7 @@ const Vision: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <Card className="p-6 h-full" glowColor={pillar.color as 'primary' | 'secondary' | 'accent'}>
+            <Card className="p-6 h-full text-center" glowColor={pillar.color as 'primary' | 'secondary' | 'accent'}>
               <h3 className="text-xl font-semibold text-app-text mb-3">{pillar.title}</h3>
               <p className="text-app-text-muted">{pillar.description}</p>
             </Card>
