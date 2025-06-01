@@ -37,7 +37,7 @@ const PartnershipPathways: React.FC = () => {
     <Section className="bg-gray-50 dark:bg-surface/30">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
-          <span className="text-white">Multiple Ways to Partner </span>
+          <span className="text-navy-800">Multiple Ways to Partner </span>
           <span className="text-accent">with GARC</span>
         </h2>
       </div>
@@ -55,7 +55,7 @@ const PartnershipPathways: React.FC = () => {
               <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-${pathway.color}`}>
                 {pathway.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{pathway.title}</h3>
+              <h3 className="text-xl font-semibold text-navy-800 mb-3">{pathway.title}</h3>
               <p className="text-gray-400">{pathway.description}</p>
             </Card>
           </motion.div>
