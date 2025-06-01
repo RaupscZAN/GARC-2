@@ -29,13 +29,13 @@ const researchAreas = [
 
 const ResearchHighlights: React.FC = () => {
   return (
-    <Section id="research\" pattern="grid">
+    <Section id="research" pattern="grid">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
-          <span className="text-white">Cutting-Edge </span>
+          <span className="text-app-text">Cutting-Edge </span>
           <span className="text-secondary">Research</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
+        <p className="text-app-text-muted max-w-2xl mx-auto">
           Our research initiatives focus on advancing the frontiers of AI through innovative approaches, 
           collaborative partnerships, and state-of-the-art infrastructure.
         </p>
@@ -55,8 +55,8 @@ const ResearchHighlights: React.FC = () => {
               {area.icon}
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-              <p className="text-gray-400">{area.description}</p>
+              <h3 className="text-xl font-semibold text-app-text mb-2">{area.title}</h3>
+              <p className="text-app-text-muted">{area.description}</p>
             </div>
           </motion.div>
         ))}
@@ -74,7 +74,7 @@ const ResearchHighlights: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
           <div>
             <h3 className="heading-md mb-4">Data Center Consortium</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-app-text-muted mb-6">
               Our state-of-the-art infrastructure provides the computational power needed to train 
               and deploy large-scale AI models. The GARC Data Center Consortium brings together 
               industry partners to create a shared resource for Indian AI research.
@@ -89,27 +89,27 @@ const ResearchHighlights: React.FC = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-2">Compute</h4>
+              <h4 className="text-app-text font-semibold mb-2">Compute</h4>
               <div className="text-3xl font-bold text-secondary mb-1">100K+</div>
-              <p className="text-gray-400 text-sm">GPU Hours/Month</p>
+              <p className="text-app-text-muted text-sm">GPU Hours/Month</p>
             </div>
             
             <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-2">Storage</h4>
+              <h4 className="text-app-text font-semibold mb-2">Storage</h4>
               <div className="text-3xl font-bold text-secondary mb-1">5 PB</div>
-              <p className="text-gray-400 text-sm">Secure Data Storage</p>
+              <p className="text-app-text-muted text-sm">Secure Data Storage</p>
             </div>
             
             <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-2">Network</h4>
+              <h4 className="text-app-text font-semibold mb-2">Network</h4>
               <div className="text-3xl font-bold text-secondary mb-1">400 Gbps</div>
-              <p className="text-gray-400 text-sm">Bandwidth</p>
+              <p className="text-app-text-muted text-sm">Bandwidth</p>
             </div>
             
             <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-2">Partners</h4>
+              <h4 className="text-app-text font-semibold mb-2">Partners</h4>
               <div className="text-3xl font-bold text-secondary mb-1">25+</div>
-              <p className="text-gray-400 text-sm">Research Partners</p>
+              <p className="text-app-text-muted text-sm">Research Partners</p>
             </div>
           </div>
         </div>

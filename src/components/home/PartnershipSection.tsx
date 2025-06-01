@@ -27,7 +27,7 @@ const partnerCategories = [
 
 const PartnershipSection: React.FC = () => {
   return (
-    <Section id="partnerships\" className="bg-surface/30\" pattern="dot">
+    <Section id="partnerships" className="bg-surface/30" pattern="dot">
       <div className="text-center mb-16">
         <div className="flex items-center justify-center gap-2 mb-4">
           <HandShake size={24} />
@@ -35,11 +35,11 @@ const PartnershipSection: React.FC = () => {
         </div>
         
         <h2 className="heading-lg mb-4">
-          <span className="text-white">Building a Collaborative </span>
+          <span className="text-app-text">Building a Collaborative </span>
           <span className="text-primary">AI Ecosystem</span>
         </h2>
         
-        <p className="text-gray-400 max-w-2xl mx-auto">
+        <p className="text-app-text-muted max-w-2xl mx-auto">
           GARC's success is built on strong partnerships across academia, industry, and government. 
           Together, we're creating a robust ecosystem that drives innovation and excellence in AI.
         </p>
@@ -62,13 +62,13 @@ const PartnershipSection: React.FC = () => {
                 {category.icon}
               </div>
               
-              <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
+              <h3 className="text-xl font-semibold text-app-text mb-4">{category.title}</h3>
               
               <ul className="space-y-2">
                 {category.partners.map((partner, idx) => (
                   <li key={idx} className="flex items-center gap-2">
                     <div className={`w-2 h-2 rounded-full bg-${category.color}`}></div>
-                    <span className="text-gray-300">{partner}</span>
+                    <span className="text-app-text-muted">{partner}</span>
                   </li>
                 ))}
               </ul>
@@ -87,7 +87,7 @@ const PartnershipSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="heading-md mb-4">Government Advisory & Policy</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-app-text-muted mb-6">
               GARC works closely with government bodies to shape AI policy, provide technical guidance, 
               and develop talent pipelines that strengthen India's position in the global AI landscape.
             </p>
@@ -101,23 +101,23 @@ const PartnershipSection: React.FC = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-1">Policy Frameworks</h4>
-              <p className="text-gray-400 text-sm">Shaping responsible AI governance</p>
+              <h4 className="text-app-text font-semibold mb-1">Policy Frameworks</h4>
+              <p className="text-app-text-muted text-sm">Shaping responsible AI governance</p>
             </div>
             
             <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-1">Talent Development</h4>
-              <p className="text-gray-400 text-sm">Building India's AI workforce</p>
+              <h4 className="text-app-text font-semibold mb-1">Talent Development</h4>
+              <p className="text-app-text-muted text-sm">Building India's AI workforce</p>
             </div>
             
             <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-1">Technology Transfer</h4>
-              <p className="text-gray-400 text-sm">From research to implementation</p>
+              <h4 className="text-app-text font-semibold mb-1">Technology Transfer</h4>
+              <p className="text-app-text-muted text-sm">From research to implementation</p>
             </div>
             
             <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-1">Strategic Advisory</h4>
-              <p className="text-gray-400 text-sm">AI roadmaps for public sector</p>
+              <h4 className="text-app-text font-semibold mb-1">Strategic Advisory</h4>
+              <p className="text-app-text-muted text-sm">AI roadmaps for public sector</p>
             </div>
           </div>
         </div>
