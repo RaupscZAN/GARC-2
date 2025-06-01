@@ -17,7 +17,7 @@ const Credibility: React.FC = () => {
     <Section>
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
-          <span className="text-white">Why Partner with </span>
+          <span className="text-app-text">Why Partner with </span>
           <span className="text-primary">GARC</span>
         </h2>
       </div>
