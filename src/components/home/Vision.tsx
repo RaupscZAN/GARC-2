@@ -44,10 +44,10 @@ const Vision: React.FC = () => {
       <div className="text-center mb-16">
         {/* Mix of gradient and solid text as requested */}
         <h2 className="heading-lg mb-4">
-          <span className="text-navy-800">What We're Building </span>
+          <span className="text-app-text">What We're Building </span>
           <span className="bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">Together</span>
         </h2>
-        <p className="text-slate-600 max-w-2xl mx-auto">
+        <p className="text-app-text-muted max-w-2xl mx-auto">
           Our comprehensive ecosystem combines education, research, and innovation to create India's AI future.
         </p>
       </div>
@@ -69,8 +69,8 @@ const Vision: React.FC = () => {
               }`}>
                 {pillar.icon}
               </div>
-              <h3 className="text-xl font-semibold text-navy-800 mb-3">{pillar.title}</h3>
-              <p className="text-slate-600">{pillar.description}</p>
+              <h3 className="text-xl font-semibold text-app-text mb-3">{pillar.title}</h3>
+              <p className="text-app-text-muted">{pillar.description}</p>
             </Card>
           </motion.div>
         ))}

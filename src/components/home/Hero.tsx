@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-app-text-muted mb-12 max-w-2xl mx-auto">
             Join GARC in building a comprehensive ecosystem of AI education, innovation, and technological excellence
           </p>
 
