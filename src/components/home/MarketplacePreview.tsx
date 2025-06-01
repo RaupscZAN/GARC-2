@@ -34,7 +34,7 @@ const agentCategories = [
 
 const MarketplacePreview: React.FC = () => {
   return (
-    <Section id="marketplace" className="bg-surface/30">
+    <Section id="marketplace\" className="bg-surface/30">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
