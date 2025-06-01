@@ -19,7 +19,7 @@ const VentureEcosystem: React.FC = () => {
             <span className="text-app-text">From Learning to </span>
             <span className="text-primary">Earning</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-app-text-muted mb-8">
             Transform your AI innovations into successful ventures through our comprehensive startup ecosystem
           </p>
         </div>
@@ -28,7 +28,7 @@ const VentureEcosystem: React.FC = () => {
       {/* Intro Section */}
       <Section className="bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-app-text-muted">
             GARC's Venture Ecosystem provides students with direct pathways to entrepreneurship and monetization. 
             Whether launching a startup or monetizing AI agents, we provide the infrastructure, mentorship, and 
             market access needed for success.
@@ -45,7 +45,7 @@ const VentureEcosystem: React.FC = () => {
               <span className="text-primary">Venture Studio</span>
             </h2>
             <p className="text-xl text-primary mb-4">Your Project Could Be the Next Big Thing</p>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <p className="text-app-text-muted max-w-3xl mx-auto">
               Exceptional projects from VCA students get fast-tracked into our venture pipeline with access to 
               funding, mentorship, and resources.
             </p>
@@ -67,7 +67,7 @@ const VentureEcosystem: React.FC = () => {
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
                   <div className="pt-8 text-center">
                     <div className="text-primary mb-2">{step.icon}</div>
-                    <p className="text-gray-300">{step.label}</p>
+                    <p className="text-app-text-muted">{step.label}</p>
                   </div>
                 </div>
               ))}
@@ -104,7 +104,7 @@ const VentureEcosystem: React.FC = () => {
             ].map((service, index) => (
               <Card key={index} className="p-6" glowColor="primary">
                 <h3 className="text-lg font-semibold text-app-text mb-2">{service.title}</h3>
-                <p className="text-gray-400">{service.description}</p>
+                <p className="text-app-text-muted">{service.description}</p>
               </Card>
             ))}
           </div>
@@ -112,7 +112,7 @@ const VentureEcosystem: React.FC = () => {
           {/* Selection Criteria */}
           <Card className="p-8 text-center" glowColor="primary">
             <h3 className="text-xl font-semibold text-app-text mb-4">Selection Criteria</h3>
-            <p className="text-gray-300">
+            <p className="text-app-text-muted">
               Projects evaluated on innovation, market potential, technical feasibility, and team capability
             </p>
           </Card>
@@ -128,7 +128,7 @@ const VentureEcosystem: React.FC = () => {
               <span className="text-secondary">Marketplace</span>
             </h2>
             <p className="text-xl text-secondary mb-4">The Future of AI Agent Monetization</p>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <p className="text-app-text-muted max-w-3xl mx-auto">
               Our revolutionary platform connects AI developers with businesses seeking specialized AI solutions, 
               creating sustainable income opportunities for AiAta graduates.
             </p>
@@ -161,7 +161,7 @@ const VentureEcosystem: React.FC = () => {
               <Card key={index} className="p-8" glowColor="secondary">
                 <div className="text-secondary mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-app-text mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-app-text-muted">{feature.description}</p>
               </Card>
             ))}
           </div>
@@ -169,7 +169,7 @@ const VentureEcosystem: React.FC = () => {
           {/* Monetization Promise */}
           <Card className="p-8 text-center" glowColor="secondary">
             <h3 className="text-xl font-semibold text-app-text mb-4">Build once, earn continuously</h3>
-            <p className="text-gray-300">
+            <p className="text-app-text-muted">
               Our platform enables developers to create passive income streams while solving real business challenges
             </p>
           </Card>
@@ -215,7 +215,7 @@ const VentureEcosystem: React.FC = () => {
                   {path.steps.map((step, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className={`text-${path.color} font-bold`}>{idx + 1}.</span>
-                      <span className="text-gray-300">{step}</span>
+                      <span className="text-app-text-muted">{step}</span>
                     </li>
                   ))}
                 </ol>
@@ -261,7 +261,7 @@ const VentureEcosystem: React.FC = () => {
               <Card key={index} className="p-6" glowColor="primary">
                 <div className="text-primary mb-4">{pillar.icon}</div>
                 <h3 className="text-lg font-semibold text-app-text mb-2">{pillar.title}</h3>
-                <p className="text-gray-400">{pillar.description}</p>
+                <p className="text-app-text-muted">{pillar.description}</p>
               </Card>
             ))}
           </div>
@@ -275,7 +275,7 @@ const VentureEcosystem: React.FC = () => {
             <span className="text-app-text">Ready to Build Your </span>
             <span className="text-accent">AI Venture?</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-app-text-muted mb-8">
             Join GARC and transform your ideas into impactful businesses
           </p>
           <Button
