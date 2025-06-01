@@ -49,7 +49,7 @@ const Academies: React.FC = () => {
       </Section>
 
       {/* Intro Section */}
-      <Section className="bg-surface/30">
+      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg text-gray-300">
             GARC's academies combine cutting-edge curriculum, industry partnerships, and guaranteed pathways to success. 
