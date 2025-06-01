@@ -26,7 +26,7 @@ const Academies: React.FC = () => {
            <span className="text-gray-900 dark:text-white">World-Class AI & Technology </span>
             <span className="text-primary">Education</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
             Two specialized academies designed to create India's next generation of tech leaders and AI innovators
           </p>
           <div className="flex flex-wrap justify-center gap-4">
