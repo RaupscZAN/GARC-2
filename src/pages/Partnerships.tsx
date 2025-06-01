@@ -144,7 +144,7 @@ const Partnerships: React.FC = () => {
                 Venture Capital Partners
               </p>
               <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-white font-semibold mb-2">Success Path</h4>
+                <h4 className="text-app-text font-semibold mb-2">Success Path</h4>
                 <p className="text-app-text-muted">
                   VCA Project → Incubator Selection → Mentorship → Funding → Scale
                 </p>
