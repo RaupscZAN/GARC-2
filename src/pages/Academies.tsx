@@ -23,7 +23,7 @@ const Academies: React.FC = () => {
       <Section className="pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="heading-xl mb-6">
-            <span className="text-white">World-Class AI & Technology </span>
+           <span className="text-gray-900 dark:text-white">World-Class AI & Technology </span>
             <span className="text-primary">Education</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8">
