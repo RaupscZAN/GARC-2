@@ -34,7 +34,7 @@ const agentCategories = [
 
 const MarketplacePreview: React.FC = () => {
   return (
-    <Section id="marketplace\" className="bg-surface/30">
+    <Section id="marketplace" className="bg-surface/30">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -116,7 +116,7 @@ const MarketplacePreview: React.FC = () => {
             ))}
           </div>
           
-          <div className="mt-6 p-6 rounded-xl border border-white/10 bg-background/60 backdrop-blur-sm">
+          <div className="mt-6 p-6 rounded-xl border border-gray-200 bg-white/60 backdrop-blur-sm">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-app-text font-semibold">Agent Certification</h3>
               <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">Verified</span>
