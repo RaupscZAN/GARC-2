@@ -1,39 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, FlaskConical } from 'lucide-react';
+import { Image } from 'lucide-react';
 import Section from '../ui/Section';
 import Card from '../ui/Card';
 
 const opportunities = [
   {
-    icon: <GraduationCap size={24} />,
     title: 'Shape AI Education',
     items: [
       'Co-create curriculum for next-gen tech education',
       'Build India\'s first specialized AI academies',
       'Connect students with real industry projects'
     ],
-    color: 'primary'
+    color: 'primary',
+    imagePlaceholder: 'AI Education Image'
   },
   {
-    icon: <Users size={24} />,
     title: 'Enable Student Success',
     items: [
       'Create pathways from learning to earning',
       'Mentor the next generation of AI developers',
       'Support student startups and innovations'
     ],
-    color: 'secondary'
+    color: 'secondary',
+    imagePlaceholder: 'Student Success Image'
   },
   {
-    icon: <FlaskConical size={24} />,
     title: 'Drive Research & Innovation',
     items: [
       'Collaborate on cutting-edge AI research',
       'Access shared infrastructure and resources',
       'Contribute to India\'s AI knowledge base'
     ],
-    color: 'accent'
+    color: 'accent',
+    imagePlaceholder: 'Research Innovation Image'
   }
 ];
 
@@ -56,12 +56,14 @@ const Opportunity: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
+            {/* Image Placeholder */}
+            <div className="aspect-video mb-6 rounded-lg bg-gray-100 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
+              <Image size={32} className="mb-2" />
+              <p className="text-sm">{opportunity.imagePlaceholder}</p>
+            </div>
+
             <Card className="p-8 h-full" glowColor={opportunity.color as 'primary' | 'secondary' | 'accent'}>
-              <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-${opportunity.color}`}>
-                {opportunity.icon}
-              </div>
-              
-              <h3 className={`text-xl font-semibold mb-6 text-${opportunity.color}-300`}>
+              <h3 className={`text-xl font-semibold mb-6 text-app-text`}>
                 {opportunity.title}
               </h3>
               
