@@ -262,7 +262,7 @@ const Academies: React.FC = () => {
       </Section>
 
       {/* Comparison Section */}
-      <Section className="bg-surface/30">
+     <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="heading-lg text-center mb-12">
             <span className="text-white">Which Academy is </span>
