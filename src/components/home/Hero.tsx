@@ -33,10 +33,10 @@ const Hero: React.FC = () => {
 
           {/* Main heading - Mix of styles as requested */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-            <span className="text-navy-800">India's</span>{' '}
+            <span className="text-app-text">India's</span>{' '}
             <span className="bg-gradient-to-r from-teal-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">AI Future</span>
             <br />
-            <span className="text-navy-800">Begins</span>{' '}
+            <span className="text-app-text">Begins</span>{' '}
             <span className="bg-gradient-to-r from-teal-500 to-yellow-400 bg-clip-text text-transparent">Here</span>
           </h1>
 
