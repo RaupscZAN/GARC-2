@@ -16,10 +16,10 @@ const ResearchInnovation: React.FC = () => {
       <Section className="pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="heading-xl mb-6">
-            <span className="text-navy-800">Advancing AI Through </span>
+            <span className="text-white">Advancing AI Through </span>
             <span className="text-primary">Cutting-Edge Research</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-app-text-muted mb-8">
             Pioneering research initiatives, world-class infrastructure, and collaborative innovation 
             to position India at the forefront of global AI development
           </p>
@@ -38,7 +38,7 @@ const ResearchInnovation: React.FC = () => {
       {/* Intro Section */}
       <Section className="bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-app-text-muted">
             GARC's research ecosystem combines theoretical excellence with practical applications. 
             Through strategic partnerships, state-of-the-art infrastructure, and interdisciplinary 
             collaboration, we're solving real-world challenges while advancing the frontiers of AI technology.
@@ -51,10 +51,10 @@ const ResearchInnovation: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-navy-800">Core Research </span>
+              <span className="text-white">Core Research </span>
               <span className="text-primary">Focus Areas</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-app-text-muted max-w-2xl mx-auto">
               Driving innovation across critical AI domains
             </p>
           </div>
@@ -108,12 +108,12 @@ const ResearchInnovation: React.FC = () => {
             ].map((area, index) => (
               <Card key={index} className="p-8" glowColor={area.color as 'primary' | 'secondary' | 'accent'}>
                 <div className={`text-${area.color} mb-4`}>{area.icon}</div>
-                <h3 className="text-xl font-semibold text-navy-800 mb-4">{area.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{area.title}</h3>
                 <ul className="space-y-3">
                   {area.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <div className={`w-2 h-2 rounded-full bg-${area.color} mt-2`}></div>
-                      <span className="text-gray-300">{item}</span>
+                      <span className="text-app-text-muted">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -128,11 +128,11 @@ const ResearchInnovation: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-navy-800">India's Premier </span>
+              <span className="text-white">India's Premier </span>
               <span className="text-secondary">AI Research Infrastructure</span>
             </h2>
             <p className="text-xl text-secondary mb-4">Powering the future through collaborative computing</p>
-            <p className="text-gray-300 max-w-3xl mx-auto">
+            <p className="text-app-text-muted max-w-3xl mx-auto">
               The GARC Data Center Consortium brings together leading Indian colleges and institutions 
               to create a distributed yet cohesive network of computational resources, democratizing 
               access to AI research infrastructure.
@@ -164,15 +164,15 @@ const ResearchInnovation: React.FC = () => {
             ].map((feature, index) => (
               <Card key={index} className="p-6" glowColor="secondary">
                 <div className="text-secondary mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-navy-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-app-text-muted">{feature.description}</p>
               </Card>
             ))}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <Card className="p-8" glowColor="secondary">
-              <h3 className="text-2xl font-bold text-navy-800 mb-6">Join the Consortium</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Join the Consortium</h3>
               <ul className="space-y-4">
                 {[
                   "Access to world-class computational resources",
@@ -183,14 +183,14 @@ const ResearchInnovation: React.FC = () => {
                 ].map((benefit, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                    <span className="text-gray-300">{benefit}</span>
+                    <span className="text-app-text-muted">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </Card>
 
             <Card className="p-8" glowColor="secondary">
-              <h3 className="text-2xl font-bold text-navy-800 mb-6">Infrastructure Capabilities</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Infrastructure Capabilities</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   "Quantum Computing Ready",
@@ -199,7 +199,7 @@ const ResearchInnovation: React.FC = () => {
                   "Automated Resource Allocation"
                 ].map((capability, index) => (
                   <div key={index} className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                    <span className="text-white">{capability}</span>
+                    <span className="text-app-text">{capability}</span>
                   </div>
                 ))}
               </div>
@@ -213,7 +213,7 @@ const ResearchInnovation: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-navy-800">Sharing Knowledge, </span>
+              <span className="text-white">Sharing Knowledge, </span>
               <span className="text-accent">Shaping the Future</span>
             </h2>
           </div>
@@ -253,12 +253,12 @@ const ResearchInnovation: React.FC = () => {
             ].map((channel, index) => (
               <Card key={index} className="p-8" glowColor="accent">
                 <div className="text-accent mb-4">{channel.icon}</div>
-                <h3 className="text-xl font-semibold text-navy-800 mb-4">{channel.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{channel.title}</h3>
                 <ul className="space-y-3">
                   {channel.items.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
-                      <span className="text-gray-300">{item}</span>
+                      <span className="text-app-text-muted">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -273,7 +273,7 @@ const ResearchInnovation: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-navy-800">Our Commitment to </span>
+              <span className="text-white">Our Commitment to </span>
               <span className="text-secondary">Open Innovation</span>
             </h2>
           </div>
@@ -303,8 +303,8 @@ const ResearchInnovation: React.FC = () => {
             ].map((commitment, index) => (
               <Card key={index} className="p-6" glowColor="secondary">
                 <div className="text-secondary mb-4">{commitment.icon}</div>
-                <h3 className="text-lg font-semibold text-navy-800 mb-2">{commitment.title}</h3>
-                <p className="text-gray-400">{commitment.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{commitment.title}</h3>
+                <p className="text-app-text-muted">{commitment.description}</p>
               </Card>
             ))}
           </div>
@@ -315,10 +315,10 @@ const ResearchInnovation: React.FC = () => {
       <Section className="bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-lg mb-4">
-            <span className="text-navy-800">Be Part of India's </span>
+            <span className="text-white">Be Part of India's </span>
             <span className="text-accent">AI Research Revolution</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-app-text-muted mb-8">
             Whether you're a researcher, institution, or industry partner, there's a place for you in our ecosystem
           </p>
           <div className="flex flex-wrap justify-center gap-4">
