@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 const BackgroundEffects: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -26,19 +25,19 @@ const BackgroundEffects: React.FC = () => {
     };
 
     const createParticles = () => {
-      const particleCount = Math.min(Math.floor(window.innerWidth / 10), 100);
+      const particleCount = Math.min(Math.floor(window.innerWidth / 15), 80);
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 2 + 0.5,
-          speedX: (Math.random() - 0.5) * 0.5,
-          speedY: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 1.5 + 0.5,
+          speedX: (Math.random() - 0.5) * 0.3,
+          speedY: (Math.random() - 0.5) * 0.3,
           color: [
-            'rgba(59, 130, 246, 0.2)',
-            'rgba(135, 206, 235, 0.2)',
-            'rgba(56, 189, 248, 0.2)',
+            'rgba(0, 191, 165, 0.1)', // Primary teal
+            'rgba(0, 172, 193, 0.1)', // Secondary blue
+            'rgba(255, 184, 0, 0.1)',  // Accent yellow
           ][Math.floor(Math.random() * 3)]
         });
       }
@@ -65,10 +64,10 @@ const BackgroundEffects: React.FC = () => {
             const dy = particle.y - otherParticle.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             
-            if (distance < 150) {
+            if (distance < 120) {
               ctx.beginPath();
-              ctx.strokeStyle = `rgba(59, 130, 246, ${0.05 - distance / 3000})`;
-              ctx.lineWidth = 0.5;
+              ctx.strokeStyle = `rgba(0, 191, 165, ${0.02 - distance / 6000})`;
+              ctx.lineWidth = 0.3;
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
@@ -94,11 +93,11 @@ const BackgroundEffects: React.FC = () => {
     <>
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full -z-10 opacity-30 pointer-events-none"
+        className="fixed inset-0 w-full h-full -z-10 opacity-40 pointer-events-none"
       />
-      <div className="fixed -top-[30%] -right-[20%] w-[60%] h-[60%] bg-glow-primary rounded-full blur-[120px] opacity-10 -z-10" />
-      <div className="fixed top-[60%] -left-[30%] w-[70%] h-[70%] bg-glow-secondary rounded-full blur-[120px] opacity-10 -z-10" />
-      <div className="fixed -bottom-[20%] right-[20%] w-[50%] h-[50%] bg-glow-accent rounded-full blur-[120px] opacity-10 -z-10" />
+      <div className="fixed -top-[30%] -right-[20%] w-[60%] h-[60%] bg-glow-primary rounded-full blur-[120px] opacity-[0.03] -z-10" />
+      <div className="fixed top-[60%] -left-[30%] w-[70%] h-[70%] bg-glow-secondary rounded-full blur-[120px] opacity-[0.03] -z-10" />
+      <div className="fixed -bottom-[20%] right-[20%] w-[50%] h-[50%] bg-glow-accent rounded-full blur-[120px] opacity-[0.03] -z-10" />
     </>
   );
 };
