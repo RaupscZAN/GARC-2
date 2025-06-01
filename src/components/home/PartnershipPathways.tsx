@@ -34,7 +34,7 @@ const pathways = [
 
 const PartnershipPathways: React.FC = () => {
   return (
-    <Section className="bg-surface/30">
+    <Section className="bg-gray-50 dark:bg-surface/30">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
           <span className="text-white">Multiple Ways to Partner </span>
