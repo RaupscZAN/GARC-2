@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
@@ -13,12 +13,11 @@ const mainMenuItems = [
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md py-4 border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md py-4 border-b border-gray-200 shadow-sm">
       <nav className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <img 
@@ -35,7 +34,7 @@ const Navbar: React.FC = () => {
             <NavLink
               key={item.name}
               to={item.path}
-              className="nav-link text-navy-700 hover:text-primary-600"
+              className="nav-link text-gray-600 hover:text-primary"
             >
               {item.name}
             </NavLink>
@@ -52,7 +51,7 @@ const Navbar: React.FC = () => {
         </a>
 
         <button
-          className="lg:hidden text-slate-700 focus:outline-none"
+          className="lg:hidden text-gray-600 focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -66,14 +65,14 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white/95 backdrop-blur-md border-t border-cyan-200 absolute top-full left-0 right-0 shadow-lg"
+              className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 absolute top-full left-0 right-0 shadow-lg"
             >
               <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
                 {mainMenuItems.map((item) => (
                   <NavLink
                     key={item.name}
                     to={item.path}
-                    className="py-3 text-slate-700 hover:text-teal-600 transition-colors"
+                    className="py-3 text-gray-600 hover:text-primary transition-colors"
                     onClick={toggleMenu}
                   >
                     {item.name}
