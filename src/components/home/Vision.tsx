@@ -40,7 +40,7 @@ const pillars = [
 
 const Vision: React.FC = () => {
   return (
-    <Section pattern="grid\" className="bg-gradient-to-r from-cyan-50 to-slate-50">
+    <Section pattern="grid\" className="bg-gradient-to-r from-primary-50 to-surface">
       <div className="text-center mb-16">
         {/* Mix of gradient and solid text as requested */}
         <h2 className="heading-lg mb-4">
