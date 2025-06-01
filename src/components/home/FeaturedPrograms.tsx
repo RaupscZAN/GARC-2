@@ -56,10 +56,10 @@ const FeaturedPrograms: React.FC = () => {
     <Section id="programs" pattern="dot">
       <div className="mb-16 text-center">
         <h2 className="heading-lg mb-4">
-          <span className="text-white">World-Class </span>
+          <span className="text-app-text">World-Class </span>
           <span className="text-primary">AI Education</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto">
+        <p className="text-app-text-muted max-w-2xl mx-auto">
           Our specialized academies provide comprehensive education in cutting-edge AI and coding technologies, designed to create the next generation of tech leaders.
         </p>
       </div>
@@ -79,8 +79,8 @@ const FeaturedPrograms: React.FC = () => {
                 <div className={`absolute inset-0 bg-glow-${program.color} rounded-lg blur-xl opacity-40`} />
               </div>
               
-              <h3 className="text-2xl font-bold text-white mb-4">{program.title}</h3>
-              <p className="text-gray-300 mb-6">{program.description}</p>
+              <h3 className="text-2xl font-bold text-app-text mb-4">{program.title}</h3>
+              <p className="text-app-text-muted mb-6">{program.description}</p>
               
               <ul className="mb-8 space-y-3">
                 {program.features.map((feature, index) => (
@@ -88,7 +88,7 @@ const FeaturedPrograms: React.FC = () => {
                     <div className={`text-${program.color} mt-1`}>
                       <ArrowRight size={16} />
                     </div>
-                    <span className="text-gray-400">{feature}</span>
+                    <span className="text-app-text-muted">{feature}</span>
                   </li>
                 ))}
               </ul>
