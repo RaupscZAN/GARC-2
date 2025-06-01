@@ -29,7 +29,7 @@ const researchAreas = [
 
 const ResearchHighlights: React.FC = () => {
   return (
-    <Section id="research" pattern="grid">
+    <Section id="research\" pattern="grid">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
           <span className="text-app-text">Cutting-Edge </span>
