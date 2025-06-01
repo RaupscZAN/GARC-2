@@ -55,19 +55,19 @@ const About: React.FC = () => {
           >
             <div className="flex items-center gap-2 mb-4">
               <Brain size={28} className="text-primary" />
-              <h2 className="text-lg md:text-xl font-medium text-gray-300">
+              <h2 className="text-lg md:text-xl font-medium text-app-text-muted">
                 Global AI Research & Coding
               </h2>
             </div>
             
             <h1 className="heading-xl mb-6">
-              <span className="text-navy-800">About </span>
+              <span className="text-white">About </span>
               <GlowingText color="primary" element="span" gradient>
                 GARC
               </GlowingText>
             </h1>
             
-            <p className="text-lg text-gray-300 mb-8 max-w-xl">
+            <p className="text-lg text-app-text-muted mb-8 max-w-xl">
               Global AI Research & Coding (GARC) is India's premier institution dedicated to 
               establishing the nation as a global AI superpower through world-class education, 
               research, and industry partnerships.
@@ -97,7 +97,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="heading-md mb-6">Executive Summary</h2>
-            <div className="space-y-4 text-gray-300">
+            <div className="space-y-4 text-app-text-muted">
               <p>
                 Global AI Research & Coding (GARC) represents India's strategic initiative to become 
                 a world leader in artificial intelligence research, education, and industry application. 
@@ -115,16 +115,16 @@ const About: React.FC = () => {
           <div>
             <h2 className="heading-md mb-6">Vision & Mission</h2>
             <Card className="p-6 mb-8" glowColor="primary">
-              <h3 className="text-xl font-semibold text-navy-800 mb-3">Our Vision</h3>
-              <p className="text-gray-300">
+              <h3 className="text-xl font-semibold text-white mb-3">Our Vision</h3>
+              <p className="text-app-text-muted">
                 To establish India as a global AI superpower through excellence in research, 
                 education, and industry application, driving innovation that benefits humanity.
               </p>
             </Card>
             
             <Card className="p-6" glowColor="secondary">
-              <h3 className="text-xl font-semibold text-navy-800 mb-3">Our Mission</h3>
-              <p className="text-gray-300">
+              <h3 className="text-xl font-semibold text-white mb-3">Our Mission</h3>
+              <p className="text-app-text-muted">
                 To create a world-class AI ecosystem that fosters collaborative research, 
                 develops exceptional talent, and accelerates the responsible application of 
                 AI technologies across sectors, positioning India as a leader in the global AI landscape.
@@ -137,10 +137,10 @@ const About: React.FC = () => {
       <Section className="bg-surface/30" pattern="grid">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4">
-            <span className="text-navy-800">Our Core </span>
+            <span className="text-white">Our Core </span>
             <span className="text-primary">Values</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-app-text-muted max-w-2xl mx-auto">
             These principles guide everything we do at GARC, from research priorities to educational 
             approaches and partnership development.
           </p>
@@ -159,8 +159,8 @@ const About: React.FC = () => {
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-${value.color}`}>
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-navy-800 mb-3">{value.title}</h3>
-                <p className="text-gray-400">{value.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                <p className="text-app-text-muted">{value.description}</p>
               </Card>
             </motion.div>
           ))}
@@ -174,7 +174,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
             <div>
               <h2 className="heading-md mb-4">India's AI Transformation</h2>
-              <p className="text-gray-300 mb-6">
+              <p className="text-app-text-muted mb-6">
                 GARC plays a central role in India's AI transformation by developing indigenous 
                 capabilities, fostering global partnerships, and creating an ecosystem that 
                 supports innovation and growth. Our initiatives align with national priorities 
@@ -192,27 +192,27 @@ const About: React.FC = () => {
             
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-navy-800 font-semibold mb-2">Education</h4>
+                <h4 className="text-white font-semibold mb-2">Education</h4>
                 <div className="text-3xl font-bold text-accent mb-1">10K+</div>
-                <p className="text-gray-400 text-sm">AI Professionals Trained</p>
+                <p className="text-app-text-muted text-sm">AI Professionals Trained</p>
               </div>
               
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-navy-800 font-semibold mb-2">Research</h4>
+                <h4 className="text-white font-semibold mb-2">Research</h4>
                 <div className="text-3xl font-bold text-accent mb-1">200+</div>
-                <p className="text-gray-400 text-sm">Publications & Patents</p>
+                <p className="text-app-text-muted text-sm">Publications & Patents</p>
               </div>
               
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-navy-800 font-semibold mb-2">Startups</h4>
+                <h4 className="text-white font-semibold mb-2">Startups</h4>
                 <div className="text-3xl font-bold text-accent mb-1">50+</div>
-                <p className="text-gray-400 text-sm">AI Ventures Launched</p>
+                <p className="text-app-text-muted text-sm">AI Ventures Launched</p>
               </div>
               
               <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-navy-800 font-semibold mb-2">Partners</h4>
+                <h4 className="text-white font-semibold mb-2">Partners</h4>
                 <div className="text-3xl font-bold text-accent mb-1">150+</div>
-                <p className="text-gray-400 text-sm">Global Collaborations</p>
+                <p className="text-app-text-muted text-sm">Global Collaborations</p>
               </div>
             </div>
           </div>
