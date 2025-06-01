@@ -27,7 +27,7 @@ const partnerCategories = [
 
 const PartnershipSection: React.FC = () => {
   return (
-    <Section id="partnerships" className="bg-surface/30" pattern="dot">
+    <Section id="partnerships\" className="bg-surface/30\" pattern="dot">
       <div className="text-center mb-16">
         <div className="flex items-center justify-center gap-2 mb-4">
           <HandShake size={24} />
