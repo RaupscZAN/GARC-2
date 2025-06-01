@@ -42,7 +42,7 @@ const Opportunity: React.FC = () => {
     <Section className="bg-gray-50 dark:bg-surface/30">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
-          <span className="text-white">Be Part of Something </span>
+          <span className="text-app-text">Be Part of Something </span>
           <span className="text-primary">Transformational</span>
         </h2>
       </div>
@@ -69,7 +69,7 @@ const Opportunity: React.FC = () => {
                 {opportunity.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div className={`w-1.5 h-1.5 rounded-full bg-${opportunity.color} mt-2`}></div>
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-app-text-muted">{item}</span>
                   </li>
                 ))}
               </ul>
