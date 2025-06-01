@@ -33,7 +33,7 @@ const Credibility: React.FC = () => {
             className="flex items-start gap-4"
           >
             <CheckCircle size={24} className="text-primary shrink-0 mt-1" />
-            <p className="text-gray-300">{benefit}</p>
+            <p className="text-app-text-muted">{benefit}</p>
           </motion.div>
         ))}
       </div>
