@@ -109,7 +109,7 @@ const Partnerships: React.FC = () => {
       </Section>
 
       {/* Incubator Network */}
-      <Section className="bg-surface/30">
+      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
