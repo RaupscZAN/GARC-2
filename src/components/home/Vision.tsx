@@ -40,7 +40,7 @@ const pillars = [
 
 const Vision: React.FC = () => {
   return (
-    <Section pattern="grid" className="bg-gradient-to-r from-primary-50 to-surface">
+    <Section pattern="grid\" className="bg-gradient-to-r from-primary-50 to-surface">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
           <span className="text-app-text">What We're Building </span>
