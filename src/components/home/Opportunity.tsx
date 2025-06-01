@@ -39,7 +39,7 @@ const opportunities = [
 
 const Opportunity: React.FC = () => {
   return (
-    <Section className="bg-gray-50 dark:bg-surface/30">
+    <Section className="bg-surface/30">
       <div className="text-center mb-16">
         <h2 className="heading-lg mb-4">
           <span className="text-app-text">Be Part of Something </span>
