@@ -23,7 +23,7 @@ const Academies: React.FC = () => {
       <Section className="pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="heading-xl mb-6">
-            <span className="text-white">World-Class AI & Technology </span>
+            <span className="text-app-text">World-Class AI & Technology </span>
             <span className="text-primary">Education</span>
           </h1>
           <p className="text-xl text-app-text-muted mb-8">
@@ -64,7 +64,7 @@ const Academies: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">Vibe Coding Academy </span>
+              <span className="text-app-text">Vibe Coding Academy </span>
               <span className="text-primary">(VCA)</span>
             </h2>
             <p className="text-xl text-primary mb-4">India's First Next-Generation Coding Academy</p>
@@ -100,7 +100,7 @@ const Academies: React.FC = () => {
             ].map((feature, index) => (
               <Card key={index} className="p-6" glowColor="primary">
                 <div className="text-primary mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-app-text mb-2">{feature.title}</h3>
                 <p className="text-app-text-muted">{feature.description}</p>
               </Card>
             ))}
@@ -118,14 +118,14 @@ const Academies: React.FC = () => {
             ].map((program, index) => (
               <Card key={index} className="p-6" glowColor="primary">
                 <div className="text-primary mb-3">{program.icon}</div>
-                <h3 className="text-lg font-semibold text-white">{program.title}</h3>
+                <h3 className="text-lg font-semibold text-app-text">{program.title}</h3>
               </Card>
             ))}
           </div>
 
           {/* Value Proposition */}
           <Card className="p-8 mb-8" glowColor="primary">
-            <h3 className="text-2xl font-bold text-white mb-4">From Code to Company</h3>
+            <h3 className="text-2xl font-bold text-app-text mb-4">From Code to Company</h3>
             <p className="text-app-text-muted mb-6">VCA students with exceptional projects get direct access to:</p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li className="flex items-center gap-3 text-app-text-muted">
@@ -166,7 +166,7 @@ const Academies: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">AI Agents Training Academy </span>
+              <span className="text-app-text">AI Agents Training Academy </span>
               <span className="text-secondary">(AiAta)</span>
             </h2>
             <p className="text-xl text-secondary mb-4">Master AI Agent Development with Guaranteed Monetization</p>
@@ -202,7 +202,7 @@ const Academies: React.FC = () => {
             ].map((feature, index) => (
               <Card key={index} className="p-6" glowColor="secondary">
                 <div className="text-secondary mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-app-text mb-2">{feature.title}</h3>
                 <p className="text-app-text-muted">{feature.description}</p>
               </Card>
             ))}
@@ -219,14 +219,14 @@ const Academies: React.FC = () => {
             ].map((specialization, index) => (
               <Card key={index} className="p-6" glowColor="secondary">
                 <div className="text-secondary mb-3">{specialization.icon}</div>
-                <h3 className="text-lg font-semibold text-white">{specialization.title}</h3>
+                <h3 className="text-lg font-semibold text-app-text">{specialization.title}</h3>
               </Card>
             ))}
           </div>
 
           {/* Monetization Promise */}
           <Card className="p-8 mb-8" glowColor="secondary">
-            <h3 className="text-2xl font-bold text-white mb-4">Your AI Agents, Your Revenue</h3>
+            <h3 className="text-2xl font-bold text-app-text mb-4">Your AI Agents, Your Revenue</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-secondary"></div>
@@ -265,7 +265,7 @@ const Academies: React.FC = () => {
       <Section className="bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="heading-lg text-center mb-12">
-            <span className="text-white">Which Academy is </span>
+            <span className="text-app-text">Which Academy is </span>
             <span className="text-accent">Right for You?</span>
           </h2>
 
@@ -276,28 +276,28 @@ const Academies: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Perfect for:</strong>
+                    <strong className="text-app-text">Perfect for:</strong>
                     <p className="text-app-text-muted">Aspiring full-stack developers and tech entrepreneurs</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Duration:</strong>
+                    <strong className="text-app-text">Duration:</strong>
                     <p className="text-app-text-muted">6-12 months intensive</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Outcome:</strong>
+                    <strong className="text-app-text">Outcome:</strong>
                     <p className="text-app-text-muted">Job-ready skills + startup opportunities</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Focus:</strong>
+                    <strong className="text-app-text">Focus:</strong>
                     <p className="text-app-text-muted">Modern software development</p>
                   </div>
                 </li>
@@ -310,28 +310,28 @@ const Academies: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <strong className="text-white">Perfect for:</strong>
+                    <strong className="text-app-text">Perfect for:</strong>
                     <p className="text-app-text-muted">AI enthusiasts and future AI entrepreneurs</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <strong className="text-white">Duration:</strong>
+                    <strong className="text-app-text">Duration:</strong>
                     <p className="text-app-text-muted">8-14 months comprehensive</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <strong className="text-white">Outcome:</strong>
+                    <strong className="text-app-text">Outcome:</strong>
                     <p className="text-app-text-muted">AI expertise + monetization channels</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <strong className="text-white">Focus:</strong>
+                    <strong className="text-app-text">Focus:</strong>
                     <p className="text-app-text-muted">AI agent development</p>
                   </div>
                 </li>
