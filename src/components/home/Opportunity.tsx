@@ -62,7 +62,7 @@ const Opportunity: React.FC = () => {
               <p className="text-sm">{opportunity.imagePlaceholder}</p>
             </div>
 
-            <Card className="p-6 h-85" glowColor={opportunity.color as 'primary' | 'secondary' | 'accent'}>
+            <Card className="p-6 h-100" glowColor={opportunity.color as 'primary' | 'secondary' | 'accent'}>
               <h3 className={`text-xl font-semibold mb-6 text-app-text`}>
                 {opportunity.title}
               </h3>
