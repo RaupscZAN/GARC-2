@@ -64,7 +64,7 @@ const Academies: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">Vibe Coding Academy </span>
+              <span className="text-navy-800">Vibe Coding Academy </span>
               <span className="text-primary">(VCA)</span>
             </h2>
             <p className="text-xl text-primary mb-4">India's First Next-Generation Coding Academy</p>
@@ -166,7 +166,7 @@ const Academies: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-white">AI Agents Training Academy </span>
+              <span className="text-navy-800">AI Agents Training Academy </span>
               <span className="text-secondary">(AiAta)</span>
             </h2>
             <p className="text-xl text-secondary mb-4">Master AI Agent Development with Guaranteed Monetization</p>
@@ -202,7 +202,7 @@ const Academies: React.FC = () => {
             ].map((feature, index) => (
               <Card key={index} className="p-6" glowColor="secondary">
                 <div className="text-secondary mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-navy-800 mb-2">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </Card>
             ))}
@@ -219,14 +219,14 @@ const Academies: React.FC = () => {
             ].map((specialization, index) => (
               <Card key={index} className="p-6" glowColor="secondary">
                 <div className="text-secondary mb-3">{specialization.icon}</div>
-                <h3 className="text-lg font-semibold text-white">{specialization.title}</h3>
+                <h3 className="text-lg font-semibold text-navy-800">{specialization.title}</h3>
               </Card>
             ))}
           </div>
 
           {/* Monetization Promise */}
           <Card className="p-8 mb-8" glowColor="secondary">
-            <h3 className="text-2xl font-bold text-white mb-4">Your AI Agents, Your Revenue</h3>
+            <h3 className="text-2xl font-bold text-navy-800 mb-4">Your AI Agents, Your Revenue</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-secondary"></div>
@@ -265,39 +265,39 @@ const Academies: React.FC = () => {
      <Section className="bg-gray-50 dark:bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="heading-lg text-center mb-12">
-            <span className="text-white">Which Academy is </span>
+            <span className="text-navy-800">Which Academy is </span>
             <span className="text-accent">Right for You?</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8" glowColor="primary">
-              <h3 className="text-2xl font-bold text-white mb-6">VCA</h3>
+              <h3 className="text-2xl font-bold text-navy-800 mb-6">VCA</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Perfect for:</strong>
+                    <strong className="text-navy-800">Perfect for:</strong>
                     <p className="text-gray-400">Aspiring full-stack developers and tech entrepreneurs</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Duration:</strong>
+                    <strong className="text-navy-800">Duration:</strong>
                     <p className="text-gray-400">6-12 months intensive</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Outcome:</strong>
+                    <strong className="text-navy-800">Outcome:</strong>
                     <p className="text-gray-400">Job-ready skills + startup opportunities</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                   <div>
-                    <strong className="text-white">Focus:</strong>
+                    <strong className="text-navy-800">Focus:</strong>
                     <p className="text-gray-400">Modern software development</p>
                   </div>
                 </li>
