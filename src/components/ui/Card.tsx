@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({
     none: '',
   };
 
-  const baseClasses = 'relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm';
+  const baseClasses = 'relative overflow-hidden rounded-xl border border-gray-200 bg-background shadow-sm';
   const hoverClasses = hover ? 'hover:border-primary/40 hover:shadow-lg transition-all duration-300' : '';
   
   return (
