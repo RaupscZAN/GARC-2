@@ -100,8 +100,8 @@ const Academies: React.FC = () => {
             ].map((feature, index) => (
               <Card key={index} className="p-6" glowColor="primary">
                 <div className="text-primary mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-navy-800 mb-2">{feature.title}</h3>
+                <p className="text-navy-600">{feature.description}</p>
               </Card>
             ))}
           </div>
@@ -118,15 +118,15 @@ const Academies: React.FC = () => {
             ].map((program, index) => (
               <Card key={index} className="p-6" glowColor="primary">
                 <div className="text-primary mb-3">{program.icon}</div>
-                <h3 className="text-lg font-semibold text-white">{program.title}</h3>
+                <h3 className="text-lg font-semibold text-navy-800">{program.title}</h3>
               </Card>
             ))}
           </div>
 
           {/* Value Proposition */}
           <Card className="p-8 mb-8" glowColor="primary">
-            <h3 className="text-2xl font-bold text-white mb-4">From Code to Company</h3>
-            <p className="text-gray-300 mb-6">VCA students with exceptional projects get direct access to:</p>
+            <h3 className="text-2xl font-bold text-navy-800 mb-4">From Code to Company</h3>
+            <p className="text-navy-600 mb-6">VCA students with exceptional projects get direct access to:</p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li className="flex items-center gap-3 text-gray-300">
                 <div className="w-2 h-2 rounded-full bg-primary"></div>
