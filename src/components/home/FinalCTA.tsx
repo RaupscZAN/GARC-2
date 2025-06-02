@@ -96,39 +96,6 @@ const FinalCTA: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Additional CTA Buttons */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <Button 
-            variant="accent" 
-            size="lg"
-            href="https://calendly.com/globalai-research/collaboration-call"
-            target="_blank"
-            rel="noopener noreferrer"
-            icon={<Calendar size={20} />}
-            iconPosition="left"
-          >
-            Schedule a Discussion
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
-            target="_blank"
-            rel="noopener noreferrer"
-            icon={<Download size={20} />}
-            iconPosition="left"
-          >
-            Download Vision Document
-          </Button>
-        </motion.div>
       </div>
     </Section>
   );
