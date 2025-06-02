@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import HeroSection from '../components/home/HeroSection';
+import Hero from '../components/home/Hero';
 import Opportunity from '../components/home/Opportunity';
 import Vision from '../components/home/Vision';
 import PartnershipPathways from '../components/home/PartnershipPathways';
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <HeroSection />
+      <Hero />
       <Opportunity />
       <Vision />
       <PartnershipPathways />
