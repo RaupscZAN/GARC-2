@@ -52,12 +52,10 @@ const FinalCTA: React.FC = () => {
           <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-full h-full bg-glow-primary opacity-10 blur-3xl"></div>
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                  <GraduationCap size={24} />
-                </div>
-                <h3 className="text-2xl font-bold text-app-text">For Students</h3>
-              </div>
+              <h3 className="text-2xl font-bold text-app-text mb-4 flex items-center gap-3">
+                <GraduationCap size={24} className="text-primary" />
+                For Students
+              </h3>
               <p className="text-app-text-muted mb-6">
                 Master AI & coding with guaranteed career pathways
               </p>
@@ -78,12 +76,10 @@ const FinalCTA: React.FC = () => {
           <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-full h-full bg-glow-secondary opacity-10 blur-3xl"></div>
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
-                  <Handshake size={24} />
-                </div>
-                <h3 className="text-2xl font-bold text-app-text">For Organizations</h3>
-              </div>
+              <h3 className="text-2xl font-bold text-app-text mb-4 flex items-center gap-3">
+                <Handshake size={24} className="text-secondary" />
+                For Organizations
+              </h3>
               <p className="text-app-text-muted mb-6">
                 Join us in shaping AI ecosystem
               </p>
