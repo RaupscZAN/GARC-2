@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Image } from 'lucide-react';
+import { Brain, Target, Users } from 'lucide-react';
 import Section from '../ui/Section';
 import Card from '../ui/Card';
 
@@ -13,7 +13,7 @@ const opportunities = [
       'Connect students with real industry projects'
     ],
     color: 'primary',
-    imagePlaceholder: 'AI Education Image'
+    imageUrl: 'https://img.freepik.com/premium-photo/computer-programmer-coding-with-ai-digital-technology_875825-33369.jpg'
   },
   {
     title: 'Enable Student Success',
@@ -23,7 +23,7 @@ const opportunities = [
       'Support student startups and innovations'
     ],
     color: 'secondary',
-    imagePlaceholder: 'Student Success Image'
+    imageUrl: 'https://fortune.com/img-assets/wp-content/uploads/2024/02/AI-programming-languages-GettyImages-1518874007-e1709244825422.jpg?w=1440&q=90'
   },
   {
     title: 'Drive Research & Innovation',
@@ -33,7 +33,7 @@ const opportunities = [
       'Contribute to India\'s AI knowledge base'
     ],
     color: 'accent',
-    imagePlaceholder: 'Research Innovation Image'
+    imageUrl: 'https://media.licdn.com/dms/image/D5612AQEDpiueyXTy_A/article-cover_image-shrink_720_1280/0/1706797621725?e=2147483647&v=beta&t=styrek6xGZ8jikWMPW1F7EY-g1CXJh2f3yBtketWpO0'
   }
 ];
 
@@ -56,10 +56,13 @@ const Opportunity: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            {/* Image Placeholder */}
-            <div className="aspect-video mb-6 rounded-lg bg-gray-100 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-              <Image size={32} className="mb-2" />
-              <p className="text-sm">{opportunity.imagePlaceholder}</p>
+            <div className="aspect-video mb-6 rounded-lg overflow-hidden">
+              <img 
+                src={opportunity.imageUrl} 
+                alt={opportunity.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
 
             <Card className="p-6" glowColor={opportunity.color as 'primary' | 'secondary' | 'accent'}>
