@@ -1,100 +1,138 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Handshake, ArrowRight } from 'lucide-react';
+import { Calendar, Download, GraduationCap, Handshake } from 'lucide-react';
 import Section from '../ui/Section';
 import Button from '../ui/Button';
-import Card from '../ui/Card';
 
 const FinalCTA: React.FC = () => {
   return (
-    <Section className="relative overflow-hidden bg-gray-900">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <Section className="relative overflow-hidden">
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-20"></div>
+        <div className="absolute -top-[30%] -right-[20%] w-[60%] h-[60%] bg-glow-primary rounded-full blur-[120px] opacity-20"></div>
+        <div className="absolute -bottom-[20%] left-[20%] w-[50%] h-[50%] bg-glow-secondary rounded-full blur-[120px] opacity-15"></div>
+      </motion.div>
       
-      {/* Glowing Effects */}
-      <div className="absolute -top-[30%] -right-[20%] w-[60%] h-[60%] bg-glow-primary rounded-full blur-[120px] opacity-5"></div>
-      <div className="absolute -bottom-[20%] left-[20%] w-[50%] h-[50%] bg-glow-secondary rounded-full blur-[120px] opacity-5"></div>
-
-      <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Heading Section */}
-        <motion.div
-          className="text-center mb-12"
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <motion.h2
+          className="heading-lg mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="heading-lg mb-4">
-            <span className="text-white">Ready to Build </span>
-            <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent">
-              AI Future Together?
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300">
-            Whether you're a student or organization - there's a place for you in our ecosystem
-          </p>
-        </motion.div>
-
-        {/* CTA Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Student Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <Card 
-              className="p-8 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
-              glowColor="primary"
-            >
-              <div className="text-primary mb-6">
-                <GraduationCap size={32} />
+          <span className="text-app-text">Ready to Build India's </span>
+          <span className="text-accent">AI Future Together?</span>
+        </motion.h2>
+        
+        <motion.p
+          className="text-xl text-app-text-muted mb-10 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          Whether you're a student or organization - there's a place for you in our ecosystem
+        </motion.p>
+        
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {/* For Students Card */}
+          <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-full h-full bg-glow-primary opacity-10 blur-3xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                  <GraduationCap size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-app-text">For Students</h3>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">For Students</h3>
-              <p className="text-gray-300 mb-8">
+              <p className="text-app-text-muted mb-6">
                 Master AI & coding with guaranteed career pathways
               </p>
               <Button 
-                variant="primary"
-                to="/academies"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
+                variant="primary" 
+                size="lg"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                Explore Student Programs
+                Explore Student Programs →
               </Button>
-            </Card>
-          </motion.div>
+            </div>
+          </div>
 
-          {/* Organization Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Card 
-              className="p-8 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
-              glowColor="secondary"
-            >
-              <div className="text-secondary mb-6">
-                <Handshake size={32} />
+          {/* For Organizations Card */}
+          <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-full h-full bg-glow-secondary opacity-10 blur-3xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                  <Handshake size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-app-text">For Organizations</h3>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">For Organizations</h3>
-              <p className="text-gray-300 mb-8">
+              <p className="text-app-text-muted mb-6">
                 Join us in shaping AI ecosystem
               </p>
               <Button 
-                variant="secondary"
-                to="/partnerships"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
+                variant="secondary" 
+                size="lg"
+                href="https://calendly.com/globalai-research/collaboration-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                Partner With Us
+                Partner With Us →
               </Button>
-            </Card>
-          </motion.div>
-        </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Additional CTA Buttons */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Button 
+            variant="accent" 
+            size="lg"
+            href="https://calendly.com/globalai-research/collaboration-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<Calendar size={20} />}
+            iconPosition="left"
+          >
+            Schedule a Discussion
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            size="lg"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<Download size={20} />}
+            iconPosition="left"
+          >
+            Download Vision Document
+          </Button>
+        </motion.div>
       </div>
     </Section>
   );
