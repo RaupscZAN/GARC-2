@@ -69,13 +69,12 @@ const PartnershipPathways: React.FC = () => {
           
           {/* Image Section - Takes 1/3 of the width */}
           <div className="lg:col-span-1">
-            <div className="w-full aspect-[4/5] bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-gray-400 text-lg">Image</span>
-                </div>
-                <p className="text-app-text-muted text-xl font-medium">Partnership Image</p>
-              </div>
+            <div className="w-full aspect-[4/5] rounded-xl overflow-hidden">
+              <img 
+                src="https://static.wixstatic.com/media/a9a928_e7447ce7e77440baa5f586dd30a22da0~mv2.jpg/v1/fill/w_1610,h_980,fp_0.51_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-robot-hand-close-human-hand.jpg"
+                alt="AI and human hands reaching towards each other"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
