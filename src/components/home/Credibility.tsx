@@ -36,7 +36,7 @@ const Credibility: React.FC = () => {
     <Section>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Image Placeholder */}
+          {/* Image */}
           <motion.div 
             className="lg:col-span-4"
             initial={{ opacity: 0 }}
@@ -44,9 +44,12 @@ const Credibility: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="h-full bg-gray-100 rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-              <ImageIcon size={48} className="mb-4" />
-              <p className="text-sm">Partnership Image</p>
+            <div className="h-full rounded-xl overflow-hidden">
+              <img 
+                src="https://img.freepik.com/free-photo/ai-robot-analyzing-data-with-futuristic-interface_23-2151977874.jpg?uid=R202748237&ga=GA1.1.360999499.1748867525&semt=ais_hybrid&w=740"
+                alt="AI Robot analyzing data"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
