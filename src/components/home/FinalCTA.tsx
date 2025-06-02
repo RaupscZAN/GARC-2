@@ -42,21 +42,22 @@ const FinalCTA: React.FC = () => {
         </motion.p>
         
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {/* For Students Card */}
-          <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-12 text-left relative overflow-hidden">
+          <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-12 text-left relative overflow-hidden flex flex-col h-full">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="relative z-10">
-              <GraduationCap size={48} className="text-primary mb-8" />
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="flex items-center gap-4 mb-6">
+                <GraduationCap size={48} className="text-primary" />
+                <h3 className="text-3xl font-bold text-white">For Students</h3>
+              </div>
               
-              <h3 className="text-3xl font-bold text-white mb-6">For Students</h3>
-              
-              <p className="text-gray-300 text-lg mb-12 leading-relaxed">
+              <p className="text-gray-300 text-lg mb-auto leading-relaxed">
                 Master AI & coding with guaranteed career pathways
               </p>
               
@@ -66,7 +67,7 @@ const FinalCTA: React.FC = () => {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-lg py-4 rounded-xl"
+                className="w-full text-lg py-4 rounded-xl mt-8"
               >
                 Explore Student Programs →
               </Button>
@@ -74,14 +75,15 @@ const FinalCTA: React.FC = () => {
           </div>
 
           {/* For Organizations Card */}
-          <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-12 text-left relative overflow-hidden">
+          <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-12 text-left relative overflow-hidden flex flex-col h-full">
             <div className="absolute top-0 right-0 w-full h-full bg-secondary/5 rounded-full blur-3xl"></div>
-            <div className="relative z-10">
-              <Handshake size={48} className="text-secondary mb-8" />
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="flex items-center gap-4 mb-6">
+                <Handshake size={48} className="text-secondary" />
+                <h3 className="text-3xl font-bold text-white">For Organizations</h3>
+              </div>
               
-              <h3 className="text-3xl font-bold text-white mb-6">For Organizations</h3>
-              
-              <p className="text-gray-300 text-lg mb-12 leading-relaxed">
+              <p className="text-gray-300 text-lg mb-auto leading-relaxed">
                 Join us in shaping AI ecosystem
               </p>
               
@@ -91,7 +93,7 @@ const FinalCTA: React.FC = () => {
                 href="https://calendly.com/globalai-research/collaboration-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-lg py-4 rounded-xl"
+                className="w-full text-lg py-4 rounded-xl mt-8"
               >
                 Partner With Us →
               </Button>
