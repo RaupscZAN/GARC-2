@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Background image with overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-x-[-1]"
         style={{ 
           backgroundImage: 'url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-technology-big-data-background-concept-generate-ai-image_15686420.jpg")'
         }}
