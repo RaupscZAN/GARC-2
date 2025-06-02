@@ -31,7 +31,7 @@ const GlowingText: React.FC<GlowingTextProps> = ({
   };
 
   const baseClasses = 'relative';
-  const glowClasses = 'glow-text';
+  const glowClasses = 'after:absolute after:inset-0 after:bg-current after:opacity-50 after:blur-lg after:-z-10';
   const textColor = gradient ? gradientClasses[color] : colorClasses[color];
 
   const ElementTag = element as keyof JSX.IntrinsicElements;

@@ -35,9 +35,9 @@ const BackgroundEffects: React.FC = () => {
           speedX: (Math.random() - 0.5) * 0.3,
           speedY: (Math.random() - 0.5) * 0.3,
           color: [
-            'rgba(0, 191, 165, 0.1)', // Primary teal
-            'rgba(0, 172, 193, 0.1)', // Secondary blue
-            'rgba(255, 184, 0, 0.1)',  // Accent yellow
+            'rgba(0, 191, 165, 0.15)', // Primary teal
+            'rgba(0, 172, 193, 0.15)', // Secondary blue
+            'rgba(255, 184, 0, 0.15)',  // Accent yellow
           ][Math.floor(Math.random() * 3)]
         });
       }
@@ -66,7 +66,7 @@ const BackgroundEffects: React.FC = () => {
             
             if (distance < 120) {
               ctx.beginPath();
-              ctx.strokeStyle = `rgba(0, 191, 165, ${0.02 - distance / 6000})`;
+              ctx.strokeStyle = `rgba(0, 191, 165, ${0.05 - distance / 6000})`;
               ctx.lineWidth = 0.3;
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -95,9 +95,9 @@ const BackgroundEffects: React.FC = () => {
         ref={canvasRef}
         className="fixed inset-0 w-full h-full -z-10 opacity-40 pointer-events-none"
       />
-      <div className="fixed -top-[30%] -right-[20%] w-[60%] h-[60%] bg-glow-primary rounded-full blur-[120px] opacity-[0.03] -z-10" />
-      <div className="fixed top-[60%] -left-[30%] w-[70%] h-[70%] bg-glow-secondary rounded-full blur-[120px] opacity-[0.03] -z-10" />
-      <div className="fixed -bottom-[20%] right-[20%] w-[50%] h-[50%] bg-glow-accent rounded-full blur-[120px] opacity-[0.03] -z-10" />
+      <div className="fixed -top-[30%] -right-[20%] w-[60%] h-[60%] bg-glow-primary rounded-full blur-[120px] opacity-[0.05] -z-10" />
+      <div className="fixed top-[60%] -left-[30%] w-[70%] h-[70%] bg-glow-secondary rounded-full blur-[120px] opacity-[0.05] -z-10" />
+      <div className="fixed -bottom-[20%] right-[20%] w-[50%] h-[50%] bg-glow-accent rounded-full blur-[120px] opacity-[0.05] -z-10" />
     </>
   );
 };

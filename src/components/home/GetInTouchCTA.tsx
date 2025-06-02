@@ -51,7 +51,7 @@ const GetInTouchCTA: React.FC = () => {
           <Button 
             variant="accent" 
             size="lg"
-            href="https://calendly.com/your-garc-link"
+            href="https://calendly.com/globalai-research/collaboration-call"
             target="_blank"
             rel="noopener noreferrer"
             icon={<Calendar size={20} />}
