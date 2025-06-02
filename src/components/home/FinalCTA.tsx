@@ -42,20 +42,20 @@ const FinalCTA: React.FC = () => {
         </motion.p>
         
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 items-stretch"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {/* For Students Card */}
-          <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-xl p-8 relative overflow-hidden">
+          <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-xl p-8 relative overflow-hidden flex flex-col">
             <div className="absolute top-0 right-0 w-full h-full bg-primary/5 rounded-full blur-3xl"></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <GraduationCap size={24} className="text-primary" />
-                For Students
-              </h3>
+            <div className="relative z-10 flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <GraduationCap size={32} className="text-primary" />
+                <h3 className="text-2xl font-bold text-white">For Students</h3>
+              </div>
               <p className="text-gray-300 mb-6">
                 Master AI & coding with guaranteed career pathways
               </p>
@@ -73,13 +73,13 @@ const FinalCTA: React.FC = () => {
           </div>
 
           {/* For Organizations Card */}
-          <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-xl p-8 relative overflow-hidden">
+          <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-xl p-8 relative overflow-hidden flex flex-col">
             <div className="absolute top-0 right-0 w-full h-full bg-secondary/5 rounded-full blur-3xl"></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Handshake size={24} className="text-secondary" />
-                For Organizations
-              </h3>
+            <div className="relative z-10 flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <Handshake size={32} className="text-secondary" />
+                <h3 className="text-2xl font-bold text-white">For Organizations</h3>
+              </div>
               <p className="text-gray-300 mb-6">
                 Join us in shaping AI ecosystem
               </p>
