@@ -7,25 +7,25 @@ import Button from '../ui/Button';
 
 const pathways = [
   {
-    icon: <Building2 size={24} />,
+    icon: <Building2 size={32} />,
     title: 'Industry Partners',
     description: 'Hire talent, guide curriculum, sponsor research',
     color: 'primary'
   },
   {
-    icon: <GraduationCap size={24} />,
+    icon: <GraduationCap size={32} />,
     title: 'Academic Partners',
     description: 'Joint programs, knowledge exchange, resource sharing',
     color: 'secondary'
   },
   {
-    icon: <Users size={24} />,
+    icon: <Users size={32} />,
     title: 'Investors & Mentors',
     description: 'Support student ventures, guide entrepreneurs',
     color: 'accent'
   },
   {
-    icon: <Server size={24} />,
+    icon: <Server size={32} />,
     title: 'Technology Partners',
     description: 'Provide infrastructure, tools, and platforms',
     color: 'primary'
@@ -51,25 +51,25 @@ const PartnershipPathways: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 aspect-square flex flex-col justify-center text-center" glowColor={pathway.color as 'primary' | 'secondary' | 'accent'}>
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 mx-auto text-${pathway.color}`}>
+                <Card className="p-8 aspect-square flex flex-col justify-center text-center" glowColor={pathway.color as 'primary' | 'secondary' | 'accent'}>
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 mx-auto text-${pathway.color}`}>
                     {pathway.icon}
                   </div>
-                  <h3 className="text-sm font-semibold text-app-text mb-2">{pathway.title}</h3>
-                  <p className="text-app-text-muted text-sm leading-tight">{pathway.description}</p>
+                  <h3 className="text-lg font-semibold text-app-text mb-3">{pathway.title}</h3>
+                  <p className="text-app-text-muted text-base leading-relaxed">{pathway.description}</p>
                 </Card>
               </motion.div>
             ))}
           </div>
         </div>
-
+        
         <div className="flex justify-center">
-          <div className="w-full max-w-lg h-full bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
+          <div className="w-full max-w-md aspect-[4/5] bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
             <div className="text-center">
-              <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-gray-400 text-sm">Image</span>
+              <div className="w-32 h-32 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <span className="text-gray-400 text-lg">Image</span>
               </div>
-              <p className="text-app-text-muted text-lg">Partnership Image</p>
+              <p className="text-app-text-muted text-xl font-medium">Partnership Image</p>
             </div>
           </div>
         </div>
