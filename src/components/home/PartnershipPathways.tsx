@@ -42,7 +42,7 @@ const PartnershipPathways: React.FC = () => {
             <span className="text-accent">with GARC</span>
           </h2>
           
-          <div className="grid grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-2 gap-3 max-w-sm">
             {pathways.map((pathway, index) => (
               <motion.div
                 key={index}
@@ -51,37 +51,25 @@ const PartnershipPathways: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 aspect-square flex flex-col justify-center text-center" glowColor={pathway.color as 'primary' | 'secondary' | 'accent'}>
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 mx-auto text-${pathway.color}`}>
+                <Card className="p-3 aspect-square flex flex-col justify-center text-center" glowColor={pathway.color as 'primary' | 'secondary' | 'accent'}>
+                  <div className={`w-6 h-6 rounded-lg flex items-center justify-center mb-2 mx-auto text-${pathway.color}`}>
                     {pathway.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-app-text mb-3">{pathway.title}</h3>
-                  <p className="text-app-text-muted text-sm">{pathway.description}</p>
+                  <h3 className="text-xs font-semibold text-app-text mb-1">{pathway.title}</h3>
+                  <p className="text-app-text-muted text-xs leading-tight">{pathway.description}</p>
                 </Card>
               </motion.div>
             ))}
           </div>
-
-          <div className="text-left">
-            <Button
-              variant="accent"
-              size="lg"
-              to="/partnerships"
-              icon={<ArrowRight size={20} />}
-              iconPosition="right"
-            >
-              Explore Partnership Options
-            </Button>
-          </div>
         </div>
 
         <div className="flex justify-center">
-          <div className="aspect-square w-full max-w-md bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
+          <div className="aspect-square w-full max-w-lg bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent text-2xl">🤝</span>
+              <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-gray-400 text-sm">Image</span>
               </div>
-              <p className="text-app-text-muted">Partnership Image</p>
+              <p className="text-app-text-muted text-lg">Partnership Image</p>
             </div>
           </div>
         </div>
