@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           backgroundImage: 'url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-technology-big-data-background-concept-generate-ai-image_15686420.jpg")'
         }}
       >
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
