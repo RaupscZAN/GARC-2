@@ -71,7 +71,7 @@ const PartnershipPathways: React.FC = () => {
           <div className="lg:col-span-1">
             <div className="w-full aspect-[4/5] rounded-xl overflow-hidden">
               <img 
-                src="https://static.wixstatic.com/media/a9a928_e7447ce7e77440baa5f586dd30a22da0~mv2.jpg/v1/fill/w_1610,h_980,fp_0.51_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-robot-hand-close-human-hand.jpg"
+                src="https://img.freepik.com/free-photo/business-hand-robot-handshake-artificial-intelligence-digital-transformation_53876-138972.jpg?semt=ais_hybrid&w=740"
                 alt="AI and human hands reaching towards each other"
                 className="w-full h-full object-cover"
               />
