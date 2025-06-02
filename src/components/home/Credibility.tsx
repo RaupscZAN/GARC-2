@@ -44,7 +44,7 @@ const Credibility: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="aspect-square bg-gray-100 rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
+            <div className="aspect-[3/4] bg-gray-100 rounded-xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
               <ImageIcon size={48} className="mb-4" />
               <p className="text-sm">Partnership Image</p>
             </div>
