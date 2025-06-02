@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, GraduationCap, Users, Server, ArrowRight } from 'lucide-react';
+import { Building2, GraduationCap, Users, Server, Image } from 'lucide-react';
 import Section from '../ui/Section';
 import Card from '../ui/Card';
-import Button from '../ui/Button';
 
 const pathways = [
   {
@@ -42,36 +41,39 @@ const PartnershipPathways: React.FC = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        {pathways.map((pathway, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <Card className="p-6 h-full" glowColor={pathway.color as 'primary' | 'secondary' | 'accent'}>
-              <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-${pathway.color}`}>
-                {pathway.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-app-text mb-3">{pathway.title}</h3>
-              <p className="text-app-text-muted">{pathway.description}</p>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {pathways.map((pathway, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <Card className="p-6" glowColor={pathway.color as 'primary' | 'secondary' | 'accent'}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className={`text-${pathway.color}`}>{pathway.icon}</div>
+                    <h3 className="text-xl font-semibold text-app-text">{pathway.title}</h3>
+                  </div>
+                  <p className="text-app-text-muted">{pathway.description}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
-      <div className="text-center">
-        <Button
-          variant="accent"
-          size="lg"
-          to="/partnerships"
-          icon={<ArrowRight size={20} />}
-          iconPosition="right"
+        <motion.div
+          className="relative aspect-[3/4] bg-gray-100 rounded-lg border-2 border-dashed border-gray-200 flex flex-col items-center justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
-          Explore Partnership Options
-        </Button>
+          <Image size={32} className="text-gray-400 mb-2" />
+          <p className="text-sm text-gray-400">Partnership Image</p>
+        </motion.div>
       </div>
     </Section>
   );
