@@ -28,6 +28,7 @@ const partnerCategories = [
 const PartnershipSection: React.FC = () => {
   return (
     <Section id="partnerships" className="bg-surface/30" pattern="dot">
+      {/* Add container wrapper for centering */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -85,22 +86,8 @@ const PartnershipSection: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          {/* Updated grid layout for better balance */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-            {/* Image section - takes 2 columns */}
-            <div className="lg:col-span-2">
-              <div className="aspect-square bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-gray-400 text-lg">Image</span>
-                  </div>
-                  <p className="text-app-text-muted text-xl font-medium">Partnership Image</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Content section - takes 3 columns */}
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
               <h3 className="heading-md mb-4">Government Advisory & Policy</h3>
               <p className="text-app-text-muted mb-6">
                 GARC works closely with government bodies to shape AI policy, provide technical guidance, 
@@ -112,27 +99,27 @@ const PartnershipSection: React.FC = () => {
               >
                 Explore Partnership Opportunities
               </Button>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                <h4 className="text-app-text font-semibold mb-1">Policy Frameworks</h4>
+                <p className="text-app-text-muted text-sm">Shaping responsible AI governance</p>
+              </div>
               
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                  <h4 className="text-app-text font-semibold mb-1">Policy Frameworks</h4>
-                  <p className="text-app-text-muted text-sm">Shaping responsible AI governance</p>
-                </div>
-                
-                <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                  <h4 className="text-app-text font-semibold mb-1">Talent Development</h4>
-                  <p className="text-app-text-muted text-sm">Building India's AI workforce</p>
-                </div>
-                
-                <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                  <h4 className="text-app-text font-semibold mb-1">Technology Transfer</h4>
-                  <p className="text-app-text-muted text-sm">From research to implementation</p>
-                </div>
-                
-                <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                  <h4 className="text-app-text font-semibold mb-1">Strategic Advisory</h4>
-                  <p className="text-app-text-muted text-sm">AI roadmaps for public sector</p>
-                </div>
+              <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                <h4 className="text-app-text font-semibold mb-1">Talent Development</h4>
+                <p className="text-app-text-muted text-sm">Building India's AI workforce</p>
+              </div>
+              
+              <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                <h4 className="text-app-text font-semibold mb-1">Technology Transfer</h4>
+                <p className="text-app-text-muted text-sm">From research to implementation</p>
+              </div>
+              
+              <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
+                <h4 className="text-app-text font-semibold mb-1">Strategic Advisory</h4>
+                <p className="text-app-text-muted text-sm">AI roadmaps for public sector</p>
               </div>
             </div>
           </div>
