@@ -47,7 +47,7 @@ const Opportunity: React.FC = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         {opportunities.map((opportunity, index) => (
           <motion.div
             key={index}
