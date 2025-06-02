@@ -64,7 +64,7 @@ const PartnershipPathways: React.FC = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-full max-w-lg h-full bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
+          <div className="aspect-square w-full max-w-lg bg-surface/60 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center">
             <div className="text-center">
               <div className="w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-gray-400 text-sm">Image</span>
