@@ -213,28 +213,7 @@ const Academies: React.FC = () => {
             </motion.div>
           </div>
 
-          <div className="text-center">
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                variant="primary"
-                size="lg"
-                to="/apply/vca"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
-              >
-                Explore VCA
-              </Button>
-              <Button
-                variant="secondary"
-                size="lg"
-                to="/apply/aiata"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
-              >
-                Explore AiAta
-              </Button>
-            </div>
-          </div>
+
         </div>
       </Section>
 
@@ -248,7 +227,7 @@ const Academies: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8" glowColor="primary">
               <h3 className="text-2xl font-bold text-app-text mb-6">VCA Path</h3>
               <ul className="space-y-4">
@@ -287,12 +266,6 @@ const Academies: React.FC = () => {
               </ul>
             </Card>
           </div>
-
-          <div className="bg-background/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-            <p className="text-app-text-muted">
-              <strong className="text-app-text">Both paths include:</strong> Industry partnerships • Expert mentorship • Real project experience • Multiple career outcomes
-            </p>
-          </div>
         </div>
       </Section>
 
@@ -330,18 +303,20 @@ const Academies: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="flex items-center justify-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-accent text-white font-bold text-xl flex items-center justify-center mr-3">
-                    {step.number}
-                  </div>
-                  <h3 className="text-lg font-semibold text-app-text">{step.title}</h3>
-                  {index < 2 && (
-                    <div className="hidden md:block absolute top-6 left-full w-full">
-                      <ArrowRight size={20} className="text-accent mx-auto" />
+                <div className="flex flex-col items-center mb-4">
+                  <div className="flex items-center justify-center mb-2">
+                    <div className="w-12 h-12 rounded-full bg-accent text-white font-bold text-xl flex items-center justify-center">
+                      {step.number}
                     </div>
-                  )}
+                  </div>
+                  <h3 className="text-lg font-semibold text-app-text text-center">{step.title}</h3>
                 </div>
-                <p className="text-app-text-muted">{step.description}</p>
+                <p className="text-app-text-muted text-center">{step.description}</p>
+                {index < 2 && (
+                  <div className="hidden md:flex absolute top-6 -right-4 w-8 justify-center">
+                    <ArrowRight size={20} className="text-accent" />
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
