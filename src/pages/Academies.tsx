@@ -13,7 +13,7 @@ const Academies: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
         {/* Tech Background - Similar to the image */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900" />
         
@@ -42,32 +42,43 @@ const Academies: React.FC = () => {
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40" />
         
-        <div className="text-center max-w-4xl mx-auto relative z-10">
-          <h1 className="heading-xl mb-6 text-white">
-            <span className="text-white">Industry-Connected AI & Technology </span>
-            <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-yellow-300 bg-clip-text text-transparent">Education</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Two specialized academies powered by strategic partnerships, creating direct pathways from learning to career success
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="primary"
-              size="lg"
-              href="#vca-section"
-            >
-              Explore VCA
-            </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              href="#aiata-section"
-            >
-              Explore AiAta
-            </Button>
-          </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-white">
+              <span className="text-white">Industry-Connected AI & </span>
+              <br />
+              <span className="text-white">Technology </span>
+              <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-yellow-300 bg-clip-text text-transparent">Education</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
+              Two specialized academies powered by strategic partnerships, creating direct pathways from learning to career success
+            </p>
+            <div className="flex flex-wrap gap-6 justify-center">
+              <Button
+                variant="primary"
+                size="lg"
+                href="#vca-section"
+                className="min-w-[200px]"
+              >
+                Explore VCA
+              </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                href="#aiata-section"
+                className="min-w-[200px]"
+              >
+                Explore AiAta
+              </Button>
+            </div>
+          </motion.div>
         </div>
-      </Section>
+      </section>
 
       {/* Partnership Advantage Section */}
       <Section className="bg-surface/30">
