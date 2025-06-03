@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Shield, Building2, Sparkles, Server, Cpu, Lock, Building, Globe, Lightbulb, Book, Newspaper, Podcast, Calendar, ArrowRight, Download, Users, Target, FlaskConical, Zap, Network, Database, BarChart, FileText, Award, Eye, Layers } from 'lucide-react';
+import { Brain, Shield, Building2, Sparkles, Server, Cpu, Lock, Building, Globe, Lightbulb, Book, Newspaper, Podcast, Calendar, ArrowRight, Download, Users, Target, FlaskConical, Zap, Network, Database, BarChart, FileText, Award, Eye, Layers, GraduationCap } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
