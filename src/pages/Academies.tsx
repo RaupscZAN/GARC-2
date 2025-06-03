@@ -14,19 +14,40 @@ const Academies: React.FC = () => {
     <>
       {/* Hero Section */}
       <Section className="pt-32 pb-16 relative overflow-hidden">
-        {/* Tech Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 opacity-30" />
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-primary/10" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-secondary/10" />
+        {/* Tech Background - Similar to the image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900" />
+        
+        {/* Floating particles/dots effect */}
+        <div className="absolute inset-0">
+          {/* Large glowing orbs */}
+          <div className="absolute top-20 left-1/4 w-32 h-32 bg-teal-400/30 rounded-full blur-2xl animate-pulse-slow" />
+          <div className="absolute top-40 right-1/3 w-24 h-24 bg-blue-400/40 rounded-full blur-xl animate-pulse-slow" />
+          <div className="absolute bottom-32 left-1/3 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-20 right-1/4 w-28 h-28 bg-yellow-400/25 rounded-full blur-2xl animate-pulse-slow" />
+          
+          {/* Small scattered dots */}
+          <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-teal-300/60 rounded-full animate-float" />
+          <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-300/50 rounded-full animate-float" />
+          <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-cyan-300/40 rounded-full animate-float" />
+          <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-yellow-300/60 rounded-full animate-float" />
+          <div className="absolute top-1/2 left-1/6 w-3 h-3 bg-green-300/50 rounded-full animate-float" />
+          <div className="absolute top-3/4 right-1/5 w-2 h-2 bg-purple-300/40 rounded-full animate-float" />
+          
+          {/* Network connection lines effect */}
+          <div className="absolute top-1/3 left-1/4 w-32 h-px bg-gradient-to-r from-transparent via-teal-400/30 to-transparent" />
+          <div className="absolute bottom-1/2 right-1/3 w-24 h-px bg-gradient-to-r from-transparent via-blue-400/25 to-transparent rotate-45" />
+          <div className="absolute top-1/2 left-1/2 w-40 h-px bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent -rotate-12" />
+        </div>
+        
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40" />
         
         <div className="text-center max-w-4xl mx-auto relative z-10">
-          <h1 className="heading-xl mb-6">
-            <span className="text-app-text">Industry-Connected AI & Technology </span>
-            <span className="text-primary">Education</span>
+          <h1 className="heading-xl mb-6 text-white">
+            <span className="text-white">Industry-Connected AI & Technology </span>
+            <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-yellow-300 bg-clip-text text-transparent">Education</span>
           </h1>
-          <p className="text-lg md:text-xl text-app-text-muted mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Two specialized academies powered by strategic partnerships, creating direct pathways from learning to career success
           </p>
           <div className="flex flex-wrap justify-center gap-4">
