@@ -14,14 +14,12 @@ const Academies: React.FC = () => {
     <>
       {/* Hero Section */}
       <Section className="pt-32 pb-16 relative overflow-hidden">
-        {/* Tech Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&h=1080')"
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-background/90" />
+        {/* Tech Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 opacity-30" />
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-primary/10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-secondary/10" />
         
         <div className="text-center max-w-4xl mx-auto relative z-10">
           <h1 className="heading-xl mb-6">
