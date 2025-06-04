@@ -419,33 +419,66 @@ const ResearchInnovation: React.FC = () => {
 
       {/* Call to Action Section */}
       <Section id="get-involved" className="bg-surface/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading-lg mb-4">
-            <span className="text-app-text">Be Part of India's </span>
-            <span className="text-accent">AI Research Revolution</span>
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="heading-lg mb-16">
+            <span className="text-app-text">Ready to </span>
+            <span className="text-accent">Get Involved?</span>
           </h2>
-          <p className="text-xl text-app-text-muted mb-8">
-            Whether you're a researcher, institution, or industry partner, there's a place for you in our ecosystem
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="primary"
-              size="lg"
-              href="/research/submit-proposal"
-              icon={<Download size={20} />}
-              iconPosition="left"
-            >
-              Submit Research Proposal
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              to="/partnerships"
-              icon={<ArrowRight size={20} />}
-              iconPosition="right"
-            >
-              Explore Partnership Options
-            </Button>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* For Researchers */}
+            <Card className="p-8 text-center" glowColor="primary">
+              <h3 className="text-2xl font-bold text-app-text mb-4">For Researchers</h3>
+              <p className="text-app-text-muted mb-8">
+                Submit your breakthrough ideas and amplify your research impact
+              </p>
+              <Button
+                variant="primary"
+                size="lg"
+                href="/research/submit-proposal"
+                icon={<Download size={20} />}
+                iconPosition="right"
+                className="w-full"
+              >
+                Submit Research Proposal
+              </Button>
+            </Card>
+
+            {/* For Institutions */}
+            <Card className="p-8 text-center" glowColor="secondary">
+              <h3 className="text-2xl font-bold text-app-text mb-4">For Institutions</h3>
+              <p className="text-app-text-muted mb-8">
+                Join our consortium and access world-class AI infrastructure
+              </p>
+              <Button
+                variant="secondary"
+                size="lg"
+                href="/consortium/join"
+                icon={<ArrowRight size={20} />}
+                iconPosition="right"
+                className="w-full"
+              >
+                Join Data Consortium
+              </Button>
+            </Card>
+
+            {/* For Leaders */}
+            <Card className="p-8 text-center" glowColor="accent">
+              <h3 className="text-2xl font-bold text-app-text mb-4">For Leaders</h3>
+              <p className="text-app-text-muted mb-8">
+                Shape the future of AI through strategic collaboration
+              </p>
+              <Button
+                variant="accent"
+                size="lg"
+                to="/partnerships"
+                icon={<ArrowRight size={20} />}
+                iconPosition="right"
+                className="w-full"
+              >
+                Explore Partnerships
+              </Button>
+            </Card>
           </div>
         </div>
       </Section>
