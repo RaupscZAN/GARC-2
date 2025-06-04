@@ -22,7 +22,8 @@ import {
   GraduationCap,
   Users,
   Scale,
-  Award
+  Award,
+  Target
 } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
