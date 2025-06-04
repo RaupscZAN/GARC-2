@@ -37,25 +37,28 @@ const ResearchInnovation: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-900 to-secondary-900 opacity-90" />
-          <img
-            src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
-            alt="AI Research Background"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,97,209,0.15),transparent_50%)]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
+        
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
               Join the Premier AI Research Ecosystem
             </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 mb-8">
               Collaborate with leading researchers, contribute breakthrough ideas, and help build 
               world-class AI infrastructure that advances technological leadership
             </p>
@@ -70,35 +73,44 @@ const ResearchInnovation: React.FC = () => {
             </Button>
           </motion.div>
         </div>
-      </Section>
+      </section>
 
       {/* Introduction Section */}
       <Section className="bg-surface/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading-lg mb-6">
-            <span className="text-app-text">Why Leading Researchers </span>
-            <span className="text-primary">Choose GARC</span>
-          </h2>
-          <p className="text-lg text-app-text-muted">
-            Access world-class computational infrastructure, collaborate with international research partners, 
-            and amplify your research impact through our comprehensive ecosystem. At GARC, your breakthrough 
-            ideas get the resources, recognition, and real-world application they deserve—while you help build 
-            the foundation for the next generation of AI innovation.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="heading-lg mb-6">
+                <span className="text-app-text">Why Leading Researchers </span>
+                <span className="text-primary">Choose GARC</span>
+              </h2>
+              <p className="text-lg text-app-text-muted">
+                Access world-class computational infrastructure, collaborate with international research partners, 
+                and amplify your research impact through our comprehensive ecosystem. At GARC, your breakthrough 
+                ideas get the resources, recognition, and real-world application they deserve—while you help build 
+                the foundation for the next generation of AI innovation.
+              </p>
+            </div>
+            <div className="relative h-[400px] rounded-xl overflow-hidden">
+              <img 
+                src="https://www.outseer.com/wp-content/uploads/blog-data_consortium-ft.jpg"
+                alt="Research Infrastructure"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </Section>
 
       {/* Research Areas Section */}
       <Section className="bg-surface/30" pattern="grid">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">
+          <div className="flex items-center gap-4 mb-16">
+            <Brain size={32} className="text-primary" />
+            <h2 className="heading-lg">
               <span className="text-app-text">Four Pillars of </span>
               <span className="text-primary">AI Innovation</span>
             </h2>
-            <p className="text-app-text-muted max-w-2xl mx-auto">
-              Contributing to breakthrough research across critical domains
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -162,6 +174,88 @@ const ResearchInnovation: React.FC = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* AI Advisory Board Section */}
+      <Section className="bg-surface/30" pattern="grid">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center gap-4 mb-16">
+            <Users size={32} className="text-accent" />
+            <h2 className="heading-lg">
+              <span className="text-app-text">Guided by </span>
+              <span className="text-accent">World-Class Expertise</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+            {[
+              {
+                icon: <GraduationCap size={24} />,
+                title: "Academic Leaders",
+                description: "MIT, Stanford, Cambridge professors + IIT/IISc leaders",
+                color: "primary"
+              },
+              {
+                icon: <Building2 size={24} />,
+                title: "Industry Pioneers",
+                description: "Tech CTOs, AI startup founders, innovation executives",
+                color: "secondary"
+              },
+              {
+                icon: <Scale size={24} />,
+                title: "Policy & Ethics Experts",
+                description: "AI governance specialists, technology regulation advisors",
+                color: "accent"
+              },
+              {
+                icon: <Globe size={24} />,
+                title: "Global Innovators",
+                description: "International research pioneers, emerging tech thought leaders",
+                color: "primary"
+              }
+            ].map((category, index) => (
+              <Card key={index} className="p-8" glowColor={category.color as 'primary' | 'secondary' | 'accent'}>
+                <div className={`text-${category.color} mb-4`}>{category.icon}</div>
+                <h3 className="text-xl font-semibold text-app-text mb-3">{category.title}</h3>
+                <p className="text-app-text-muted">{category.description}</p>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-app-text mb-6">Board Impact</h3>
+          </div>
+
+          <Card className="p-8" glowColor="accent">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <Target size={24} />,
+                  title: "Research Direction",
+                  description: "Setting strategic priorities and identifying emerging opportunities"
+                },
+                {
+                  icon: <Award size={24} />,
+                  title: "Global Standards",
+                  description: "Ensuring research meets international benchmarks"
+                },
+                {
+                  icon: <Users size={24} />,
+                  title: "Network Access",
+                  description: "Facilitating collaborations with top-tier institutions"
+                }
+              ].map((impact, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="text-accent shrink-0">{impact.icon}</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-app-text mb-2">{impact.title}</h4>
+                    <p className="text-app-text-muted">{impact.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
         </div>
       </Section>
 
@@ -238,92 +332,6 @@ const ResearchInnovation: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
             </div>
           </div>
-        </div>
-      </Section>
-
-      {/* AI Advisory Board Section */}
-      <Section className="bg-surface/30" pattern="grid">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Guided by </span>
-              <span className="text-accent">World-Class Expertise</span>
-            </h2>
-            <p className="text-xl text-accent mb-4">
-              Strategic direction from leading AI researchers, industry pioneers, and policy experts
-            </p>
-            <p className="text-app-text-muted max-w-3xl mx-auto">
-              Our Global AI Advisory Board brings together distinguished leaders who meet quarterly 
-              and convene annually to shape research priorities, ensure international standards, and 
-              connect GARC with premier global networks.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {[
-              {
-                icon: <GraduationCap size={24} />,
-                title: "Academic Leaders",
-                description: "MIT, Stanford, Cambridge professors + IIT/IISc leaders",
-                color: "primary"
-              },
-              {
-                icon: <Building2 size={24} />,
-                title: "Industry Pioneers",
-                description: "Tech CTOs, AI startup founders, innovation executives",
-                color: "secondary"
-              },
-              {
-                icon: <Scale size={24} />,
-                title: "Policy & Ethics Experts",
-                description: "AI governance specialists, technology regulation advisors",
-                color: "accent"
-              },
-              {
-                icon: <Globe size={24} />,
-                title: "Global Innovators",
-                description: "International research pioneers, emerging tech thought leaders",
-                color: "primary"
-              }
-            ].map((category, index) => (
-              <Card key={index} className="p-8" glowColor={category.color as 'primary' | 'secondary' | 'accent'}>
-                <div className={`text-${category.color} mb-4`}>{category.icon}</div>
-                <h3 className="text-xl font-semibold text-app-text mb-3">{category.title}</h3>
-                <p className="text-app-text-muted">{category.description}</p>
-              </Card>
-            ))}
-          </div>
-
-          <Card className="p-8" glowColor="accent">
-            <h3 className="text-2xl font-bold text-app-text mb-6">Board Impact</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <Target size={24} />,
-                  title: "Research Direction",
-                  description: "Setting strategic priorities and identifying emerging opportunities"
-                },
-                {
-                  icon: <Award size={24} />,
-                  title: "Global Standards",
-                  description: "Ensuring research meets international benchmarks"
-                },
-                {
-                  icon: <Users size={24} />,
-                  title: "Network Access",
-                  description: "Facilitating collaborations with top-tier institutions"
-                }
-              ].map((impact, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="text-accent shrink-0">{impact.icon}</div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-app-text mb-2">{impact.title}</h4>
-                    <p className="text-app-text-muted">{impact.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Card>
         </div>
       </Section>
 
