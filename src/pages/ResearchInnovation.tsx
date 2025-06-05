@@ -99,7 +99,8 @@ const ResearchInnovation: React.FC = () => {
             {/* Left Column - Text Content */}
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                <span className="text-app-text">Why Leading Researchers </span>
+                <span className="text-app-text">Why Leading Researchers</span>
+                <br />
                 <span className="text-primary">Choose GARC</span>
               </h2>
               <p className="text-lg text-app-text-muted leading-relaxed">
@@ -161,7 +162,7 @@ const ResearchInnovation: React.FC = () => {
                 color: "secondary"
               },
               {
-                image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
+                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
                 title: "Domain-Specific AI Applications",
                 items: [
                   "Healthcare AI and precision medicine",
@@ -172,7 +173,7 @@ const ResearchInnovation: React.FC = () => {
                 color: "accent"
               },
               {
-                image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=250&fit=crop",
+                image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop",
                 title: "Emerging Technologies Integration",
                 items: [
                   "AI-Blockchain convergence",
@@ -208,105 +209,123 @@ const ResearchInnovation: React.FC = () => {
       <Section className="bg-surface/30" pattern="grid">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            <h2 className="heading-lg mb-4">
               <span className="text-app-text">Sharing Knowledge, </span>
-              <br />
               <span className="text-accent">Shaping the Future</span>
             </h2>
           </div>
 
-          <div className="mb-16">
-            {/* First Row - 3 cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-              {[
-                {
-                  icon: <Book size={24} />,
-                  title: "GARC AI Research Journal",
-                  items: [
-                    "Peer-reviewed quarterly publication",
-                    "Open access to global research community",
-                    "Original research in AI and machine learning",
-                    "Target: Top-tier academic recognition"
-                  ]
-                },
-                {
-                  icon: <Newspaper size={24} />,
-                  title: "AI Insights Newsletter",
-                  items: [
-                    "Monthly industry analysis",
-                    "Policy recommendations",
-                    "Research highlights",
-                    "50,000+ subscribers target"
-                  ]
-                },
-                {
-                  icon: <Podcast size={24} />,
-                  title: "Voices of AI Podcast",
-                  items: [
-                    "Weekly expert discussions",
-                    "Research deep-dives",
-                    "Industry perspectives",
-                    "Global thought leadership"
-                  ]
-                }
-              ].map((channel, index) => (
-                <Card key={index} className="p-8 h-full" glowColor="accent">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="text-accent">{channel.icon}</div>
-                    <h3 className="text-xl font-semibold text-app-text leading-tight">{channel.title}</h3>
-                  </div>
-                  <ul className="space-y-4">
-                    {channel.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
-                        <span className="text-app-text text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-16">
+            {[
+              {
+                icon: <Book size={24} />,
+                title: "GARC AI Research Journal",
+                items: [
+                  "Peer-reviewed quarterly publication",
+                  "Open access to global research community",
+                  "Original research in AI and machine learning",
+                  "Target: Top-tier academic recognition"
+                ]
+              },
+              {
+                icon: <Newspaper size={24} />,
+                title: "AI Insights Newsletter",
+                items: [
+                  "Monthly industry analysis",
+                  "Policy recommendations",
+                  "Research highlights",
+                  "50,000+ subscribers target"
+                ]
+              },
+              {
+                icon: <Podcast size={24} />,
+                title: "Voices of AI Podcast",
+                items: [
+                  "Weekly expert discussions",
+                  "Research deep-dives",
+                  "Industry perspectives",
+                  "Global thought leadership"
+                ]
+              },
+              {
+                icon: <Globe size={24} />,
+                title: "GARC Global AI Summit",
+                items: [
+                  "Annual flagship event",
+                  "5,000+ attendees",
+                  "Global streaming access",
+                  "Industry-academia collaboration"
+                ]
+              },
+              {
+                icon: <Lightbulb size={24} />,
+                title: "Quarterly Research Symposiums",
+                items: [
+                  "Specialized conferences",
+                  "Ethics forums",
+                  "Research competitions",
+                  "Industry showcases"
+                ]
+              }
+            ].map((channel, index) => (
+              <Card key={index} className="p-6" glowColor="accent">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-accent">{channel.icon}</div>
+                  <h3 className="text-lg font-semibold text-app-text">{channel.title}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {channel.items.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-accent"></div>
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Section>
 
-            {/* Second Row - 2 cards centered */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {[
-                {
-                  icon: <Globe size={24} />,
-                  title: "GARC Global AI Summit",
-                  items: [
-                    "Annual flagship event",
-                    "5,000+ attendees",
-                    "Global streaming access",
-                    "Industry-academia collaboration"
-                  ]
-                },
-                {
-                  icon: <Lightbulb size={24} />,
-                  title: "Quarterly Research Symposiums",
-                  items: [
-                    "Specialized conferences",
-                    "Ethics forums",
-                    "Research competitions",
-                    "Industry showcases"
-                  ]
-                }
-              ].map((channel, index) => (
-                <Card key={index + 3} className="p-8 h-full" glowColor="accent">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="text-accent">{channel.icon}</div>
-                    <h3 className="text-xl font-semibold text-app-text leading-tight">{channel.title}</h3>
-                  </div>
-                  <ul className="space-y-4">
-                    {channel.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
-                        <span className="text-app-text text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              ))}
-            </div>
+      {/* Research Impact Section */}
+      <Section className="bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="heading-lg mb-4">
+              <span className="text-app-text">Our Commitment to </span>
+              <span className="text-secondary">Open Innovation</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Globe size={24} />,
+                title: "Open Source",
+                description: "All fundamental research published openly"
+              },
+              {
+                icon: <Rocket size={24} />,
+                title: "Excellence",
+                description: "Pursuing breakthrough innovations"
+              },
+              {
+                icon: <Microscope size={24} />,
+                title: "Collaboration",
+                description: "Global research consortiums"
+              },
+              {
+                icon: <Lightbulb size={24} />,
+                title: "Application",
+                description: "Technology transfer to real-world solutions"
+              }
+            ].map((commitment, index) => (
+              <Card key={index} className="p-6" glowColor="secondary">
+                <div className="text-secondary mb-4">{commitment.icon}</div>
+                <h3 className="text-lg font-semibold text-app-text mb-2">{commitment.title}</h3>
+                <p className="text-app-text-muted">{commitment.description}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </Section>
@@ -335,7 +354,7 @@ const ResearchInnovation: React.FC = () => {
               },
               {
                 icon: <Cpu size={24} />,
-                title: "Quantum Computing Integration",
+                title: "Quantum Computing Ready",
                 description: "Preparation for next-generation computing"
               },
               {
@@ -384,78 +403,6 @@ const ResearchInnovation: React.FC = () => {
                 className="w-full h-64 object-cover rounded-xl"
               />
             </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* Global AI Advisory Board Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-16">
-            <h2 className="heading-lg mb-6">
-              <span className="text-app-text">Guided by </span>
-              <span className="text-primary">World-Class Expertise</span>
-            </h2>
-            <p className="text-xl text-primary mb-8 max-w-4xl mx-auto">
-              Strategic direction from leading AI researchers, industry pioneers, and policy experts
-            </p>
-            <p className="text-lg text-app-text-muted max-w-5xl mx-auto mb-10">
-              Our Global AI Advisory Board brings together distinguished leaders from academia, industry, and 
-              policy who provide strategic guidance, ensure international standards, and connect GARC with 
-              premier global networks through quarterly sessions and our annual summit.
-            </p>
-            <Button
-              variant="primary"
-              size="lg"
-              to="/advisory-board"
-              icon={<ArrowRight size={20} />}
-              iconPosition="right"
-            >
-              Learn About Our Advisory Board
-            </Button>
-          </div>
-        </div>
-      </Section>
-
-      {/* Our Commitment to Open Innovation Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-              <span className="text-app-text">Our Commitment to </span>
-              <span className="text-primary">Open Innovation</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Globe size={32} />,
-                title: "Open Source",
-                description: "All fundamental research published openly"
-              },
-              {
-                icon: <Rocket size={32} />,
-                title: "Excellence",
-                description: "Pursuing breakthrough innovations"
-              },
-              {
-                icon: <Microscope size={32} />,
-                title: "Collaboration",
-                description: "Global research consortiums"
-              },
-              {
-                icon: <Lightbulb size={32} />,
-                title: "Application",
-                description: "Technology transfer to real-world solutions"
-              }
-            ].map((commitment, index) => (
-              <Card key={index} className="p-8 text-center h-full" glowColor="primary">
-                <div className="text-primary mb-6">{commitment.icon}</div>
-                <h3 className="text-xl font-semibold text-app-text mb-4">{commitment.title}</h3>
-                <p className="text-app-text-muted">{commitment.description}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </Section>
