@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Rocket, Bot, Target, Brain, Shield, Users, Code, Briefcase, LineChart, Globe, Lightbulb, HandshakeIcon, Book, Newspaper, Podcast, Calendar } from 'lucide-react';
+import { ArrowRight, Rocket, Bot, Target, Brain, Shield, Users, Code, Briefcase, LineChart, Globe, Lightbulb, HandshakeIcon, Book, Newspaper, Podcast, Calendar, Server, Cpu, Lock, Building, Download } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
