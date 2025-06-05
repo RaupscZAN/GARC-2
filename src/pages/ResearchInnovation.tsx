@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Rocket, Bot, Target, Brain, Shield, Users, Code, Briefcase, LineChart, Globe, Lightbulb, HandshakeIcon, Book, Newspaper, Podcast, Calendar, Server, Cpu, Lock, Building, Download } from 'lucide-react';
+import { 
+  ArrowRight, Rocket, Bot, Target, Brain, Shield, Users, Code, 
+  Briefcase, LineChart, Globe, Lightbulb, Book, Newspaper, 
+  Podcast, Calendar, Server, Cpu, Lock, Building, Download,
+  GraduationCap, Award, Microscope, Building2
+} from 'lucide-react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -78,6 +83,208 @@ const ResearchInnovation: React.FC = () => {
         </div>
       </section>
 
+      {/* Why Leading Researchers Choose GARC Section */}
+      <Section className="bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Text Content */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <span className="text-app-text">Why Leading Researchers </span>
+                <span className="text-primary">Choose GARC</span>
+              </h2>
+              <p className="text-lg text-app-text-muted leading-relaxed">
+                Access world-class computational infrastructure, collaborate with international research partners, 
+                and amplify your research impact through our comprehensive ecosystem. At GARC, your breakthrough 
+                ideas get the resources, recognition, and real-world application they deserve—while you help build 
+                the foundation for the next generation of AI innovation.
+              </p>
+            </div>
+
+            {/* Right Column - Data Visualization Image */}
+            <div className="relative">
+              <img 
+                src="https://www.outseer.com/wp-content/uploads/blog-data_consortium-ft.jpg"
+                alt="AI Research Data Visualization"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Four Pillars Section */}
+      <Section className="bg-surface/30" pattern="grid">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="heading-lg mb-4">
+              <span className="text-app-text">Four Pillars of </span>
+              <span className="text-primary">AI Innovation</span>
+            </h2>
+            <p className="text-app-text-muted max-w-2xl mx-auto">
+              Driving innovation across critical AI domains
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&h=250&fit=crop",
+                title: "Next-Generation AI Architectures",
+                items: [
+                  "Transformer evolution and optimization",
+                  "Neuromorphic computing applications",
+                  "Quantum-classical hybrid systems",
+                  "Focus: AI models optimized for diverse contexts and languages"
+                ],
+                color: "primary"
+              },
+              {
+                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop",
+                title: "AI Safety and Alignment",
+                items: [
+                  "Robust AI systems development",
+                  "Interpretability and explainable AI",
+                  "Value alignment in autonomous systems",
+                  "Focus: Frameworks for safe and ethically aligned AI"
+                ],
+                color: "secondary"
+              },
+              {
+                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+                title: "Domain-Specific AI Applications",
+                items: [
+                  "Healthcare AI and precision medicine",
+                  "Agricultural intelligence and sustainability",
+                  "Educational AI and personalized learning",
+                  "Smart cities and urban planning"
+                ],
+                color: "accent"
+              },
+              {
+                image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop",
+                title: "Emerging Technologies Integration",
+                items: [
+                  "AI-Blockchain convergence",
+                  "Internet of Things (IoT) intelligence",
+                  "Edge computing optimization",
+                  "Human-AI collaboration frameworks"
+                ],
+                color: "primary"
+              }
+            ].map((area, index) => (
+              <Card key={index} className="p-8" glowColor={area.color as 'primary' | 'secondary' | 'accent'}>
+                <img 
+                  src={area.image} 
+                  alt={area.title}
+                  className="w-full h-32 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-semibold text-app-text mb-4">{area.title}</h3>
+                <ul className="space-y-3">
+                  {area.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className={`w-2 h-2 rounded-full bg-${area.color} mt-2`}></div>
+                      <span className="text-app-text-muted">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Expertise and Board Impact Section */}
+      <Section className="bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Left Column - Expertise */}
+            <div>
+              <h2 className="heading-lg mb-8">
+                <span className="text-app-text">Guided by </span>
+                <span className="text-accent">World-Class Expertise</span>
+              </h2>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  {
+                    icon: <GraduationCap size={24} />,
+                    title: "Academic Leaders",
+                    description: "MIT, Stanford, Cambridge professors + IIT/IISc leaders",
+                    color: "primary"
+                  },
+                  {
+                    icon: <Building2 size={24} />,
+                    title: "Industry Pioneers",
+                    description: "Tech CTOs, AI startup founders, innovation executives",
+                    color: "secondary"
+                  },
+                  {
+                    icon: <Shield size={24} />,
+                    title: "Policy & Ethics Experts",
+                    description: "AI governance specialists, technology regulation advisors",
+                    color: "accent"
+                  },
+                  {
+                    icon: <Globe size={24} />,
+                    title: "Global Innovators",
+                    description: "International research pioneers, emerging tech thought leaders",
+                    color: "primary"
+                  }
+                ].map((expert, index) => (
+                  <Card key={index} className="p-6" glowColor={expert.color as 'primary' | 'secondary' | 'accent'}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`text-${expert.color}`}>{expert.icon}</div>
+                      <h3 className="text-lg font-semibold text-app-text">{expert.title}</h3>
+                    </div>
+                    <p className="text-app-text-muted">{expert.description}</p>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column - Board Impact */}
+            <div className="h-full flex flex-col">
+              <h2 className="heading-lg mb-8">
+                <span className="text-app-text">Board Impact</span>
+              </h2>
+              
+              <div className="flex-1 flex flex-col justify-between space-y-12">
+                {[
+                  {
+                    icon: <Lightbulb size={24} />,
+                    title: "Research Direction",
+                    description: "Setting strategic priorities and identifying emerging opportunities",
+                    color: "accent"
+                  },
+                  {
+                    icon: <Award size={24} />,
+                    title: "Global Standards",
+                    description: "Ensuring research meets international benchmarks",
+                    color: "secondary"
+                  },
+                  {
+                    icon: <Users size={24} />,
+                    title: "Network Access",
+                    description: "Facilitating collaborations with top-tier institutions",
+                    color: "primary"
+                  }
+                ].map((impact, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className={`text-${impact.color} mt-1`}>{impact.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-app-text mb-2">{impact.title}</h3>
+                      <p className="text-app-text-muted">{impact.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Publications & Thought Leadership Section */}
       <Section className="bg-surface/30" pattern="grid">
         <div className="max-w-7xl mx-auto">
@@ -154,6 +361,49 @@ const ResearchInnovation: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Research Impact Section */}
+      <Section className="bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="heading-lg mb-4">
+              <span className="text-app-text">Our Commitment to </span>
+              <span className="text-secondary">Open Innovation</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Globe size={24} />,
+                title: "Open Source",
+                description: "All fundamental research published openly"
+              },
+              {
+                icon: <Rocket size={24} />,
+                title: "Excellence",
+                description: "Pursuing breakthrough innovations"
+              },
+              {
+                icon: <Microscope size={24} />,
+                title: "Collaboration",
+                description: "Global research consortiums"
+              },
+              {
+                icon: <Lightbulb size={24} />,
+                title: "Application",
+                description: "Technology transfer to real-world solutions"
+              }
+            ].map((commitment, index) => (
+              <Card key={index} className="p-6" glowColor="secondary">
+                <div className="text-secondary mb-4">{commitment.icon}</div>
+                <h3 className="text-lg font-semibold text-app-text mb-2">{commitment.title}</h3>
+                <p className="text-app-text-muted">{commitment.description}</p>
               </Card>
             ))}
           </div>
