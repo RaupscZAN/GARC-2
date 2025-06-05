@@ -328,7 +328,6 @@ const ResearchInnovation: React.FC = () => {
               to="/research/submit-proposal"
               icon={<Download size={20} />}
               iconPosition="left"
-              className="whitespace-nowrap"
             >
               Submit Research Proposal
             </Button>
