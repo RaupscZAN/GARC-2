@@ -45,7 +45,7 @@ const ResearchInnovation: React.FC = () => {
 
             {/* Main heading */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-              <span className="text-white">Join the Premier AI </span>
+              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">Join the Premier AI</span>
               <br />
               <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
                 Research Ecosystem
