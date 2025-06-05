@@ -70,7 +70,7 @@ const ResearchInnovation: React.FC = () => {
             {/* Right Column - Data Visualization Image */}
             <div className="relative">
               <img 
-                src="https://via.placeholder.com/600x400/1a1a2e/00d4aa?text=Data+Visualization"
+                src="https://www.outseer.com/wp-content/uploads/blog-data_consortium-ft.jpg"
                 alt="AI Research Data Visualization"
                 className="w-full h-80 object-cover rounded-xl"
               />
