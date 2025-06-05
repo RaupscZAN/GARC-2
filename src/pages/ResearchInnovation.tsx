@@ -18,7 +18,7 @@ const ResearchInnovation: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://img.pikbest.com/backgrounds/20190924/technology-background-with-blue-gradient-background-v_1559315jpg!w700wp)'
+            backgroundImage: 'url(https://static.vecteezy.com/system/resources/previews/035/719/178/non_2x/ai-generated-abstract-technology-background-with-glowing-lines-and-bokeh-effect-abstract-background-theme-technology-data-futuristic-ai-generated-free-photo.jpg)'
           }}
         >
           {/* Gradient overlay for better text readability */}
