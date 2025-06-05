@@ -530,5 +530,3 @@ const ResearchInnovation: React.FC = () => {
 };
 
 export default ResearchInnovation;
-
-export default ResearchInnovation
