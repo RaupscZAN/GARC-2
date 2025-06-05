@@ -12,42 +12,60 @@ const ResearchInnovation: React.FC = () => {
 
   return (
     <>
-      {/* Hero Section with Background Image */}
-      <Section className="pt-32 pb-16 relative overflow-hidden">
-        {/* Background Image with Overlay */}
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center">
+        {/* Background image with overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://www.shutterstock.com/image-vector/abstract-ai-circuit-board-background-600nw-2471339475.jpg)'
+          style={{ 
+            backgroundImage: 'url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-technology-big-data-background-concept-generate-ai-image_15686420.jpg")'
           }}
         >
-          {/* Gradient overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-primary/10 to-secondary/20 backdrop-blur-[1px]"></div>
-          {/* Additional overlay for text contrast */}
-          <div className="absolute inset-0 bg-background/70"></div>
+          <div className="absolute inset-0 bg-black/60" />
         </div>
-        
-        <div className="text-center max-w-4xl mx-auto relative z-10">
-          <h1 className="heading-xl mb-6">
-            <span className="text-app-text">Join the Premier AI </span>
-            <span className="text-primary">Research Ecosystem</span>
-          </h1>
-          <p className="text-xl text-app-text-muted mb-8">
-            GARC's ecosystem provides cutting-edge AI research infrastructure and global 
-            collaborative opportunities for academia, industry, and innovators worldwide
-          </p>
-          <Button
-            variant="primary"
-            size="lg"
-            href="#get-involved"
-            icon={<ArrowRight size={20} />}
-            iconPosition="right"
-            className="bg-primary hover:bg-primary-600"
+
+        {/* Content */}
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
-            See How to Get Involved
-          </Button>
+            {/* Pill header */}
+            <div className="inline-block px-6 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-8">
+              <span className="text-white font-medium">
+                Global AI Research Council
+              </span>
+            </div>
+
+            {/* Main heading */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+              <span className="text-white">Join the Premier AI </span>
+              <br />
+              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
+                Research Ecosystem
+              </span>
+            </h1>
+
+            {/* Subheading */}
+            <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+              GARC's ecosystem provides cutting-edge AI research infrastructure and global collaborative opportunities for academia, industry, and innovators worldwide
+            </p>
+
+            <Button
+              variant="primary"
+              size="lg"
+              href="#get-involved"
+              icon={<ArrowRight size={20} />}
+              iconPosition="right"
+              className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+            >
+              See How to Get Involved
+            </Button>
+          </motion.div>
         </div>
-      </Section>
+      </section>
 
       {/* Intro Section */}
       <Section className="bg-surface/30">
@@ -305,7 +323,7 @@ const ResearchInnovation: React.FC = () => {
 
             <div className="relative">
               <img 
-                src="https://www.pymnts.com/wp-content/uploads/2019/08/bigtech-joshstein-jimhood-kenpaxton.jpg?w=620"
+                src="https://www.outseer.com/wp-content/uploads/blog-data_consortium-ft.jpg"
                 alt="Data Center Infrastructure"
                 className="w-full h-64 object-cover rounded-xl"
               />
@@ -487,3 +505,5 @@ const ResearchInnovation: React.FC = () => {
 };
 
 export default ResearchInnovation;
+
+export default ResearchInnovation
