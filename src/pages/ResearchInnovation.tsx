@@ -12,69 +12,71 @@ const ResearchInnovation: React.FC = () => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        {/* Background image with overlay */}
+      {/* Hero Section with Background Image */}
+      <Section className="pt-32 pb-16 relative overflow-hidden">
+        {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: 'url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-technology-big-data-background-concept-generate-ai-image_15686420.jpg")'
+          style={{
+            backgroundImage: 'url(https://img.pikbest.com/backgrounds/20190924/technology-background-with-blue-gradient-background-v_1559315jpg!w700wp)'
           }}
         >
-          <div className="absolute inset-0 bg-black/60" />
+          {/* Gradient overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-primary/10 to-secondary/20 backdrop-blur-[1px]"></div>
+          {/* Additional overlay for text contrast */}
+          <div className="absolute inset-0 bg-background/70"></div>
         </div>
-
-        {/* Content */}
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
+        
+        <div className="text-center max-w-4xl mx-auto relative z-10">
+          <h1 className="heading-xl mb-6">
+            <span className="text-app-text">Join the Premier AI </span>
+            <span className="text-primary">Research Ecosystem</span>
+          </h1>
+          <p className="text-xl text-app-text-muted mb-8">
+            GARC's ecosystem provides cutting-edge AI research infrastructure and global 
+            collaborative opportunities for academia, industry, and innovators worldwide
+          </p>
+          <Button
+            variant="primary"
+            size="lg"
+            href="#get-involved"
+            icon={<ArrowRight size={20} />}
+            iconPosition="right"
+            className="bg-primary hover:bg-primary-600"
           >
-            {/* Pill header */}
-            <div className="inline-block px-6 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-8">
-              <span className="text-white font-medium">
-                Global AI Research Council
-              </span>
+            See How to Get Involved
+          </Button>
+        </div>
+      </Section>
+
+      {/* Why Leading Researchers Choose GARC Section */}
+      <Section className="bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Text Content */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <span className="text-app-text">Why Leading Researchers </span>
+                <span className="text-primary">Choose GARC</span>
+              </h2>
+              <p className="text-lg text-app-text-muted leading-relaxed">
+                Access world-class computational infrastructure, collaborate with international research partners, 
+                and amplify your research impact through our comprehensive ecosystem. At GARC, your breakthrough 
+                ideas get the resources, recognition, and real-world application they deserve—while you help build 
+                the foundation for the next generation of AI innovation.
+              </p>
             </div>
 
-            {/* Main heading */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-              <span className="text-white">Join the Premier AI </span>
-              <br />
-              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
-                Research Ecosystem
-              </span>
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-              GARC's ecosystem provides cutting-edge AI research infrastructure and global collaborative opportunities for academia, industry, and innovators worldwide
-            </p>
-
-            <Button
-              variant="primary"
-              size="lg"
-              href="#get-involved"
-              icon={<ArrowRight size={20} />}
-              iconPosition="right"
-              className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
-            >
-              See How to Get Involved
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-app-text-muted">
-            GARC's research ecosystem combines theoretical excellence with practical applications. 
-            Through strategic partnerships, state-of-the-art infrastructure, and interdisciplinary 
-            collaboration, we're solving real-world challenges while advancing the frontiers of AI technology.
-          </p>
+            {/* Right Column - Data Visualization Image */}
+            <div className="relative">
+              <img 
+                src="https://via.placeholder.com/600x400/1a1a2e/00d4aa?text=Data+Visualization"
+                alt="AI Research Data Visualization"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl"></div>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -82,13 +84,10 @@ const ResearchInnovation: React.FC = () => {
       <Section className="bg-surface/30" pattern="grid">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Brain size={32} className="text-primary" />
-              <h2 className="heading-lg">
-                <span className="text-app-text">Four Pillars of </span>
-                <span className="text-primary">AI Innovation</span>
-              </h2>
-            </div>
+            <h2 className="heading-lg mb-4">
+              <span className="text-app-text">Four Pillars of </span>
+              <span className="text-primary">AI Innovation</span>
+            </h2>
             <p className="text-app-text-muted max-w-2xl mx-auto">
               Driving innovation across critical AI domains
             </p>
@@ -97,7 +96,7 @@ const ResearchInnovation: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                image: "https://via.placeholder.com/300x200/00BFA5/FFFFFF?text=AI+Architecture",
+                image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&h=250&fit=crop",
                 title: "Next-Generation AI Architectures",
                 items: [
                   "Transformer evolution and optimization",
@@ -108,7 +107,7 @@ const ResearchInnovation: React.FC = () => {
                 color: "primary"
               },
               {
-                image: "https://via.placeholder.com/300x200/00ACC1/FFFFFF?text=AI+Safety",
+                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop",
                 title: "AI Safety and Alignment",
                 items: [
                   "Robust AI systems development",
@@ -119,7 +118,7 @@ const ResearchInnovation: React.FC = () => {
                 color: "secondary"
               },
               {
-                image: "https://via.placeholder.com/300x200/FFB800/000000?text=Domain+AI",
+                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
                 title: "Domain-Specific AI Applications",
                 items: [
                   "Healthcare AI and precision medicine",
@@ -130,7 +129,7 @@ const ResearchInnovation: React.FC = () => {
                 color: "accent"
               },
               {
-                image: "https://via.placeholder.com/300x200/00BFA5/FFFFFF?text=Emerging+Tech",
+                image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop",
                 title: "Emerging Technologies Integration",
                 items: [
                   "AI-Blockchain convergence",
@@ -168,13 +167,10 @@ const ResearchInnovation: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Left Column - Expertise */}
             <div>
-              <div className="flex items-center gap-3 mb-8">
-                <Users size={32} className="text-accent" />
-                <h2 className="heading-lg">
-                  <span className="text-app-text">Guided by </span>
-                  <span className="text-accent">World-Class Expertise</span>
-                </h2>
-              </div>
+              <h2 className="heading-lg mb-8">
+                <span className="text-app-text">Guided by </span>
+                <span className="text-accent">World-Class Expertise</span>
+              </h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
@@ -215,12 +211,12 @@ const ResearchInnovation: React.FC = () => {
             </div>
 
             {/* Right Column - Board Impact */}
-            <div>
-              <h2 className="heading-lg text-center mb-8">
+            <div className="h-full flex flex-col">
+              <h2 className="heading-lg mb-8">
                 <span className="text-app-text">Board Impact</span>
               </h2>
               
-              <div className="space-y-8">
+              <div className="flex-1 flex flex-col justify-between space-y-12">
                 {[
                   {
                     icon: <Lightbulb size={24} />,
@@ -263,7 +259,7 @@ const ResearchInnovation: React.FC = () => {
               <span className="text-app-text">Data Center </span>
               <span className="text-secondary">Consortium</span>
             </h2>
-            <p className="text-xl text-secondary mb-4">India's Premier AI Research Infrastructure</p>
+            <p className="text-xl text-secondary mb-4">Premier AI Research Infrastructure</p>
             <p className="text-app-text-muted max-w-3xl mx-auto">
               Partnership-based model with leading Indian colleges and international institutions to create a 
               distributed yet cohesive data center network.
@@ -323,7 +319,7 @@ const ResearchInnovation: React.FC = () => {
 
             <div className="relative">
               <img 
-                src="https://www.outseer.com/wp-content/uploads/blog-data_consortium-ft.jpg"
+                src="https://www.pymnts.com/wp-content/uploads/2019/08/bigtech-joshstein-jimhood-kenpaxton.jpg?w=620"
                 alt="Data Center Infrastructure"
                 className="w-full h-64 object-cover rounded-xl"
               />
