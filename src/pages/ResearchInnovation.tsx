@@ -49,7 +49,7 @@ const ResearchInnovation: React.FC = () => {
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              Access world-class infrastructure, collaborate with global partners, and drive the future of AI innovation
+              Collaborate with leading researchers, contribute breakthrough ideas, and help build world-class AI infrastructure that advances technological leadership
             </p>
 
             {/* CTA buttons */}
@@ -62,16 +62,7 @@ const ResearchInnovation: React.FC = () => {
                 iconPosition="right"
                 className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
               >
-                Get Involved
-              </Button>
-
-              <Button 
-                variant="outline"
-                size="lg"
-                href="#research-areas"
-                className="min-w-[200px] border-white/20 hover:bg-white/5"
-              >
-                Explore Research Areas
+                See How to Get Involved
               </Button>
             </div>
           </motion.div>
@@ -190,96 +181,6 @@ const ResearchInnovation: React.FC = () => {
         </div>
       </Section>
 
-      {/* Expertise and Board Impact Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left Column - Expertise */}
-            <div>
-              <h2 className="heading-lg mb-8">
-                <span className="text-app-text">Guided by </span>
-                <span className="text-accent">World-Class Expertise</span>
-              </h2>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  {
-                    icon: <GraduationCap size={24} />,
-                    title: "Academic Leaders",
-                    description: "MIT, Stanford, Cambridge professors + IIT/IISc leaders",
-                    color: "primary"
-                  },
-                  {
-                    icon: <Building size={24} />,
-                    title: "Industry Pioneers",
-                    description: "Tech CTOs, AI startup founders, innovation executives",
-                    color: "secondary"
-                  },
-                  {
-                    icon: <Shield size={24} />,
-                    title: "Policy & Ethics Experts",
-                    description: "AI governance specialists, technology regulation advisors",
-                    color: "accent"
-                  },
-                  {
-                    icon: <Globe size={24} />,
-                    title: "Global Innovators",
-                    description: "International research pioneers, emerging tech thought leaders",
-                    color: "primary"
-                  }
-                ].map((expert, index) => (
-                  <Card key={index} className="p-6" glowColor={expert.color as 'primary' | 'secondary' | 'accent'}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className={`text-${expert.color}`}>{expert.icon}</div>
-                      <h3 className="text-lg font-semibold text-app-text">{expert.title}</h3>
-                    </div>
-                    <p className="text-app-text-muted">{expert.description}</p>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column - Board Impact */}
-            <div className="h-full flex flex-col">
-              <h2 className="heading-lg mb-8">
-                <span className="text-app-text">Board Impact</span>
-              </h2>
-              
-              <div className="flex-1 flex flex-col justify-between space-y-12">
-                {[
-                  {
-                    icon: <Lightbulb size={24} />,
-                    title: "Research Direction",
-                    description: "Setting strategic priorities and identifying emerging opportunities",
-                    color: "accent"
-                  },
-                  {
-                    icon: <Award size={24} />,
-                    title: "Global Standards",
-                    description: "Ensuring research meets international benchmarks",
-                    color: "secondary"
-                  },
-                  {
-                    icon: <Users size={24} />,
-                    title: "Network Access",
-                    description: "Facilitating collaborations with top-tier institutions",
-                    color: "primary"
-                  }
-                ].map((impact, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className={`text-${impact.color} mt-1`}>{impact.icon}</div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-app-text mb-2">{impact.title}</h3>
-                      <p className="text-app-text-muted">{impact.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       {/* Data Center Consortium Section */}
       <Section className="bg-surface/30">
         <div className="max-w-6xl mx-auto">
@@ -288,7 +189,7 @@ const ResearchInnovation: React.FC = () => {
               <span className="text-app-text">Data Center </span>
               <span className="text-secondary">Consortium</span>
             </h2>
-            <p className="text-xl text-secondary mb-4">Premier AI Research Infrastructure</p>
+            <p className="text-xl text-secondary mb-4">India's Premier AI Research Infrastructure</p>
             <p className="text-app-text-muted max-w-3xl mx-auto">
               Partnership-based model with leading Indian colleges and international institutions to create a 
               distributed yet cohesive data center network.
@@ -328,7 +229,7 @@ const ResearchInnovation: React.FC = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-app-text mb-6">Consortium Benefits</h3>
               <ul className="space-y-4">
@@ -357,16 +258,49 @@ const ResearchInnovation: React.FC = () => {
         </div>
       </Section>
 
-      {/* Publications & Thought Leadership Section */}
+      {/* AI Advisory Board Section */}
       <Section className="bg-surface/30" pattern="grid">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="heading-lg mb-4">
+            <span className="text-app-text">Guided by </span>
+            <span className="text-primary">World-Class Expertise</span>
+          </h2>
+          <p className="text-xl text-primary mb-4">
+            Strategic direction from leading AI researchers, industry pioneers, and policy experts
+          </p>
+          <p className="text-app-text-muted max-w-3xl mx-auto mb-8">
+            Our Global AI Advisory Board brings together distinguished leaders from academia, industry, and policy 
+            who provide strategic guidance, ensure international standards, and connect GARC with premier global 
+            networks through quarterly sessions and our annual summit.
+          </p>
+          <Button 
+            variant="primary"
+            size="lg"
+            to="/partnerships"
+            icon={<ArrowRight size={20} />}
+            iconPosition="right"
+          >
+            Learn About Our Advisory Board
+          </Button>
+        </div>
+      </Section>
+
+      {/* Publications & Thought Leadership Section */}
+      <Section className="bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Sharing Knowledge, </span>
-              <span className="text-accent">Shaping the Future</span>
+              <span className="text-app-text">Shaping Global </span>
+              <span className="text-accent">AI Discourse</span>
             </h2>
+            <p className="text-xl text-accent mb-4">Leading through publications, events, and strategic conversations</p>
+            <p className="text-app-text-muted max-w-3xl mx-auto">
+              GARC establishes thought leadership through comprehensive publications and world-class events that share 
+              knowledge, influence policy, and position India as a global AI authority.
+            </p>
           </div>
 
+          {/* Publications Platform */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
               {
@@ -399,12 +333,12 @@ const ResearchInnovation: React.FC = () => {
                   "Global thought leadership"
                 ]
               }
-            ].map((channel, index) => (
+            ].map((platform, index) => (
               <Card key={index} className="p-8" glowColor="accent">
-                <div className="text-accent mb-4">{channel.icon}</div>
-                <h3 className="text-xl font-semibold text-app-text mb-4">{channel.title}</h3>
+                <div className="text-accent mb-4">{platform.icon}</div>
+                <h3 className="text-xl font-semibold text-app-text mb-4">{platform.title}</h3>
                 <ul className="space-y-3">
-                  {channel.items.map((item, idx) => (
+                  {platform.items.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
                       <span className="text-app-text-muted">{item}</span>
@@ -414,62 +348,57 @@ const ResearchInnovation: React.FC = () => {
               </Card>
             ))}
           </div>
-        </div>
-      </Section>
 
-      {/* Research Impact Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Our Commitment to </span>
-              <span className="text-secondary">Open Innovation</span>
-            </h2>
-          </div>
+          {/* Global Events Platform */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="p-8" glowColor="accent">
+              <h3 className="text-xl font-semibold text-app-text mb-4">GARC Global AI Summit</h3>
+              <ul className="space-y-3">
+                {[
+                  "Annual flagship event",
+                  "5,000+ attendees",
+                  "Global streaming access",
+                  "Industry-academia collaboration"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent"></div>
+                    <span className="text-app-text-muted">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Globe size={24} />,
-                title: "Open Source",
-                description: "All fundamental research published openly"
-              },
-              {
-                icon: <Rocket size={24} />,
-                title: "Excellence",
-                description: "Pursuing breakthrough innovations"
-              },
-              {
-                icon: <Microscope size={24} />,
-                title: "Collaboration",
-                description: "Global research consortiums"
-              },
-              {
-                icon: <Lightbulb size={24} />,
-                title: "Application",
-                description: "Technology transfer to real-world solutions"
-              }
-            ].map((commitment, index) => (
-              <Card key={index} className="p-6" glowColor="secondary">
-                <div className="text-secondary mb-4">{commitment.icon}</div>
-                <h3 className="text-lg font-semibold text-app-text mb-2">{commitment.title}</h3>
-                <p className="text-app-text-muted">{commitment.description}</p>
-              </Card>
-            ))}
+            <Card className="p-8" glowColor="accent">
+              <h3 className="text-xl font-semibold text-app-text mb-4">Quarterly Research Symposiums</h3>
+              <ul className="space-y-3">
+                {[
+                  "Specialized conferences",
+                  "Ethics forums",
+                  "Research competitions",
+                  "Industry showcases"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent"></div>
+                    <span className="text-app-text-muted">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
           </div>
         </div>
       </Section>
 
       {/* Call to Action Section */}
       <Section id="get-involved" className="bg-surface/30">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="heading-lg mb-16">
-            <span className="text-app-text">Ready to </span>
-            <span className="text-accent">Get Involved?</span>
-          </h2>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="heading-lg mb-4">
+              <span className="text-app-text">Ready to </span>
+              <span className="text-accent">Get Involved?</span>
+            </h2>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* For Researchers */}
             <Card className="p-8 text-center" glowColor="primary">
               <h3 className="text-2xl font-bold text-app-text mb-4">For Researchers</h3>
               <p className="text-app-text-muted mb-8">
@@ -487,7 +416,6 @@ const ResearchInnovation: React.FC = () => {
               </Button>
             </Card>
 
-            {/* For Institutions */}
             <Card className="p-8 text-center" glowColor="secondary">
               <h3 className="text-2xl font-bold text-app-text mb-4">For Institutions</h3>
               <p className="text-app-text-muted mb-8">
@@ -505,7 +433,6 @@ const ResearchInnovation: React.FC = () => {
               </Button>
             </Card>
 
-            {/* For Leaders */}
             <Card className="p-8 text-center" glowColor="accent">
               <h3 className="text-2xl font-bold text-app-text mb-4">For Leaders</h3>
               <p className="text-app-text-muted mb-8">
