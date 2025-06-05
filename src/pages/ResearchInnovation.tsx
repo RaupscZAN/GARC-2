@@ -20,7 +20,7 @@ const ResearchInnovation: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
         {/* Background elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,97,209,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-900/20 to-secondary-900/20"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
@@ -53,7 +53,7 @@ const ResearchInnovation: React.FC = () => {
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
               Access world-class infrastructure, collaborate with global partners, and drive the future of AI innovation
             </p>
 
