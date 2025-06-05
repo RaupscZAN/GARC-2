@@ -18,99 +18,26 @@ const ResearchInnovation: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,97,209,0.15),transparent_50%)]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
-        
-        {/* Glowing orbs */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            {/* Pill header */}
-            <div className="inline-block px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
-              <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent">
-                Research & Innovation Hub
-              </span>
-            </div>
-
-            {/* Main heading */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-              <span className="text-white">Join the Premier AI </span>
-              <br />
-              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
-                Research Ecosystem
-              </span>
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              Access world-class infrastructure, collaborate with global partners, and drive the future of AI innovation
-            </p>
-
-            {/* CTA buttons */}
-            <div className="flex flex-wrap gap-6 justify-center">
-              <Button 
-                variant="primary"
-                size="lg"
-                href="#get-involved"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
-                className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
-              >
-                Get Involved
-              </Button>
-
-              <Button 
-                variant="outline"
-                size="lg"
-                href="#research-areas"
-                className="min-w-[200px] border-white/20 hover:bg-white/5"
-              >
-                Explore Research Areas
-              </Button>
-            </div>
-          </motion.div>
+      <Section className="pt-32 pb-16">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="heading-xl mb-6">
+            <span className="text-app-text">From Learning to </span>
+            <span className="text-primary">Earning</span>
+          </h1>
+          <p className="text-xl text-app-text-muted mb-8">
+            Transform your AI innovations into successful ventures through our comprehensive startup ecosystem
+          </p>
         </div>
-      </section>
+      </Section>
 
-      {/* Why Leading Researchers Choose GARC Section */}
+      {/* Intro Section */}
       <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column - Text Content */}
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                <span className="text-app-text">Why Leading Researchers </span>
-                <span className="text-primary">Choose GARC</span>
-              </h2>
-              <p className="text-lg text-app-text-muted leading-relaxed">
-                Access world-class computational infrastructure, collaborate with international research partners, 
-                and amplify your research impact through our comprehensive ecosystem. At GARC, your breakthrough 
-                ideas get the resources, recognition, and real-world application they deserve—while you help build 
-                the foundation for the next generation of AI innovation.
-              </p>
-            </div>
-
-            {/* Right Column - Data Visualization Image */}
-            <div className="relative">
-              <img 
-                src="https://www.outseer.com/wp-content/uploads/blog-data_consortium-ft.jpg"
-                alt="AI Research Data Visualization"
-                className="w-full h-80 object-cover rounded-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl"></div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-lg text-app-text-muted">
+            GARC's Venture Ecosystem provides students with direct pathways to entrepreneurship and monetization. 
+            Whether launching a startup or monetizing AI agents, we provide the infrastructure, mentorship, and 
+            market access needed for success.
+          </p>
         </div>
       </Section>
 
@@ -195,93 +122,30 @@ const ResearchInnovation: React.FC = () => {
         </div>
       </Section>
 
-      {/* Expertise and Board Impact Section */}
+      {/* World-Class Expertise Section */}
       <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left Column - Expertise */}
-            <div>
-              <h2 className="heading-lg mb-8">
-                <span className="text-app-text">Guided by </span>
-                <span className="text-accent">World-Class Expertise</span>
-              </h2>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  {
-                    icon: <GraduationCap size={24} />,
-                    title: "Academic Leaders",
-                    description: "MIT, Stanford, Cambridge professors + IIT/IISc leaders",
-                    color: "primary"
-                  },
-                  {
-                    icon: <Building2 size={24} />,
-                    title: "Industry Pioneers",
-                    description: "Tech CTOs, AI startup founders, innovation executives",
-                    color: "secondary"
-                  },
-                  {
-                    icon: <Shield size={24} />,
-                    title: "Policy & Ethics Experts",
-                    description: "AI governance specialists, technology regulation advisors",
-                    color: "accent"
-                  },
-                  {
-                    icon: <Globe size={24} />,
-                    title: "Global Innovators",
-                    description: "International research pioneers, emerging tech thought leaders",
-                    color: "primary"
-                  }
-                ].map((expert, index) => (
-                  <Card key={index} className="p-6" glowColor={expert.color as 'primary' | 'secondary' | 'accent'}>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className={`text-${expert.color}`}>{expert.icon}</div>
-                      <h3 className="text-lg font-semibold text-app-text">{expert.title}</h3>
-                    </div>
-                    <p className="text-app-text-muted">{expert.description}</p>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column - Board Impact */}
-            <div className="h-full flex flex-col">
-              <h2 className="heading-lg mb-8">
-                <span className="text-app-text">Board Impact</span>
-              </h2>
-              
-              <div className="flex-1 flex flex-col justify-between space-y-12">
-                {[
-                  {
-                    icon: <Lightbulb size={24} />,
-                    title: "Research Direction",
-                    description: "Setting strategic priorities and identifying emerging opportunities",
-                    color: "accent"
-                  },
-                  {
-                    icon: <Award size={24} />,
-                    title: "Global Standards",
-                    description: "Ensuring research meets international benchmarks",
-                    color: "secondary"
-                  },
-                  {
-                    icon: <Users size={24} />,
-                    title: "Network Access",
-                    description: "Facilitating collaborations with top-tier institutions",
-                    color: "primary"
-                  }
-                ].map((impact, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className={`text-${impact.color} mt-1`}>{impact.icon}</div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-app-text mb-2">{impact.title}</h3>
-                      <p className="text-app-text-muted">{impact.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="heading-lg mb-4">
+            <span className="text-app-text">Guided by </span>
+            <span className="text-primary">World-Class Expertise</span>
+          </h2>
+          <p className="text-xl text-app-text-muted mb-8 max-w-3xl mx-auto">
+            Strategic direction from leading AI researchers, industry pioneers, and policy experts
+          </p>
+          <p className="text-lg text-app-text-muted mb-12 max-w-3xl mx-auto">
+            Our Global AI Advisory Board brings together distinguished leaders from academia, industry, and 
+            policy who provide strategic guidance, ensure international standards, and connect GARC with 
+            premier global networks through quarterly sessions and our annual summit.
+          </p>
+          <Button
+            variant="primary"
+            size="lg"
+            to="/about/advisory-board"
+            icon={<ArrowRight size={20} />}
+            iconPosition="right"
+          >
+            Learn About Our Advisory Board
+          </Button>
         </div>
       </Section>
 
@@ -367,49 +231,6 @@ const ResearchInnovation: React.FC = () => {
         </div>
       </Section>
 
-      {/* Research Impact Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Our Commitment to </span>
-              <span className="text-secondary">Open Innovation</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Globe size={24} />,
-                title: "Open Source",
-                description: "All fundamental research published openly"
-              },
-              {
-                icon: <Rocket size={24} />,
-                title: "Excellence",
-                description: "Pursuing breakthrough innovations"
-              },
-              {
-                icon: <Microscope size={24} />,
-                title: "Collaboration",
-                description: "Global research consortiums"
-              },
-              {
-                icon: <Lightbulb size={24} />,
-                title: "Application",
-                description: "Technology transfer to real-world solutions"
-              }
-            ].map((commitment, index) => (
-              <Card key={index} className="p-6" glowColor="secondary">
-                <div className="text-secondary mb-4">{commitment.icon}</div>
-                <h3 className="text-lg font-semibold text-app-text mb-2">{commitment.title}</h3>
-                <p className="text-app-text-muted">{commitment.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* Data Center Consortium Section */}
       <Section className="bg-surface/30">
         <div className="max-w-6xl mx-auto">
@@ -489,66 +310,35 @@ const ResearchInnovation: React.FC = () => {
 
       {/* Call to Action Section */}
       <Section id="get-involved" className="bg-surface/30">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="heading-lg mb-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="heading-lg mb-4">
             <span className="text-app-text">Ready to </span>
             <span className="text-accent">Get Involved?</span>
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* For Researchers */}
-            <Card className="p-8 text-center" glowColor="primary">
-              <h3 className="text-2xl font-bold text-app-text mb-4">For Researchers</h3>
-              <p className="text-app-text-muted mb-8">
-                Submit your breakthrough ideas and amplify your research impact
-              </p>
-              <Button
-                variant="primary"
-                size="lg"
-                href="/research/submit-proposal"
-                icon={<Download size={20} />}
-                iconPosition="right"
-                className="w-full"
-              >
-                Submit Research Proposal
-              </Button>
-            </Card>
-
-            {/* For Institutions */}
-            <Card className="p-8 text-center" glowColor="secondary">
-              <h3 className="text-2xl font-bold text-app-text mb-4">For Institutions</h3>
-              <p className="text-app-text-muted mb-8">
-                Join our consortium and access world-class AI infrastructure
-              </p>
-              <Button
-                variant="secondary"
-                size="lg"
-                href="/consortium/join"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
-                className="w-full"
-              >
-                Join Data Consortium
-              </Button>
-            </Card>
-
-            {/* For Leaders */}
-            <Card className="p-8 text-center" glowColor="accent">
-              <h3 className="text-2xl font-bold text-app-text mb-4">For Leaders</h3>
-              <p className="text-app-text-muted mb-8">
-                Shape the future of AI through strategic collaboration
-              </p>
-              <Button
-                variant="accent"
-                size="lg"
-                to="/partnerships"
-                icon={<ArrowRight size={20} />}
-                iconPosition="right"
-                className="w-full"
-              >
-                Explore Partnerships
-              </Button>
-            </Card>
+          <p className="text-xl text-app-text-muted mb-8">
+            Join pioneering organizations in building India's AI future. Let's explore how we can work together.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              variant="primary"
+              size="lg"
+              href="https://calendly.com/your-garc-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              icon={<Calendar size={20} />}
+              iconPosition="left"
+            >
+              Schedule Partnership Discussion
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              to="/contact"
+              icon={<ArrowRight size={20} />}
+              iconPosition="right"
+            >
+              Learn More
+            </Button>
           </div>
         </div>
       </Section>
