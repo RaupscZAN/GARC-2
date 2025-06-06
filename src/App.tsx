@@ -7,6 +7,9 @@ import Academies from './pages/Academies';
 import ResearchInnovation from './pages/ResearchInnovation';
 import Partnerships from './pages/Partnerships';
 import VentureEcosystem from './pages/VentureEcosystem';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
@@ -29,9 +32,9 @@ const App: React.FC = () => {
           <Route path="research-innovation" element={<ResearchInnovation />} />
           <Route path="partnerships" element={<Partnerships />} />
           <Route path="venture-ecosystem" element={<VentureEcosystem />} />
-          
-          {/* Add other routes here */}
-          {/* <Route path="join" element={<Join />} /> */}
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/:slug" element={<BlogPost />} />
+          <Route path="contact" element={<Contact />} />
           
           {/* 404 route */}
           <Route path="*" element={<NotFound />} />
