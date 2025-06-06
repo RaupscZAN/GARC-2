@@ -33,7 +33,7 @@ const Academies: React.FC = () => {
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto px-4 text-center relative z-10 pt-32">
+        <div className="container mx-auto px-4 text-center relative z-10 pt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

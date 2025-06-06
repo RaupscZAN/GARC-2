@@ -6,7 +6,7 @@ import BackgroundEffects from '../ui/BackgroundEffects';
 
 const Layout: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
+    <div className="flex flex-col min-h-screen relative overflow-x-hidden">
       <BackgroundEffects />
       <Navbar />
       <main className="flex-grow">
