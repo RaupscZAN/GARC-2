@@ -27,7 +27,7 @@ const partnerCategories = [
 
 const PartnershipSection: React.FC = () => {
   return (
-    <Section id="partnerships" className="bg-surface/30" pattern="dot">
+    <Section id="partnerships\" className="bg-surface/30\" pattern="dot">
       {/* Add container wrapper for centering */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'urlhttps://media.gettyimages.com/id/1469875556/video/4k-abstract-lines-background-loopable.jpg?s=640x640&k=20&c=oRhmLOFm1rQPZQSQrUqnd8eRd8LsoGLmiQS7nMIh-MU=")'
+            backgroundImage: 'url("https://media.gettyimages.com/id/1148091793/photo/technology-abstract.jpg?s=612x612&w=0&k=20&c=bmMTM4U6Nyt05dd6xHvgBm09efBal3En0yAmlTRXaI4=")'
           }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
@@ -49,16 +49,16 @@ const About: React.FC = () => {
 
             {/* Main heading */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-              <span className="text-white">Building India's </span>
+              <span className="text-white">Building the Future of </span>
               <br />
               <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
-                AI Superpower
+                AI Innovation
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              GARC creates the complete ecosystem India needs to lead the global AI revolution - 
+              GARC creates the complete ecosystem needed to lead the global AI revolution - 
               from world-class education to cutting-edge research to thriving startups
             </p>
 
@@ -151,7 +151,7 @@ const About: React.FC = () => {
               {
                 icon: <Server size={24} />,
                 title: 'Data Center Consortium',
-                description: 'World-class infrastructure powering India\'s AI research and development',
+                description: 'World-class infrastructure powering global AI research and development',
                 color: 'accent',
                 to: '/research-innovation'
               },
@@ -196,7 +196,7 @@ const About: React.FC = () => {
             <Card className="p-8" glowColor="primary">
               <h3 className="text-2xl font-bold text-app-text mb-6">Our Vision</h3>
               <p className="text-app-text-muted leading-relaxed">
-                To establish India as the global epicenter of artificial intelligence innovation, 
+                To establish a global epicenter of artificial intelligence innovation, 
                 education, and research, creating a sustainable ecosystem that nurtures world-class 
                 AI talent and drives technological advancement for societal benefit.
               </p>
@@ -260,7 +260,7 @@ const About: React.FC = () => {
           </h2>
           <p className="text-xl text-app-text-muted mb-12">
             We're in our foundation phase, establishing partnerships, building infrastructure, 
-            and creating the framework that will power India's AI transformation. 
+            and creating the framework that will power global AI transformation. 
             Join us in building something unprecedented.
           </p>
 
@@ -300,12 +300,12 @@ const About: React.FC = () => {
       <Section className="bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-lg mb-4">
-            <span className="text-app-text">Be Part of India's </span>
+            <span className="text-app-text">Be Part of the </span>
             <span className="text-primary">AI Revolution</span>
           </h2>
           <p className="text-xl text-app-text-muted mb-8">
             Whether you're a student, researcher, industry professional, or organization - 
-            there's a place for you in building India's AI future.
+            there's a place for you in building the future of AI.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button
