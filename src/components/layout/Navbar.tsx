@@ -17,14 +17,14 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md py-4 border-b border-gray-200 shadow-sm">
-      <nav className="container mx-auto px-4 flex justify-between items-center">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-screen-xl rounded-full bg-white/95 backdrop-blur-md shadow-lg border border-white/20 py-3 px-8">
+      <nav className="flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <img 
             src="https://tfvzrxzmsltgwtkotmyg.supabase.co/storage/v1/object/sign/garc-images/logo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDljN2MwZS05ZWEyLTQxOGUtOTE2Zi05NjY2NDk5YTA4MjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJnYXJjLWltYWdlcy9sb2dvLnBuZyIsImlhdCI6MTc0OTIxNzQ3MCwiZXhwIjoyNjEzMjE3NDcwfQ.XJjG0Jm8La7ShNmXLN2DK6fDl_7Ac6rnKcWKv_ue6fM" 
             alt="GARC Logo"
-            width="150"
-            height="150"
+            width="80"
+            height="80"
             className="object-contain"
           />
         </Link>
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             <NavLink
               key={item.name}
               to={item.path}
-              className="nav-link text-app-text-muted hover:text-primary"
+              className="nav-link text-gray-700 hover:text-primary"
             >
               {item.name}
             </NavLink>
@@ -45,13 +45,13 @@ const Navbar: React.FC = () => {
           href="https://calendly.com/globalai-research/collaboration-call"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:inline-flex btn-primary"
+          className="hidden lg:inline-flex btn-accent"
         >
           Join Us
         </a>
 
         <button
-          className="lg:hidden text-app-text-muted focus:outline-none"
+          className="lg:hidden text-gray-700 focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -65,14 +65,14 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-background/95 backdrop-blur-md border-t border-gray-200 absolute top-full left-0 right-0 shadow-lg"
+              className="lg:hidden bg-white/95 backdrop-blur-md border border-white/20 rounded-xl shadow-lg absolute top-full left-4 right-4 mt-2"
             >
-              <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
+              <div className="px-4 py-4 flex flex-col gap-2">
                 {mainMenuItems.map((item) => (
                   <NavLink
                     key={item.name}
                     to={item.path}
-                    className="py-3 text-app-text-muted hover:text-primary transition-colors"
+                    className="py-3 text-gray-700 hover:text-primary transition-colors"
                     onClick={toggleMenu}
                   >
                     {item.name}
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                   href="https://calendly.com/globalai-research/collaboration-call"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary mt-4"
+                  className="btn-accent mt-4"
                   onClick={toggleMenu}
                 >
                   Join Us
