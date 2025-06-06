@@ -281,3 +281,41 @@ const About: React.FC = () => {
               {
                 phase: "Phase 3",
                 title: "Scale",
+                status: "Future",
+                description: "Global expansion, full ecosystem operation, industry leadership"
+              }
+            ].map((phase, index) => (
+              <Card key={index} className="p-6" glowColor="primary">
+                <div className="text-primary font-semibold mb-2">{phase.phase}</div>
+                <h4 className="text-xl font-bold text-app-text mb-2">{phase.title}</h4>
+                <div className={`inline-block px-3 py-1 rounded-full text-sm mb-4 ${
+                  phase.status === 'Current' ? 'bg-accent/20 text-accent' :
+                  phase.status === 'Next' ? 'bg-secondary/20 text-secondary' :
+                  'bg-primary/20 text-primary'
+                }`}>
+                  {phase.status}
+                </div>
+                <p className="text-app-text-muted text-sm">{phase.description}</p>
+              </Card>
+            ))}
+          </div>
+
+          <Button 
+            variant="primary"
+            size="lg"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<ArrowRight size={20} />}
+            iconPosition="right"
+            className="bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+          >
+            Be Part of the Foundation
+          </Button>
+        </div>
+      </Section>
+    </>
+  );
+};
+
+export default About;
