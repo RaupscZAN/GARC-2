@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ArrowRight, Building2, GraduationCap, Landmark, Rocket, TrendingUp, Users, Globe, Trophy, Mail } from 'lucide-react';
+import { Calendar, ArrowRight, Building2, GraduationCap, Rocket, Users, TrendingUp, Globe, Trophy, CheckCircle } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -13,298 +13,274 @@ const Partnerships: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
-        {/* Background image with overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: 'url("https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop")'
-          }}
-        >
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-
-        {/* Decorative elements */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
-        
-        {/* Glowing orbs */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            {/* Pill header */}
-            <div className="inline-block px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
-              <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent">
-                Strategic Alliances
-              </span>
-            </div>
-
-            {/* Main heading */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-              <span className="text-white">Building a Collaborative </span>
-              <br />
-              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
-                AI Ecosystem
-              </span>
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Strategic partnerships across academia, industry, and government to drive innovation and create opportunities
-            </p>
-
-            {/* CTA buttons */}
-            <div className="flex flex-wrap gap-6 justify-center">
-              <Button 
-                variant="primary"
-                size="lg"
-                href="#partnership-categories"
-                className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
-              >
-                Explore Partnership Opportunities
-              </Button>
-
-              <Button 
-                variant="outline"
-                size="lg"
-                href="https://calendly.com/globalai-research/collaboration-call"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="min-w-[200px] border-white/20 hover:bg-white/5 text-white"
-              >
-                Schedule a Call
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <Section className="bg-surface/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-app-text-muted">
-            GARC's success is built on strong partnerships. Together, we're creating a robust ecosystem that drives innovation, 
-            nurtures talent, and positions India as a global AI leader.
+      <Section className="pt-32 pb-16">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="heading-xl mb-6">
+            <span className="text-app-text">Strategic Partnerships Driving </span>
+            <span className="text-primary">India's AI Future</span>
+          </h1>
+          <p className="text-xl text-app-text-muted mb-8">
+            Join leading organizations in building a collaborative ecosystem that nurtures talent, drives innovation, and positions India as a global AI leader
           </p>
         </div>
       </Section>
 
-      {/* Partnership Categories */}
-      <Section id="partnership-categories" className="bg-surface/30" pattern="grid">
+      {/* Why Partner With GARC */}
+      <Section className="bg-surface/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="heading-lg mb-6">
+                <span className="text-app-text">Why Leading Organizations Choose </span>
+                <span className="text-primary">GARC</span>
+              </h2>
+              <p className="text-lg text-app-text-muted mb-8">
+                Access world-class AI talent, cutting-edge research, and direct pathways to innovation. 
+                GARC offers the only comprehensive ecosystem combining education, research, ventures, and industry integration in India.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "First access to breakthrough student projects and research",
+                  "Direct pipeline to trained AI professionals and developers", 
+                  "Global network connections and international expansion support",
+                  "Industry-defining position in AI education and research"
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle size={20} className="text-primary shrink-0 mt-1" />
+                    <span className="text-app-text-muted">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&h=400"
+                alt="Strategic partnerships in AI"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Three Partnership Pillars */}
+      <Section className="bg-surface/30" pattern="grid">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Partnership </span>
-              <span className="text-primary">Opportunities</span>
+              <span className="text-app-text">Three Partnership </span>
+              <span className="text-primary">Pillars</span>
             </h2>
+            <p className="text-app-text-muted max-w-2xl mx-auto">
+              Strategic alliances across academia, industry, and entrepreneurship to create India's most comprehensive AI ecosystem
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <GraduationCap size={24} />,
-                title: "Academic Partnerships",
-                description: "Collaborate with world's top universities",
-                items: [
-                  "Joint degree programs",
-                  "Research collaborations",
-                  "Faculty exchange",
-                  "Student mobility programs"
+                icon: <GraduationCap size={32} />,
+                title: "Academic Excellence",
+                description: "World-class research collaboration and knowledge exchange",
+                features: [
+                  "Joint programs with MIT, Stanford, Cambridge",
+                  "Faculty exchange and research partnerships", 
+                  "International student mobility programs",
+                  "Collaborative research publications"
                 ],
-                profile: "Global Top-50 Universities • Premier Indian Institutes • International Research Centers",
-                color: "primary"
+                color: "primary",
+                partners: "50+ Global Universities • Premier Indian Institutes"
               },
               {
-                icon: <Building2 size={24} />,
-                title: "Industry Partnerships",
-                description: "Connect with global tech leaders",
-                items: [
-                  "Curriculum co-development",
-                  "Talent pipeline access",
-                  "Research sponsorship",
-                  "Technology partnerships"
+                icon: <Building2 size={32} />,
+                title: "Industry Integration", 
+                description: "Direct access to talent and cutting-edge innovation",
+                features: [
+                  "Curriculum co-development with tech leaders",
+                  "Priority talent pipeline access",
+                  "Technology infrastructure partnerships",
+                  "Corporate R&D collaboration"
                 ],
-                profile: "Fortune 500 Tech Companies • Leading IT Services Firms • Innovation Labs • Emerging Startups",
-                color: "secondary"
+                color: "secondary", 
+                partners: "Fortune 500 Companies • Leading IT Services • Innovation Labs"
               },
               {
-                icon: <Landmark size={24} />,
-                title: "Government Advisory",
-                description: "Shape India's AI future",
-                items: [
-                  "Policy development",
-                  "National AI strategy",
-                  "Talent development programs",
-                  "Research initiatives"
+                icon: <Rocket size={32} />,
+                title: "Startup Ecosystem",
+                description: "From student projects to funded ventures",
+                features: [
+                  "Direct access to vetted student projects",
+                  "Structured incubation programs",
+                  "Co-investment opportunities",
+                  "Mentorship and scaling support"
                 ],
-                profile: "AI Governance • Ethical Guidelines • Skill Development • Strategic Planning",
-                color: "accent"
+                color: "accent",
+                partners: "Top Incubators • Y Combinator Network • Corporate VCs"
               }
-            ].map((category, index) => (
-              <Card key={index} className="p-8" glowColor={category.color as 'primary' | 'secondary' | 'accent'}>
-                <div className={`text-${category.color} mb-4`}>{category.icon}</div>
-                <h3 className="text-xl font-semibold text-app-text mb-3">{category.title}</h3>
-                <p className="text-app-text-muted mb-6">{category.description}</p>
-                <ul className="space-y-3 mb-6">
-                  {category.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className={`w-2 h-2 rounded-full bg-${category.color} mt-2`}></div>
-                      <span className="text-app-text-muted">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-sm text-app-text-muted pt-4 border-t border-white/10">
-                  {category.profile}
-                </div>
-              </Card>
+            ].map((pillar, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="p-8 h-full" glowColor={pillar.color as 'primary' | 'secondary' | 'accent'}>
+                  <div className={`text-${pillar.color} mb-6`}>{pillar.icon}</div>
+                  <h3 className="text-xl font-semibold text-app-text mb-3">{pillar.title}</h3>
+                  <p className="text-app-text-muted mb-6">{pillar.description}</p>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {pillar.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <div className={`w-2 h-2 rounded-full bg-${pillar.color} mt-2`}></div>
+                        <span className="text-app-text-muted text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-xs text-app-text-muted font-medium">{pillar.partners}</p>
+                  </div>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* Featured Partnership Examples */}
+      {/* Global AI Advisory Board */}
       <Section className="bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Target </span>
-              <span className="text-primary">Partnership Network</span>
+              <span className="text-app-text">Guided by </span>
+              <span className="text-secondary">World-Class Expertise</span>
             </h2>
-            <p className="text-app-text-muted max-w-3xl mx-auto">
-              We're building strategic alliances with leading institutions and organizations worldwide
+            <p className="text-xl text-secondary mb-4">Strategic direction from leading AI researchers, industry pioneers, and policy experts</p>
+            <p className="text-app-text-muted max-w-4xl mx-auto">
+              Our Global AI Advisory Board brings together distinguished leaders from academia, industry, and 
+              policy who provide strategic guidance, ensure international standards, and connect GARC with 
+              premier global networks.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6" glowColor="primary">
-              <h3 className="text-lg font-semibold text-app-text mb-4">International Universities</h3>
-              <ul className="space-y-2 text-app-text-muted">
-                <li>• Massachusetts Institute of Technology (MIT)</li>
-                <li>• Stanford University</li>
-                <li>• University of Cambridge</li>
-                <li>• ETH Zurich</li>
-                <li>• National University of Singapore</li>
-              </ul>
-            </Card>
-
-            <Card className="p-6" glowColor="secondary">
-              <h3 className="text-lg font-semibold text-app-text mb-4">Technology Partners</h3>
-              <ul className="space-y-2 text-app-text-muted">
-                <li>• Google & Microsoft (Cloud Infrastructure)</li>
-                <li>• TCS, Infosys, Wipro (Talent Pipeline)</li>
-                <li>• Amazon & Meta (Platform Support)</li>
-                <li>• Leading AI Startups</li>
-                <li>• Research Labs & Think Tanks</li>
-              </ul>
-            </Card>
-
-            <Card className="p-6" glowColor="accent">
-              <h3 className="text-lg font-semibold text-app-text mb-4">Startup Ecosystem</h3>
-              <ul className="space-y-2 text-app-text-muted">
-                <li>• T-Hub (National Level)</li>
-                <li>• Y Combinator Networks</li>
-                <li>• Techstars & 500 Startups</li>
-                <li>• Corporate Accelerators</li>
-                <li>• Sector-Specific Incubators</li>
-              </ul>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {[
+              {
+                title: "Research Excellence",
+                description: "Leading AI researchers from top universities worldwide",
+                icon: "🔬"
+              },
+              {
+                title: "Industry Leadership", 
+                description: "C-suite executives from Fortune 500 tech companies",
+                icon: "🏢"
+              },
+              {
+                title: "Policy Expertise",
+                description: "Government advisors and policy framework architects",
+                icon: "🏛️"
+              },
+              {
+                title: "Global Standards",
+                description: "International AI ethics and governance specialists",
+                icon: "🌍"
+              }
+            ].map((area, index) => (
+              <Card key={index} className="p-6 text-center" glowColor="secondary">
+                <div className="text-4xl mb-4">{area.icon}</div>
+                <h3 className="text-lg font-semibold text-app-text mb-3">{area.title}</h3>
+                <p className="text-app-text-muted text-sm">{area.description}</p>
+              </Card>
+            ))}
           </div>
+
+          <Card className="p-8 text-center" glowColor="secondary">
+            <h3 className="text-xl font-semibold text-app-text mb-4">Advisory Board Impact</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="text-secondary font-semibold mb-2">Quarterly Sessions</h4>
+                <p className="text-app-text-muted text-sm">Regular strategic guidance and direction setting</p>
+              </div>
+              <div>
+                <h4 className="text-secondary font-semibold mb-2">Annual Summit</h4>
+                <p className="text-app-text-muted text-sm">Global AI conference with international thought leaders</p>
+              </div>
+              <div>
+                <h4 className="text-secondary font-semibold mb-2">Policy Influence</h4>
+                <p className="text-app-text-muted text-sm">Shaping national AI strategy and governance frameworks</p>
+              </div>
+            </div>
+          </Card>
         </div>
       </Section>
 
-      {/* Incubator Network */}
+      {/* Partnership Journey */}
       <Section className="bg-surface/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Startup Ecosystem </span>
-              <span className="text-secondary">Partners</span>
+              <span className="text-app-text">Your Partnership </span>
+              <span className="text-accent">Journey</span>
             </h2>
-            <p className="text-xl text-secondary mb-4">From idea to impact through our incubator network</p>
+            <p className="text-app-text-muted max-w-3xl mx-auto">
+              From initial discussion to active collaboration, we provide structured pathways for meaningful partnership development
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <Card className="p-8" glowColor="secondary">
-              <h3 className="text-2xl font-bold text-app-text mb-6">Network Benefits</h3>
-              <ul className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <Card className="p-8" glowColor="primary">
+              <h3 className="text-2xl font-bold text-app-text mb-6">Partnership Process</h3>
+              <div className="space-y-6">
                 {[
-                  "Direct access to top student projects",
-                  "Structured mentorship programs",
-                  "Co-investment opportunities",
-                  "Talent pipeline for portfolio companies"
-                ].map((benefit, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                    <span className="text-app-text-muted">{benefit}</span>
-                  </li>
+                  { step: "1", title: "Discovery Call", desc: "Understand your goals and explore synergies" },
+                  { step: "2", title: "Strategic Alignment", desc: "Define collaboration framework and objectives" },
+                  { step: "3", title: "Pilot Program", desc: "Start with focused initiatives to build momentum" },
+                  { step: "4", title: "Scale & Impact", desc: "Expand successful programs for maximum value" }
+                ].map((item, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center shrink-0">
+                      {item.step}
+                    </div>
+                    <div>
+                      <h4 className="text-app-text font-semibold mb-1">{item.title}</h4>
+                      <p className="text-app-text-muted text-sm">{item.desc}</p>
+                    </div>
+                  </div>
                 ))}
-              </ul>
-            </Card>
-
-            <Card className="p-8" glowColor="secondary">
-              <h3 className="text-2xl font-bold text-app-text mb-6">Network Profile</h3>
-              <p className="text-app-text-muted mb-6">
-                Leading National Incubators • International Accelerator Networks • Corporate Innovation Programs • 
-                Venture Capital Partners
-              </p>
-              <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
-                <h4 className="text-app-text font-semibold mb-2">Success Path</h4>
-                <p className="text-app-text-muted">
-                  VCA Project → Incubator Selection → Mentorship → Funding → Scale
-                </p>
               </div>
             </Card>
-          </div>
-        </div>
-      </Section>
 
-      {/* Partnership Benefits */}
-      <Section className="bg-surface/30" pattern="grid">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">
-              <span className="text-app-text">Why Partner with </span>
-              <span className="text-accent">GARC</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <TrendingUp size={24} />,
-                title: "Access to Innovation",
-                description: "First look at breakthrough research and student innovations"
-              },
-              {
-                icon: <Users size={24} />,
-                title: "Talent Pipeline",
-                description: "Direct access to trained AI professionals and developers"
-              },
-              {
-                icon: <Globe size={24} />,
-                title: "Global Network",
-                description: "Connect with international partners and expand reach"
-              },
-              {
-                icon: <Trophy size={24} />,
-                title: "Industry Leadership",
-                description: "Position your organization at the forefront of AI development"
-              }
-            ].map((benefit, index) => (
-              <Card key={index} className="p-6" glowColor="accent">
-                <div className="text-accent mb-4">{benefit.icon}</div>
-                <h3 className="text-lg font-semibold text-app-text mb-2">{benefit.title}</h3>
-                <p className="text-app-text-muted">{benefit.description}</p>
-              </Card>
-            ))}
+            <Card className="p-8" glowColor="secondary">
+              <h3 className="text-2xl font-bold text-app-text mb-6">Partnership Benefits</h3>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { icon: <TrendingUp size={20} />, title: "Innovation Access", desc: "First look at breakthrough research" },
+                  { icon: <Users size={20} />, title: "Talent Pipeline", desc: "Direct access to AI professionals" },
+                  { icon: <Globe size={20} />, title: "Global Network", desc: "International expansion support" },
+                  { icon: <Trophy size={20} />, title: "Industry Leadership", desc: "Positioning at AI forefront" }
+                ].map((benefit, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-secondary mb-2">{benefit.icon}</div>
+                    <h4 className="text-app-text font-semibold text-sm mb-1">{benefit.title}</h4>
+                    <p className="text-app-text-muted text-xs">{benefit.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </Card>
           </div>
         </div>
       </Section>
@@ -313,34 +289,23 @@ const Partnerships: React.FC = () => {
       <Section className="bg-surface/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-lg mb-4">
-            <span className="text-app-text">Ready to </span>
-            <span className="text-primary">Partner?</span>
+            <span className="text-app-text">Ready to Shape </span>
+            <span className="text-accent">India's AI Future?</span>
           </h2>
           <p className="text-xl text-app-text-muted mb-8">
-            Join pioneering organizations in building India's AI future. Let's explore how we can work together.
+            Join pioneering organizations building the next generation of AI innovation. Let's explore how we can create impact together.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="primary"
-              size="lg"
-              href="https://calendly.com/globalai-research/collaboration-call"
-              target="_blank"
-              rel="noopener noreferrer"
-              icon={<Calendar size={20} />}
-              iconPosition="left"
-            >
-              Schedule Partnership Discussion
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              href="mailto:info@garc.ai"
-              icon={<Mail size={20} />}
-              iconPosition="left"
-            >
-              Email Us
-            </Button>
-          </div>
+          <Button
+            variant="accent"
+            size="lg"
+            href="https://calendly.com/globalai-research/collaboration-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<Calendar size={20} />}
+            iconPosition="left"
+          >
+            Schedule Partnership Discussion
+          </Button>
         </div>
       </Section>
     </>

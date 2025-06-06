@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop")'
+            backgroundImage: 'urlhttps://media.gettyimages.com/id/1469875556/video/4k-abstract-lines-background-loopable.jpg?s=640x640&k=20&c=oRhmLOFm1rQPZQSQrUqnd8eRd8LsoGLmiQS7nMIh-MU=")'
           }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
@@ -108,7 +108,7 @@ const About: React.FC = () => {
 
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop"
+                src="https://ik.imagekit.io/gm4wvukvl/logo%20GARC"
                 alt="AI and technology visualization"
                 className="w-full h-80 object-cover rounded-xl"
               />
