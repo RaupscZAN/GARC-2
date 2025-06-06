@@ -13,7 +13,7 @@ const About: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background image with overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -33,7 +33,7 @@ const About: React.FC = () => {
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 text-center relative z-10 pt-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ const About: React.FC = () => {
               <img 
                 src="https://tfvzrxzmsltgwtkotmyg.supabase.co/storage/v1/object/sign/garc-images/logo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDljN2MwZS05ZWEyLTQxOGUtOTE2Zi05NjY2NDk5YTA4MjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJnYXJjLWltYWdlcy9sb2dvLnBuZyIsImlhdCI6MTc0OTIxNzQ3MCwiZXhwIjoyNjEzMjE3NDcwfQ.XJjG0Jm8La7ShNmXLN2DK6fDl_7Ac6rnKcWKv_ue6fM"
                 alt="AI and technology visualization"
-                className="w-full h-80 object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl"></div>
             </div>
@@ -281,58 +281,3 @@ const About: React.FC = () => {
               {
                 phase: "Phase 3",
                 title: "Scale",
-                status: "Planned",
-                description: "Full operations, international partnerships, venture outcomes"
-              }
-            ].map((phase, index) => (
-              <Card key={index} className="p-6" glowColor="accent">
-                <div className="text-accent font-bold mb-2">{phase.phase}</div>
-                <h3 className="text-xl font-semibold text-app-text mb-2">{phase.title}</h3>
-                <div className="text-sm font-medium text-secondary mb-3">{phase.status}</div>
-                <p className="text-app-text-muted">{phase.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Call to Action */}
-      <Section className="bg-surface/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading-lg mb-4">
-            <span className="text-app-text">Be Part of the </span>
-            <span className="text-primary">AI Revolution</span>
-          </h2>
-          <p className="text-xl text-app-text-muted mb-8">
-            Whether you're a student, researcher, industry professional, or organization - 
-            there's a place for you in building the future of AI.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="primary"
-              size="lg"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
-              target="_blank"
-              rel="noopener noreferrer"
-              icon={<ArrowRight size={20} />}
-              iconPosition="right"
-            >
-              Join GARC
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              href="https://calendly.com/globalai-research/collaboration-call"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Schedule a Call
-            </Button>
-          </div>
-        </div>
-      </Section>
-    </>
-  );
-};
-
-export default About;
