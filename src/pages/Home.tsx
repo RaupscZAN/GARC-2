@@ -8,7 +8,7 @@ import FinalCTA from '../components/home/FinalCTA';
 
 const Home: React.FC = () => {
   useEffect(() => {
-    document.title = 'GARC - India\'s Future in AI Begins Here';
+    document.title = 'GARC - The Future of AI Begins Here';
   }, []);
 
   return (

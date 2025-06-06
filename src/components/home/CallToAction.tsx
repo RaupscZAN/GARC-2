@@ -27,8 +27,8 @@ const CallToAction: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-app-text">Be Part of </span>
-          <span className="text-accent">India's AI Revolution</span>
+          <span className="text-app-text">Be Part of the </span>
+          <span className="text-accent">AI Revolution</span>
         </motion.h2>
         
         <motion.p
@@ -38,7 +38,7 @@ const CallToAction: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Join GARC and contribute to building India's future as a global AI powerhouse. 
+          Join GARC and contribute to building the future as a global AI powerhouse. 
           Whether you're a student, researcher, developer, or organization, there's a place 
           for you in our ecosystem.
         </motion.p>

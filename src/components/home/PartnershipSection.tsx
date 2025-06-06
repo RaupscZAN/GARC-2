@@ -91,7 +91,7 @@ const PartnershipSection: React.FC = () => {
               <h3 className="heading-md mb-4">Government Advisory & Policy</h3>
               <p className="text-app-text-muted mb-6">
                 GARC works closely with government bodies to shape AI policy, provide technical guidance, 
-                and develop talent pipelines that strengthen India's position in the global AI landscape.
+                and develop talent pipelines that strengthen global AI capabilities and leadership.
               </p>
               <Button 
                 variant="primary" 
@@ -109,7 +109,7 @@ const PartnershipSection: React.FC = () => {
               
               <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">
                 <h4 className="text-app-text font-semibold mb-1">Talent Development</h4>
-                <p className="text-app-text-muted text-sm">Building India's AI workforce</p>
+                <p className="text-app-text-muted text-sm">Building global AI workforce</p>
               </div>
               
               <div className="bg-surface/60 backdrop-blur-sm border border-white/10 rounded-lg p-4">

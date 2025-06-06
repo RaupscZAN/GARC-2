@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-app-text-muted mb-6">
-              Pioneering India's AI Future
+              Pioneering the Future of AI
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-app-text-muted hover:text-primary transition-colors" aria-label="Twitter">
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary mt-1 shrink-0" />
-                <span className="text-app-text-muted">Hyderabad, Telangana, India</span>
+                <span className="text-app-text-muted">Hyderabad, Telangana</span>
               </li>
             </ul>
             <Button 

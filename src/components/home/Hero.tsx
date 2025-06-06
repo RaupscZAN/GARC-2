@@ -39,9 +39,9 @@ const Hero: React.FC = () => {
 
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-            <span className="text-white">India's </span>
+            <span className="text-white">The Future of </span>
             <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
-              AI Future
+              AI Innovation
             </span>
             <br />
             <span className="text-white">Begins </span>

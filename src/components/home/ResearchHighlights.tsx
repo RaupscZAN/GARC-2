@@ -8,7 +8,7 @@ const researchAreas = [
   {
     icon: <Cpu size={24} />,
     title: 'Advanced AI Architectures',
-    description: 'Developing next-generation AI models optimized for Indian contexts and languages.'
+    description: 'Developing next-generation AI models optimized for diverse contexts and languages.'
   },
   {
     icon: <Lock size={24} />,
@@ -77,7 +77,7 @@ const ResearchHighlights: React.FC = () => {
             <p className="text-app-text-muted mb-6">
               Our state-of-the-art infrastructure provides the computational power needed to train 
               and deploy large-scale AI models. The GARC Data Center Consortium brings together 
-              industry partners to create a shared resource for Indian AI research.
+              industry partners to create a shared resource for global AI research.
             </p>
             <Button 
               variant="secondary" 
