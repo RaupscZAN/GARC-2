@@ -96,10 +96,6 @@ const Footer: React.FC = () => {
                   +91 98844 02971
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary mt-1 shrink-0" />
-                <span className="text-app-text-muted">Hyderabad, Telangana</span>
-              </li>
             </ul>
             <Button 
               variant="primary"
