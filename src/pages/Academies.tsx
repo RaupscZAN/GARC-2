@@ -14,33 +14,24 @@ const Academies: React.FC = () => {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
-        {/* Tech Background - Similar to the image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900" />
-        
-        {/* Floating particles/dots effect */}
-        <div className="absolute inset-0">
-          {/* Large glowing orbs */}
-          <div className="absolute top-20 left-1/4 w-32 h-32 bg-teal-400/30 rounded-full blur-2xl animate-pulse-slow" />
-          <div className="absolute top-40 right-1/3 w-24 h-24 bg-blue-400/40 rounded-full blur-xl animate-pulse-slow" />
-          <div className="absolute bottom-32 left-1/3 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-20 right-1/4 w-28 h-28 bg-yellow-400/25 rounded-full blur-2xl animate-pulse-slow" />
-          
-          {/* Small scattered dots */}
-          <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-teal-300/60 rounded-full animate-float" />
-          <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-300/50 rounded-full animate-float" />
-          <div className="absolute bottom-1/3 left-1/3 w-4 h-4 bg-cyan-300/40 rounded-full animate-float" />
-          <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-yellow-300/60 rounded-full animate-float" />
-          <div className="absolute top-1/2 left-1/6 w-3 h-3 bg-green-300/50 rounded-full animate-float" />
-          <div className="absolute top-3/4 right-1/5 w-2 h-2 bg-purple-300/40 rounded-full animate-float" />
-          
-          {/* Network connection lines effect */}
-          <div className="absolute top-1/3 left-1/4 w-32 h-px bg-gradient-to-r from-transparent via-teal-400/30 to-transparent" />
-          <div className="absolute bottom-1/2 right-1/3 w-24 h-px bg-gradient-to-r from-transparent via-blue-400/25 to-transparent rotate-45" />
-          <div className="absolute top-1/2 left-1/2 w-40 h-px bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent -rotate-12" />
+        {/* Background image with overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop")'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
+
+        {/* Decorative elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
         
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
@@ -49,29 +40,43 @@ const Academies: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-white">
+            {/* Pill header */}
+            <div className="inline-block px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
+              <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent">
+                Specialized Academies
+              </span>
+            </div>
+
+            {/* Main heading */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
               <span className="text-white">Industry-Connected AI & </span>
               <br />
-              <span className="text-white">Technology </span>
-              <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-yellow-300 bg-clip-text text-transparent">Education</span>
+              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
+                Technology Education
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
+
+            {/* Subheading */}
+            <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
               Two specialized academies powered by strategic partnerships, creating direct pathways from learning to career success
             </p>
+
+            {/* CTA buttons */}
             <div className="flex flex-wrap gap-6 justify-center">
               <Button
                 variant="primary"
                 size="lg"
                 href="#vca-section"
-                className="min-w-[200px]"
+                className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
               >
                 Explore VCA
               </Button>
+
               <Button
-                variant="secondary"
+                variant="outline"
                 size="lg"
                 href="#aiata-section"
-                className="min-w-[200px]"
+                className="min-w-[200px] border-white/20 hover:bg-white/5 text-white"
               >
                 Explore AiAta
               </Button>
@@ -248,8 +253,6 @@ const Academies: React.FC = () => {
               </Card>
             </motion.div>
           </div>
-
-
         </div>
       </Section>
 
