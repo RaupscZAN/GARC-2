@@ -13,17 +13,81 @@ const Partnerships: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-32 pb-16">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="heading-xl mb-6">
-            <span className="text-app-text">Strategic Partnerships Driving </span>
-            <span className="text-primary">India's AI Future</span>
-          </h1>
-          <p className="text-xl text-app-text-muted mb-8">
-            Join leading organizations in building a collaborative ecosystem that nurtures talent, drives innovation, and positions India as a global AI leader
-          </p>
+      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden">
+        {/* Background image with overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop")'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
-      </Section>
+
+        {/* Decorative elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
+        
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            {/* Pill header */}
+            <div className="inline-block px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
+              <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent">
+                Strategic Partnerships
+              </span>
+            </div>
+
+            {/* Main heading */}
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+              <span className="text-white">Building India's </span>
+              <br />
+              <span className="bg-gradient-to-r from-primary-300 via-secondary-300 to-accent-300 bg-clip-text text-transparent">
+                AI Ecosystem Together
+              </span>
+            </h1>
+
+            {/* Subheading */}
+            <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+              Join leading organizations in creating a collaborative ecosystem that nurtures talent, drives innovation, and positions India as a global AI leader
+            </p>
+
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-6 justify-center">
+              <Button 
+                variant="primary"
+                size="lg"
+                href="https://calendly.com/globalai-research/collaboration-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                icon={<Calendar size={20} />}
+                iconPosition="left"
+                className="min-w-[200px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+              >
+                Schedule Partnership Call
+              </Button>
+
+              <Button 
+                variant="outline"
+                size="lg"
+                href="#partnership-pillars"
+                className="min-w-[200px] border-white/20 hover:bg-white/5 text-white"
+              >
+                Explore Opportunities
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Why Partner With GARC */}
       <Section className="bg-surface/30">
@@ -76,7 +140,7 @@ const Partnerships: React.FC = () => {
       </Section>
 
       {/* Three Partnership Pillars */}
-      <Section className="bg-surface/30" pattern="grid">
+      <Section id="partnership-pillars" className="bg-surface/30" pattern="grid">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
