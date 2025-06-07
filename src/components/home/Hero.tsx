@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
 
       {/* Circular CTA Button */}
       <motion.button
-        className="absolute bottom-8 right-4 md:right-8 w-[147px] h-[147px] rounded-full bg-primary hover:bg-primary-600 text-white flex flex-col items-center justify-center cursor-pointer transition-colors duration-300"
+        className="absolute bottom-8 right-4 md:right-8 w-[120px] h-[120px] rounded-full bg-primary hover:bg-primary-600 text-white flex flex-col items-center justify-center cursor-pointer transition-colors duration-300"
         onClick={scrollToNextSection}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
