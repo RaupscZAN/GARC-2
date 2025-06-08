@@ -15,6 +15,8 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import PageSections from './pages/admin/PageSections';
+import PageSectionForm from './pages/admin/PageSectionForm';
 
 const App: React.FC = () => {
   // Scroll to top on route change
@@ -53,6 +55,9 @@ const App: React.FC = () => {
           </ProtectedRoute>
         }>
           <Route index element={<AdminDashboard />} />
+          <Route path="sections" element={<PageSections />} />
+          <Route path="sections/new" element={<PageSectionForm />} />
+          <Route path="sections/edit/:id" element={<PageSectionForm />} />
           {/* Additional admin routes will be added here */}
         </Route>
       </Routes>
