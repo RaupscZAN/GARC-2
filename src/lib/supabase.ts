@@ -48,6 +48,20 @@ export interface Tag {
   created_at: string;
 }
 
+export interface PageSection {
+  id: string;
+  page_name: string;
+  section_name: string;
+  section_type: string;
+  title: string | null;
+  subtitle: string | null;
+  content: Record<string, any>;
+  display_order: number;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 // Contact form submission
 export const submitContactForm = async (contactData: {
   name: string;
@@ -76,6 +90,16 @@ export const getPublishedPosts = async () => {
   return data;
 };
 
+export const getAllPosts = async () => {
+  const { data, error } = await supabase
+    .from('posts')
+    .select('*')
+    .order('created_at', { ascending: false });
+
+  if (error) throw error;
+  return data;
+};
+
 export const getPostBySlug = async (slug: string) => {
   const { data, error } = await supabase
     .from('posts')
@@ -86,6 +110,38 @@ export const getPostBySlug = async (slug: string) => {
 
   if (error) throw error;
   return data;
+};
+
+export const createPost = async (postData: Omit<Post, 'id' | 'created_at' | 'updated_at'>) => {
+  const { data, error } = await supabase
+    .from('posts')
+    .insert([postData])
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+};
+
+export const updatePost = async (id: string, postData: Partial<Post>) => {
+  const { data, error } = await supabase
+    .from('posts')
+    .update(postData)
+    .eq('id', id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+};
+
+export const deletePost = async (id: string) => {
+  const { error } = await supabase
+    .from('posts')
+    .delete()
+    .eq('id', id);
+
+  if (error) throw error;
 };
 
 export const getCategories = async () => {
@@ -106,4 +162,117 @@ export const getTags = async () => {
 
   if (error) throw error;
   return data;
+};
+
+// Page sections functions for CMS
+export const getPageSections = async (pageName: string) => {
+  const { data, error } = await supabase
+    .from('page_sections')
+    .select('*')
+    .eq('page_name', pageName)
+    .eq('is_active', true)
+    .order('display_order');
+
+  if (error) throw error;
+  return data;
+};
+
+export const getAllPageSections = async () => {
+  const { data, error } = await supabase
+    .from('page_sections')
+    .select('*')
+    .order('page_name', { ascending: true })
+    .order('display_order', { ascending: true });
+
+  if (error) throw error;
+  return data;
+};
+
+export const getPageSection = async (id: string) => {
+  const { data, error } = await supabase
+    .from('page_sections')
+    .select('*')
+    .eq('id', id)
+    .single();
+
+  if (error) throw error;
+  return data;
+};
+
+export const createPageSection = async (sectionData: Omit<PageSection, 'id' | 'created_at' | 'updated_at'>) => {
+  const { data, error } = await supabase
+    .from('page_sections')
+    .insert([sectionData])
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+};
+
+export const updatePageSection = async (id: string, sectionData: Partial<PageSection>) => {
+  const { data, error } = await supabase
+    .from('page_sections')
+    .update(sectionData)
+    .eq('id', id)
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data;
+};
+
+export const deletePageSection = async (id: string) => {
+  const { error } = await supabase
+    .from('page_sections')
+    .delete()
+    .eq('id', id);
+
+  if (error) throw error;
+};
+
+// Authentication functions
+export const signIn = async (email: string, password: string) => {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
+
+  if (error) throw error;
+  return data;
+};
+
+export const signOut = async () => {
+  const { error } = await supabase.auth.signOut();
+  if (error) throw error;
+};
+
+export const getCurrentUser = async () => {
+  const { data: { user }, error } = await supabase.auth.getUser();
+  if (error) throw error;
+  return user;
+};
+
+export const onAuthStateChange = (callback: (event: string, session: any) => void) => {
+  return supabase.auth.onAuthStateChange(callback);
+};
+
+// Contact management functions for admin
+export const getAllContacts = async () => {
+  const { data, error } = await supabase
+    .from('contacts')
+    .select('*')
+    .order('created_at', { ascending: false });
+
+  if (error) throw error;
+  return data;
+};
+
+export const deleteContact = async (id: string) => {
+  const { error } = await supabase
+    .from('contacts')
+    .delete()
+    .eq('id', id);
+
+  if (error) throw error;
 };

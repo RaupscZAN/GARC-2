@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import AdminLayout from './components/admin/AdminLayout';
+import ProtectedRoute from './components/admin/ProtectedRoute';
 import Home from './pages/Home';
 import About from './pages/About';
 import Academies from './pages/Academies';
@@ -11,6 +13,8 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 const App: React.FC = () => {
   // Scroll to top on route change
@@ -25,6 +29,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        {/* Public routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -38,6 +43,17 @@ const App: React.FC = () => {
           
           {/* 404 route */}
           <Route path="*" element={<NotFound />} />
+        </Route>
+
+        {/* Admin routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        }>
+          <Route index element={<AdminDashboard />} />
+          {/* Additional admin routes will be added here */}
         </Route>
       </Routes>
     </BrowserRouter>
