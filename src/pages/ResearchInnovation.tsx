@@ -414,7 +414,9 @@ const ResearchInnovation: React.FC = () => {
             <Button
               variant="primary"
               size="lg"
-              to="/advisory-board"
+              href="https://garc.tech/partnerships"
+              target="_blank"
+              rel="noopener noreferrer"
               icon={<ArrowRight size={20} />}
               iconPosition="right"
             >
