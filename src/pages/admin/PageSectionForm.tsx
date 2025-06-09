@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Save, ArrowLeft, AlertCircle } from 'lucide-react';
 import { 
@@ -13,13 +13,18 @@ import Card from '../../components/ui/Card';
 
 const PageSectionForm: React.FC = () => {
   const { id } = useParams();
+  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const isEditing = Boolean(id);
 
+  // Get pre-fill values from URL params
+  const presetPage = searchParams.get('page');
+  const presetType = searchParams.get('type');
+
   const [formData, setFormData] = useState({
-    page_name: '',
+    page_name: presetPage || '',
     section_name: '',
-    section_type: '',
+    section_type: presetType || '',
     title: '',
     subtitle: '',
     content: '{}',
@@ -34,8 +39,22 @@ const PageSectionForm: React.FC = () => {
   useEffect(() => {
     if (isEditing && id) {
       loadSection(id);
+    } else if (presetType === 'cta') {
+      // Pre-fill with CTA template
+      setFormData(prev => ({
+        ...prev,
+        content: JSON.stringify({
+          cta_buttons: [
+            {
+              text: "Get Started",
+              link: "/contact",
+              variant: "primary"
+            }
+          ]
+        }, null, 2)
+      }));
     }
-  }, [id, isEditing]);
+  }, [id, isEditing, presetType]);
 
   const loadSection = async (sectionId: string) => {
     try {
@@ -132,8 +151,53 @@ const PageSectionForm: React.FC = () => {
     'research-innovation',
     'partnerships',
     'venture-ecosystem',
-    'contact'
+    'contact',
+    'blog'
   ];
+
+  const getContentTemplate = (type: string) => {
+    const templates = {
+      cta: {
+        cta_buttons: [
+          {
+            text: "Get Started",
+            link: "/contact",
+            variant: "primary"
+          }
+        ]
+      },
+      hero: {
+        background_image: "https://example.com/image.jpg",
+        pill_text: "Welcome",
+        cta_buttons: [
+          {
+            text: "Learn More",
+            variant: "primary",
+            action: "scroll_to_next"
+          }
+        ]
+      },
+      card_grid: {
+        cards: [
+          {
+            title: "Card Title",
+            description: "Card description",
+            color: "primary"
+          }
+        ]
+      }
+    };
+    return templates[type as keyof typeof templates] || {};
+  };
+
+  const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newType = e.target.value;
+    setFormData(prev => ({
+      ...prev,
+      section_type: newType,
+      content: JSON.stringify(getContentTemplate(newType), null, 2)
+    }));
+  };
 
   if (loading && isEditing) {
     return (
@@ -222,7 +286,7 @@ const PageSectionForm: React.FC = () => {
                 id="section_type"
                 name="section_type"
                 value={formData.section_type}
-                onChange={handleChange}
+                onChange={handleTypeChange}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               >

@@ -7,7 +7,8 @@ import {
   Settings, 
   LogOut,
   Layers,
-  FolderOpen
+  FolderOpen,
+  MousePointer
 } from 'lucide-react';
 import { signOut } from '../../lib/supabase';
 import { useAuth } from '../../hooks/useAuth';
@@ -29,6 +30,7 @@ const AdminLayout: React.FC = () => {
   const menuItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/admin' },
     { icon: Layers, label: 'Page Sections', path: '/admin/sections' },
+    { icon: MousePointer, label: 'Call to Actions', path: '/admin/cta' },
     { icon: FileText, label: 'Blog Posts', path: '/admin/posts' },
     { icon: FolderOpen, label: 'Categories', path: '/admin/categories' },
     { icon: Users, label: 'Contacts', path: '/admin/contacts' },

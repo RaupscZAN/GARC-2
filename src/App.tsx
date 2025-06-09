@@ -17,6 +17,7 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import PageSections from './pages/admin/PageSections';
 import PageSectionForm from './pages/admin/PageSectionForm';
+import CallToActions from './pages/admin/CallToActions';
 
 const App: React.FC = () => {
   // Scroll to top on route change
@@ -58,6 +59,7 @@ const App: React.FC = () => {
           <Route path="sections" element={<PageSections />} />
           <Route path="sections/new" element={<PageSectionForm />} />
           <Route path="sections/edit/:id" element={<PageSectionForm />} />
+          <Route path="cta" element={<CallToActions />} />
           {/* Additional admin routes will be added here */}
         </Route>
       </Routes>

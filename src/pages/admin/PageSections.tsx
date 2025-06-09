@@ -11,6 +11,18 @@ const PageSections: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  // Define all possible pages in the website
+  const allPages = [
+    'home',
+    'about', 
+    'academies',
+    'research-innovation',
+    'partnerships',
+    'venture-ecosystem',
+    'contact',
+    'blog'
+  ];
+
   useEffect(() => {
     loadSections();
   }, []);
@@ -60,6 +72,7 @@ const PageSections: React.FC = () => {
     }
   };
 
+  // Group sections by page name
   const groupedSections = sections.reduce((acc, section) => {
     if (!acc[section.page_name]) {
       acc[section.page_name] = [];
@@ -67,6 +80,12 @@ const PageSections: React.FC = () => {
     acc[section.page_name].push(section);
     return acc;
   }, {} as Record<string, PageSection[]>);
+
+  // Create a complete list showing all pages, even those without sections
+  const allPagesWithSections = allPages.map(pageName => ({
+    pageName,
+    sections: groupedSections[pageName] || []
+  }));
 
   if (loading) {
     return (
@@ -96,33 +115,41 @@ const PageSections: React.FC = () => {
         </div>
       )}
 
-      {Object.keys(groupedSections).length === 0 ? (
-        <Card className="p-8 text-center">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">No sections found</h3>
-          <p className="text-gray-600 mb-4">Create your first page section to get started</p>
-          <Link to="/admin/sections/new">
-            <Button variant="primary">Create First Section</Button>
-          </Link>
-        </Card>
-      ) : (
-        <div className="space-y-8">
-          {Object.entries(groupedSections).map(([pageName, pageSections]) => (
-            <motion.div
-              key={pageName}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Card className="overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4 border-b">
+      <div className="space-y-8">
+        {allPagesWithSections.map(({ pageName, sections: pageSections }) => (
+          <motion.div
+            key={pageName}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card className="overflow-hidden">
+              <div className="bg-gray-50 px-6 py-4 border-b flex justify-between items-center">
+                <div>
                   <h2 className="text-xl font-semibold text-gray-900 capitalize">
-                    {pageName} Page
+                    {pageName.replace('-', ' ')} Page
                   </h2>
                   <p className="text-sm text-gray-600">
                     {pageSections.length} section{pageSections.length !== 1 ? 's' : ''}
                   </p>
                 </div>
+                <Link to={`/admin/sections/new?page=${pageName}`}>
+                  <Button variant="outline" size="sm" icon={<Plus size={16} />}>
+                    Add Section
+                  </Button>
+                </Link>
+              </div>
 
+              {pageSections.length === 0 ? (
+                <div className="p-8 text-center">
+                  <p className="text-gray-500 mb-4">No sections defined for this page yet.</p>
+                  <Link to={`/admin/sections/new?page=${pageName}`}>
+                    <Button variant="primary" size="sm">
+                      Create First Section
+                    </Button>
+                  </Link>
+                </div>
+              ) : (
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead className="bg-gray-50">
@@ -163,7 +190,11 @@ const PageSections: React.FC = () => {
                               </div>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                                section.section_type === 'cta' 
+                                  ? 'bg-orange-100 text-orange-800'
+                                  : 'bg-blue-100 text-blue-800'
+                              }`}>
                                 {section.section_type}
                               </span>
                             </td>
@@ -242,11 +273,11 @@ const PageSections: React.FC = () => {
                     </tbody>
                   </table>
                 </div>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      )}
+              )}
+            </Card>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
