@@ -64,7 +64,7 @@ const FinalCTA: React.FC = () => {
               <Button 
                 variant="primary" 
                 size="lg"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+                href="https://forms.gle/RsvDL2jbhb8GqWp49"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-lg py-4 rounded-xl mt-8"
@@ -90,9 +90,7 @@ const FinalCTA: React.FC = () => {
               <Button 
                 variant="secondary" 
                 size="lg"
-                href="https://calendly.com/globalai-research/collaboration-call"
-                target="_blank"
-                rel="noopener noreferrer"
+                to="/partnerships"
                 className="w-full text-lg py-4 rounded-xl mt-8"
               >
                 Partner With Us →

@@ -78,7 +78,7 @@ const About: React.FC = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+                href="https://calendly.com/globalai-research/collaboration-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="min-w-[200px] border-white/20 hover:bg-white/5 text-white"
@@ -303,7 +303,7 @@ const About: React.FC = () => {
           <Button 
             variant="primary"
             size="lg"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+            href="https://calendly.com/globalai-research/collaboration-call"
             target="_blank"
             rel="noopener noreferrer"
             icon={<ArrowRight size={20} />}

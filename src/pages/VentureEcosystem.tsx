@@ -390,7 +390,7 @@ const VentureEcosystem: React.FC = () => {
             <Button
               variant="accent"
               size="lg"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeKj9DeXunZDnUUJdt-ldvKJqRQPurZleNB2lJ4owFL91lPtQ/viewform?usp=dialog"
+              href="https://forms.gle/3dgegHVSmKs88e1P6"
               target="_blank"
               rel="noopener noreferrer"
               icon={<Send size={20} />}

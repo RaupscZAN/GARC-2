@@ -86,7 +86,7 @@ const Vision: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <Button
             variant="primary"
-            to="/programs"
+            to="/academies"
           >
             See Our Programs
           </Button>

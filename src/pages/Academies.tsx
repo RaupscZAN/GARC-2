@@ -1,14 +1,82 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Bot, ArrowRight, Calendar } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+import { getPageSections, PageSection } from '../lib/supabase';
 
 const Academies: React.FC = () => {
+  const [ctaSection, setCtaSection] = useState<PageSection | null>(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     document.title = 'Academies - GARC';
+    loadCTASection();
   }, []);
+
+  const loadCTASection = async () => {
+    try {
+      const sections = await getPageSections('academies');
+      const finalCTA = sections?.find(section => section.section_name === 'academies-final-cta');
+      setCtaSection(finalCTA || null);
+    } catch (error) {
+      console.error('Error loading CTA section:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const renderCTAButtons = () => {
+    if (!ctaSection || !ctaSection.content.cta_buttons) {
+      // Fallback to default buttons if no CTA section found
+      return (
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <Button
+            variant="primary"
+            size="lg"
+            href="https://forms.gle/RsvDL2jbhb8GqWp49"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<Calendar size={20} />}
+            iconPosition="left"
+          >
+            Apply to VCA
+          </Button>
+          <Button
+            variant="secondary"
+            size="lg"
+            href="https://forms.gle/RsvDL2jbhb8GqWp49"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<Calendar size={20} />}
+            iconPosition="left"
+          >
+            Apply to AiAta
+          </Button>
+        </div>
+      );
+    }
+
+    return (
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {ctaSection.content.cta_buttons.map((button: any, index: number) => (
+          <Button
+            key={index}
+            variant={button.variant || 'primary'}
+            size={button.size || 'lg'}
+            href={button.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={button.icon === 'Calendar' ? <Calendar size={20} /> : undefined}
+            iconPosition={button.iconPosition || 'left'}
+          >
+            {button.text}
+          </Button>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -360,26 +428,8 @@ const Academies: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Button
-              variant="primary"
-              size="lg"
-              to="/apply/vca"
-              icon={<Calendar size={20} />}
-              iconPosition="left"
-            >
-              Apply to VCA
-            </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              to="/apply/aiata"
-              icon={<Calendar size={20} />}
-              iconPosition="left"
-            >
-              Apply to AiAta
-            </Button>
-          </div>
+          {/* Dynamic CTA Section */}
+          {!loading && renderCTAButtons()}
 
           <p className="text-app-text-muted">Applications are reviewed on a rolling basis.</p>
         </div>

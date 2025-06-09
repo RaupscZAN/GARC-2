@@ -15,6 +15,13 @@ const ResearchInnovation: React.FC = () => {
     document.title = 'Research & Innovation - GARC';
   }, []);
 
+  const scrollToResearchAreas = () => {
+    const element = document.querySelector('#research-areas');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -82,7 +89,7 @@ const ResearchInnovation: React.FC = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                href="#research-areas"
+                onClick={scrollToResearchAreas}
                 className="min-w-[200px] border-white/20 hover:bg-white/5"
               >
                 Explore Research Areas
@@ -124,7 +131,7 @@ const ResearchInnovation: React.FC = () => {
       </Section>
 
       {/* Four Pillars Section */}
-      <Section className="bg-surface/30" pattern="grid">
+      <Section id="research-areas" className="bg-surface/30" pattern="grid">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">
@@ -478,7 +485,9 @@ const ResearchInnovation: React.FC = () => {
               <Button
                 variant="primary"
                 size="lg"
-                href="/research/submit-proposal"
+                href="https://forms.gle/fyYQnH2nZDZmgK1bA"
+                target="_blank"
+                rel="noopener noreferrer"
                 icon={<Download size={20} />}
                 iconPosition="right"
                 className="w-full"
@@ -496,7 +505,9 @@ const ResearchInnovation: React.FC = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                href="/consortium/join"
+                href="https://calendly.com/globalai-research/collaboration-call"
+                target="_blank"
+                rel="noopener noreferrer"
                 icon={<ArrowRight size={20} />}
                 iconPosition="right"
                 className="w-full"
