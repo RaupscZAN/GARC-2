@@ -64,7 +64,7 @@ const FinalCTA: React.FC = () => {
               <Button 
                 variant="primary" 
                 size="lg"
-                href="https://forms.gle/RsvDL2jbhb8GqWp49"
+                href="https://garc.tech/academies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-lg py-4 rounded-xl mt-8"
