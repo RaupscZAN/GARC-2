@@ -12,6 +12,7 @@ export default {
           100: '#E2E8F0',
           200: '#CBD5E1',
           300: '#94A3B8',
+          400: '#64748B',
         },
         'primary': {
           DEFAULT: '#0891B2', // Teal
