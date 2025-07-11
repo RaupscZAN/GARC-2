@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'accent' | 'outline';
+  variant?: 'primary' | 'secondary' | 'accent' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   to?: string;
   href?: string;
@@ -15,6 +15,7 @@ interface ButtonProps {
   disabled?: boolean;
   target?: string;
   rel?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -30,25 +31,25 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   target,
   rel,
+  type = 'button',
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none';
+  const baseClasses = 'btn';
   
   const variantClasses = {
-    primary: 'bg-primary hover:bg-primary-600 text-white',
-    secondary: 'bg-secondary hover:bg-secondary-600 text-white',
-    accent: 'bg-accent hover:bg-accent-600 text-gray-900',
-    outline: 'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white',
+    primary: 'btn-primary',
+    secondary: 'btn-secondary',
+    accent: 'btn-accent',
+    outline: 'btn-outline',
+    ghost: 'btn-ghost',
   };
   
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'btn-sm',
+    md: '',
+    lg: 'btn-lg',
   };
 
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
-  
-  const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+  const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   const content = (
     <>
@@ -59,14 +60,14 @@ const Button: React.FC<ButtonProps> = ({
   );
 
   const motionProps = {
-    whileHover: { scale: disabled ? 1 : 1.03 },
-    whileTap: { scale: disabled ? 1 : 0.97 },
+    whileHover: disabled ? {} : { scale: 1.02 },
+    whileTap: disabled ? {} : { scale: 0.98 },
     transition: { duration: 0.2 }
   };
 
   if (to) {
     return (
-      <motion.div {...motionProps}>
+      <motion.div {...motionProps} className="inline-block">
         <Link to={to} className={buttonClasses}>
           {content}
         </Link>
@@ -76,7 +77,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <motion.div {...motionProps}>
+      <motion.div {...motionProps} className="inline-block">
         <a href={href} className={buttonClasses} target={target} rel={rel}>
           {content}
         </a>
@@ -89,6 +90,7 @@ const Button: React.FC<ButtonProps> = ({
       className={buttonClasses}
       onClick={onClick}
       disabled={disabled}
+      type={type}
       {...motionProps}
     >
       {content}
